@@ -1,0 +1,37 @@
+permalinks: title
+baseurl: /python-data-intro
+title: Introduction to Data Processing with Python
+map:
+ - title: Home
+   path: /
+   caption: Introduction to Data Processing with Python
+ - title: Core
+   caption: The 'mandatory' workshop content
+   subpages:
+    - title: Background Recap
+      path: /core/recap.html
+      caption: A quick recap of some of the Introduction to Programming essentials.
+    - title: Working With Text Files
+      path: /core/text-files.html
+      caption: What is a text file? How do we get them in and out of Python?
+    - title: Working With Strings
+      path: /core/strings.html
+      caption: Once we have our text in Python, what can we do with it?
+    - title: Regular Expressions
+      path: /core/regex.html
+      caption: A powerful way to find patterns in text.
+    - title: Strings and Numbers
+      path: /core/numbers.html
+      caption: Converting strings to numbers and back again, working with numeric data.
+    - title: CSV Files
+      path: /core/csv.html
+      caption: Reading and writing comma-separated data with the csv module
+ - title: Extras
+   caption: Additional workshop content
+   subpages:
+    - title: Basic statistics with NumPy
+      path: /extras/numpy.html
+      caption: Using NumPy to perform some basic statistical operations on data.
+    - title: Fundamentals of String Encoding
+      path: /extras/encoding.html
+      caption: Basics of Unicode to work with non-Latin characters, or even these - ☃☃👍.
