@@ -5,7 +5,7 @@
 
   <title>OpenTechSchool – Introduction to Data Processing with Python</title>
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="http://localhost:8000//bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/zenburn.min.css">
 
   <link rel="icon" href="/favicon.ico" type="image/png">
@@ -52,7 +52,7 @@
         <div class="container-fluid">
 	  <div class="row-fluid">
 	  <div class="span3"><a href="http://www.opentechschool.org/"><h1>OpenTechSchool</a></h1></div>
-	  <div class="span6"><h1><a href="./">Introduction to Data Processing with Python</a></h1></div>
+	  <div class="span6"><h1><a href="http://localhost:8000//">Introduction to Data Processing with Python</a></h1></div>
 	  </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
        
         <li class="nav-header">
 	  
-	  <a href="./" alt="Introduction to Data Processing with Python">Home</a>
+	  <a href="http://localhost:8000//" alt="Introduction to Data Processing with Python">Home</a>
 	  
 	</li>
         
@@ -83,17 +83,19 @@
 	  
 	</li>
         
-          <li><a href="./core/recap.html" alt="A quick recap of some of the Introduction to Programming essentials.">Background Recap</a></li>
+          <li><a href="http://localhost:8000//core/recap.html" alt="A quick recap of some of the Introduction to Programming essentials.">Recap of Python basics</a></li>
         
-          <li><a href="./core/text-files.html" alt="What is a text file? How do we get them in and out of Python?">Working With Text Files</a></li>
+          <li><a href="http://localhost:8000//core/data.html" alt="An introduction to the list and dictionary data structures.">Data Structures in Python</a></li>
         
-          <li><a href="./core/strings.html" alt="Once we have our text in Python, what can we do with it?">Working With Strings</a></li>
+          <li><a href="http://localhost:8000//core/text-files.html" alt="What is a text file? How do we get them in and out of Python?">Working With Text Files</a></li>
         
-          <li><a href="./core/regex.html" alt="Powerful replacing of patterns of text.">Regular Expressions</a></li>
+          <li><a href="http://localhost:8000//core/strings.html" alt="Once we have our text in Python, what can we do with it?">Working With Strings</a></li>
         
-          <li><a href="./core/numbers.html" alt="Converting strings to numbers and back again, working with numeric data.">Strings and Numbers</a></li>
+          <li><a href="http://localhost:8000//core/regex.html" alt="A powerful way to find patterns in text.">Regular Expressions</a></li>
         
-          <li><a href="./core/csv.html" alt="Reading and writing comma-separated data with the csv module">CSV Files</a></li>
+          <li><a href="http://localhost:8000//core/numbers.html" alt="Converting strings to numbers and back again, working with numeric data.">Strings and Numbers</a></li>
+        
+          <li><a href="http://localhost:8000//core/csv.html" alt="Reading and writing comma-separated data with the csv module">CSV Files</a></li>
         
        
         <li class="nav-header">
@@ -102,9 +104,9 @@
 	  
 	</li>
         
-          <li><a href="./extras/numpy.html" alt="Using NumPy to perform some basic statistical operations on data.">Basic statistics with NumPy</a></li>
+          <li><a href="http://localhost:8000//extras/numpy.html" alt="Using NumPy to perform some basic statistical operations on data.">Basic statistics with NumPy</a></li>
         
-          <li><a href="./extras/encoding.html" alt="Basics of Unicode to work with non-Latin characters, or even these - ☃☃👍.">Fundamentals of String Encoding</a></li>
+          <li><a href="http://localhost:8000//extras/encoding.html" alt="Basics of Unicode to work with non-Latin characters, or even these - ☃☃👍.">Fundamentals of String Encoding</a></li>
         
       
       </ul>
@@ -117,7 +119,7 @@
 
 <p>Welcome to Introduction to Data Processing with Python. In this workshop we will take you through the fundamentals of working with text and other types of data with Python. After the workshop you&#8217;ll know how to use Python to process files, extract information from the data in those files, and reprocess the data into different formats.</p>
 
-<p>We only expect you to know a little Python, just the things covered in the <a href='http://opentechschool.github.com/python-beginners/en/index.html'>Introduction to Programming</a> workshop. You definitely do not need to know a lot. You will need Python 3+ installed, the <a href='http://opentechschool.github.com/python-beginners/en/index.html'>Introduction to Programming</a> course uses that version (and contains instructions on how to install it.)</p>
+<p>We only expect you to know a little Python, just the things covered in the <a href='http://opentechschool.github.com/python-beginners/en/index.html'>Introduction to Programming</a> workshop. You definitely do not need to know a lot.</p>
 
 <h2 id='what_well_do_today'>What we&#8217;ll do today</h2>
 
@@ -149,8 +151,6 @@ Hugo Sodersten - Daikon</code></pre>
 <li>Did your arch-enemy &#8220;Rich McKnight&#8221; vote?</li>
 </ul>
 
-<p>Maybe for next time you&#8217;ll update the survey so people can choose their top three radish varieties.</p>
-
 <h3 id='useful'>Useful?</h3>
 
 <p>&#8230; as <em>ridiculously contrived</em> as this example is, I&#8217;m sure lots of you have come across situations where you have some data and you want to extract some relevant information from it.</p>
@@ -160,29 +160,19 @@ Hugo Sodersten - Daikon</code></pre>
 <h1 id='core_workshop_material'>Core workshop material</h1>
 
 <ul>
-<li>
-<p><a href='core/setup.html'>Background recap</a> - A quick recap of some of the Introduction to Programming essentials.</p>
-</li>
+<li><a href='core/recap.html'>Recap of Python essentials</a> - A quick recap of some of the Introduction to Programming essentials.</li>
 
-<li>
-<p><a href='core/text-files.html'>Working With Text Files</a> - What is a text file? How do we get them in and out of Python?</p>
-</li>
+<li><a href='core/data.html'>Data Structures in Python</a> - An introduction to the list and dictionary data structures.</li>
 
-<li>
-<p><a href='core/strings.html'>Working With Strings</a> - Once we have our text in Python, what can we do with it?</p>
-</li>
+<li><a href='core/text-files.html'>Working With Text Files</a> - What is a text file? How do we get them in and out of Python?</li>
 
-<li>
-<p><a href='core/regex.html'>Regular Expressions</a> - Powerful replacing of patterns of text.</p>
-</li>
+<li><a href='core/strings.html'>Working With Strings</a> - Once we have our text in Python, what can we do with it?</li>
 
-<li>
-<p><a href='core/numbers.html'>Strings and Numbers</a> - Converting strings to numbers and back again, working with numeric data.</p>
-</li>
+<li><a href='core/regex.html'>Regular Expressions</a> - A powerful way to find patterns in text.</li>
 
-<li>
-<p><a href='core/csv.html'>CSV Files</a> - Reading and writing comma-separated data with the csv module</p>
-</li>
+<li><a href='core/numbers.html'>Strings and Numbers</a> - Converting strings to numbers and back again, working with numeric data.</li>
+
+<li><a href='core/csv.html'>CSV Files</a> - Reading and writing comma-separated data with the csv module</li>
 </ul>
 
 <h1 id='extra_fun_stuff'>Extra fun stuff</h1>
@@ -202,7 +192,7 @@ Hugo Sodersten - Daikon</code></pre>
 
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://localhost:8000//bootstrap/js/bootstrap.min.js"></script>
     <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </body>

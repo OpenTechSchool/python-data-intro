@@ -11,7 +11,7 @@ This is the course content for Introduction to Data Processing with Python, whic
 
 Welcome to Introduction to Data Processing with Python. In this workshop we will take you through the fundamentals of working with text and other types of data with Python. After the workshop you'll know how to use Python to process files, extract information from the data in those files, and reprocess the data into different formats.
 
-We only expect you to know a little Python, just the things covered in the [Introduction to Programming](http://opentechschool.github.com/python-beginners/en/index.html) workshop. You definitely do not need to know a lot. You will need Python 3+ installed, the [Introduction to Programming](http://opentechschool.github.com/python-beginners/en/index.html) course uses that version (and contains instructions on how to install it.)
+We only expect you to know a little Python, just the things covered in the [Introduction to Programming](http://opentechschool.github.com/python-beginners/en/index.html) workshop. You definitely do not need to know a lot.
 
 ## What we'll do today
 
@@ -37,8 +37,6 @@ You want to know:
 * Did anyone vote twice?
 * Did your arch-enemy "Rich McKnight" vote?
 
-Maybe for next time you'll update the survey so people can choose their top three radish varieties.
-
 ### Useful?
 
 ... as _ridiculously contrived_ as this example is, I'm sure lots of you have come across situations where you have some data and you want to extract some relevant information from it.
@@ -47,8 +45,8 @@ By the end of this workshop, you should have the knowledge to quickly write a pr
 
 # Core workshop material
 
-* [Background recap](core/setup.html) - A quick recap of some of the Introduction to Programming essentials.
-
+* [Recap of Python essentials](core/recap.html) - A quick recap of some of the Introduction to Programming essentials.
+* [Data Structures in Python](core/data.html) - An introduction to the list and dictionary data structures.
 * [Working With Text Files](core/text-files.html) - What is a text file? How do we get them in and out of Python?
 * [Working With Strings](core/strings.html) - Once we have our text in Python, what can we do with it?
 * [Regular Expressions](core/regex.html) - A powerful way to find patterns in text.

@@ -8,9 +8,12 @@ map:
  - title: Core
    caption: The 'mandatory' workshop content
    subpages:
-    - title: Background Recap
+    - title: Recap of Python basics
       path: /core/recap.html
       caption: A quick recap of some of the Introduction to Programming essentials.
+    - title: Data Structures in Python
+      path: /core/data.html
+      caption: An introduction to the list and dictionary data structures.
     - title: Working With Text Files
       path: /core/text-files.html
       caption: What is a text file? How do we get them in and out of Python?
