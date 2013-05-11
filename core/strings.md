@@ -199,10 +199,257 @@ Remember that for dictionaries `counts[vote]` means "the value in `counts` which
             counts[vote] = counts[vote] + 1
     print(counts)
 
+### Pretty printing
+
+When you run this program the output is pretty hard for a person to read, even though it's all there. What we want is to print the data in a way which is easy for people to read. Programmers call this "pretty printing"
+
+Instead of
+
+    print(counts)
+
+A pretty printing option could be:
+
+    for name in counts:
+        count = counts[name]
+        print(name + ": " + str(count))
+
+* This option prints each vote on its own line.
+
+* Iterating through a dictionary means iterating through the *keys* (radish variety names), so we still need to look up each *value* (the vote count) with `count = counts[name]`.
+
+* When we get the count back, it's a number so we can't `print()` it straight away. `str()` returns the string equivalent of the number, ie `str(12)` returns `"12"`.
+
+Python needs to distinguish between strings and numbers for lots of reasons. For example, using numbers `12+1` is 13. Using strings, `"12" + "1"` *concatenates* the strings to give you `"121"`.
+
+### Tip
+
+Python actually has a built-in module called [pprint](http://docs.python.org/3/library/pprint.html) to make it easy to pretty-print things. Try it out with your program if you like!
+
 
 # Cleaning ("Munging") data
 
+There's some weird stuff in our vote count:
+
+    Red King: 1
+    red king: 3
+    White Icicle: 1
+     Cherry Belle: 2
+    daikon: 4
+    Cherry  Belle: 1
+
+*Vote rigging!* Probably not, it's just unclean data. To a computer, "Red King" and "red King" look different because of the different capitalisation. So do "Cherry Belle" and " Cherry Belle" because of the leading space.
+
+We need to clean up (sometimes called "munge") the data so it all looks the same.
+
+We already know one munging function, `strip()`. Try applying `strip()` to each voting choice, to remove distinctions like " Cherry Belle" and "Cherry Belle".
+
+How about "Red King" and "red king"? Take a look at the [Python string functions reference](http://docs.python.org/3/library/stdtypes.html#string-methods) and see if you can find a function that could transform these two so they look the same to the computer.
+
+## Solution
+
+There are lots of functions which could remove the case distinction. `str.lower()` would convert all the names to all lower case, `str.upper()` would CONVERT THEM ALL TO UPPER CASE, or `str.capitalize()` would Capitalise the first letter only. Here's one way:
+
+
+    # Create an empty dictionary for associating radish names
+    # with vote counts
+    counts = {}
+
+    for line in open("radishsurvey.txt"):
+        line = line.strip()
+        parts = line.split(" - ")
+        vote = parts[1]
+        # munge the vote string to clean it up
+        vote = vote.strip().capitalize()
+        if not vote in counts:
+            # First vote for this variety
+            counts[vote] = 1
+        else:
+            # Increment the vote count
+            counts[vote] = counts[vote] + 1
+    print(counts)
+
+If you're having trouble spotting the difference here, it's
+
+    vote = vote.strip().capitalize()
+
+Which means "take the variable called `vote`, and call the `strip()` function on it, and then call the `capitalize()` function on the result, and then assign that result back to the variable `vote`.
+
+This could be written in two lines like this, if you prefer:
+
+    vote = vote.strip()
+    vote = vote.capitalize()
+
+Or it could be condensed even further:
+
+    vote = parts[1].strip().capitalize()
+
+... these all do the *same thing* when you run them. It's up to you which you use, a good practice is to use the version which is the most readable to a human being, without being unnecessarily verbose.
+
+## Not quite there
+
+There are still some funny votes counted in the output of this program:
+
+    Sicily  giant: 1
+    Plum  purple: 1
+    Cherry  belle: 1
+
+They all have something in common, a double space "  " between the first and second words. Damn typos!
+
+strip() only cleaned up additional whitespace at the start and end of the string.
+
+The `replace` function can be used to replace all double spaces "  " with a single space " ":
+
+    vote = vote.replace("  ", " ")
+
+Try putting that into your program so those last few votes get counted correctly.
+
 # Checking if anyone voted twice
 
-# Checking for specific values
+So far we've counted votes without paying attention to the name of the person who voted.
 
+Can you modify your program so it also prints out a warning if anyone voted twice?
+
+## Hint
+
+You will need to start making a list of the names of everyone who has voted so far. Each time you see a new name, check if it is already in the list of names. Starting with an empty list of names, you can use `list.append(newentry)` to append a new entry to the end. Or you can use + like this:
+
+    list = list + [ newentry ]
+
+You'll need to apply the same data munging techniques you used to clean up the radish names, so that "Joanne Smith" and "joanne smith" are counted as the same person.
+
+## Solution
+
+This is just one of many ways to do this:
+
+    # Create an empty dictionary for associating radish names
+    # with vote counts
+    counts = {}
+    
+    # Create an empty list with the names of everyone who voted
+    voted = []
+    
+    for line in open("radishsurvey.txt"):
+        line = line.strip()
+        parts = line.split(" - ")
+        name = parts[0]
+        # clean up the person's name
+        name = name.strip().capitalize().replace("  "," ")
+        # check if this person already voted
+        if name in voted:
+            print(name + " has already voted! Fraud!")
+            continue
+        voted.append(name)
+        vote = parts[1]
+        # munge the vote string to clean it up
+        vote = vote.strip().capitalize().replace("  "," ")
+        if not vote in counts:
+            # First vote for this variety
+            counts[vote] = 1
+        else:
+            # Increment the vote count
+            counts[vote] = counts[vote] + 1
+    
+    print("Results:")
+    print()
+    for name in counts:
+        print(name + ": " + str(counts[name]))
+
+
+There's a new concept in the code above, `continue`, which means "stop whatever you were doing and go to the next iteration of the loop". In this case, if the person has already voted then we don't want to carry on to count their second vote - instead we `continue` and start the next iteration, with the next line of the file.
+
+
+# Factoring our code
+
+Our program here is now getting a little bit long, and a little bit complex. There are lots of comments pointing out what specific sections do.
+
+Perhaps we can split it into functions to make it easier to read:
+
+* A function to clean up (munge) a string to make it easy to match against (because we do the exact same thing to clean up names as we do to clean up the vote choice.)
+* A function to check if someone has voted before
+* A function to count a vote
+
+Have a try at breaking out some of the parts into functions, one function at a time, without breaking the program.
+
+## Solution
+
+This is just one possible way to break it down:
+
+    # Create an empty dictionary for associating radish names
+    # with vote counts
+    counts = {}
+    
+    # Create an empty list with the names of everyone who voted
+    voted = []
+    
+    # Clean (munge) up a string so it's easy to match against other     strings
+    def clean_string(s):
+        return s.strip().capitalize().replace("  "," ")
+    
+    # Check if someone has voted already and return True or False
+    def has_already_voted(name):
+        if name in voted:
+            print(name + " has already voted! Fraud!")
+            return True
+        return False
+    
+    # Count a vote for the radish variety named 'radish'
+    def count_vote(radish):
+        if not radish in counts:
+            # First vote for this variety
+            counts[radish] = 1
+        else:
+            # Increment the radish count
+            counts[radish] = counts[radish] + 1
+    
+    
+    for line in open("radishsurvey.txt"):
+        line = line.strip()
+        parts = line.split(" - ")
+        name = clean_string(parts[0])
+        vote = clean_string(parts[1])
+    
+        if not has_already_voted(name):
+            count_vote(vote)
+        voted.append(name)
+    
+    print("Results:")
+    print()
+    for name in counts:
+        print(name + ": " + str(counts[name]))
+    
+
+What do you think? Is that easier to read and understand?
+
+For small programs it's not as important as big programs, but with big programs it becomes very important to factor things out so you can understand them - as well as so parts can be reused.
+
+
+# Finding the winner
+
+Our program prints the number of votes cast for each radish variety, but it doesn't declare a winner. Can you update the program so it goes through the votes counted and finds the one with the most votes?
+
+(You may want to add this as a totally separate section, at the end of the program, rather than modifying any of the existing loops.)
+
+## Solution
+
+You can add something like this at the end of your program:
+
+    # Record the winning name and the votes cast for it
+    winner_name = "No winner"
+    winner_votes = 0
+    
+    for name in counts:
+        if counts[name] > winner_votes:
+            winner_votes = counts[name]
+            winner_name = name
+    
+    print("The winner is: " + winner_name)
+
+## Challenge
+
+Can you refactor the part of the program that finds the winner into a function?
+
+## Bigger Challenge
+
+The loop shown above keeps track of one name, winner_name, and the number of votes cast for it. Each turn of the loop it checks if there is a name with more votes than the current winner, and updates it if so. However, it doesn't do anything special if it finds another entry with the same number of votes as the current winner.
+
+Can you write a winner function that could deal with a tie?
