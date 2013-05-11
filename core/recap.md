@@ -7,6 +7,16 @@ title: Recap of Python Essentials
 
 This chapter is just a recap of some of the important points of the Introduction to Programming with Python course. Feel free to skip ahead if this course is still fresh in your memory.
 
+# Python 3
+
+The Introduction to Programming course could be used with both Python 2 or Python 3. In this course we will be using Python 3 (3.2 or 3.3.)
+
+For OS X or Windows [download Python 3 here](http://python.org/download/). For Linux users, you can install Python 3 using your package manager.
+
+If you have both Python 2 and 3 installed then 2 may be the default. To run version 3 you may have to run it with the command `python3` instead of `python`.
+
+Most of the programs shown here will work on 2 or 3, but some of them may not.
+
 # Running Python
 
 After installing Python on your system successfully, you can start the
@@ -14,10 +24,12 @@ interactive Python prompt by typing `python` in the command line and
 pressing `<Enter>`.  It will show you some context information about
 Python similar to this::
 
-    Python 2.7.2 (default, Feb  1 2012, 00:28:57) 
-    [GCC 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2335.15.00)] on darwin
+    Python 3.2.3 (default, Oct 19 2012, 19:53:16) 
+    [GCC 4.7.2] on linux2
     Type "help", "copyright", "credits" or "license" for more information.
     >>> 
+
+If you see a Python 2 version in the message shown then you may need to type `python3` instead.
 
 On Windows you can open Python through the Start Menu.
 
@@ -34,33 +46,40 @@ On Windows you can run a Python file by double-clicking it.
 
 What does this code do?
 
-    for i in range(10):
+    for i in [2, 4, 6, 8]:
         print(i)
-
-Clue: To find out what the expression `range(10)` evaluates to, open a Python interpreter and then type that expression in by itself. The output you see is a Python `list`, something we cover in the next chapter.
 
 ### Solution
 
-This code prints the numbers 0 through 9, one per line.
+This code prints the even numbers 2 through 8, one per line.
+
+### Bonus Detail
+
+Python has a built-in function called `range` that can automatically generate a range of numbers like [2, 4, 6, 8]. For example, `range(1,10)` is a sequence of the numbers 1 through 9 (a common but sometimes confusing thing in programming is for the "end" number not to be included in a sequence.)
+
+Can you make a `range` equivalent to [2, 4, 6, 8]? To get some clues, you can open an interactive Python Interpreter and type `help(range)`. The useful details are near the top. Press 'q' to exit the help viewer when you're done.
+
 
 # Variables
 
 You can use variables to manipulate values inside code. What does this code do?
 
     total = 0
-    for i in range(10):
+    for i in [1, 3, 7]:
         total = total + i
     print(total)
 
 ### Solution
 
-This code prints 45 - the sum of the numbers 0 through 9.
+This code prints 11 - the sum of the numbers 1, 3 and 7.
 
 ### Bonus Detail
 
 Python actually has a built-in function called `sum` that sums a sequence of values automatically, you don't need the `for` loop. You can get the same result with this:
 
-    print(sum(range(10)))
+    print(sum([1,3,7]))
+
+Can you make a one line Python statement that uses both `sum` and `range` to print the sum of the numbers 1 through 10?
 
 
 # Functions
