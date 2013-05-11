@@ -94,5 +94,24 @@ You can define your own functions with parameters in order to reuse some code ag
     
 ### Solution
 
-    Turning anticlockwise!
+    Hello Miranda
+    Hello Fred
+
+
+# Conditionals
+
+You can use the 'if' statement to execute some statements only if a condition is true. What does this code print?
+
+    angle = 5
+    if angle > 0:
+        print("Turning clockwise")
+    else if angle < 0:
+        print("Turning anticlockwise")
+    else:
+        print("Not turning at all")
+
+### Solution
+
+    Turning clockwise
+
 

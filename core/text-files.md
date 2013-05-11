@@ -13,7 +13,7 @@ A character can be a number like 3 or 6, or a letter of the alphabet like M or p
 
 Characters also include non-alphanumeric symbols like # or $, or even more exotic symbols like 汉 or Й. Each of these is a single character
 
-(The last characters in the paragraph above will only appear correctly if your browser is using a font that supports Simplified Chinese and Cyrillic characters.)
+(The last characters in the paragraph above will only appear correctly if your browser is using a font that supports Simplified Chinese and Cyrillic characters, respectively.)
 
 Symbols in text files can have special meanings, for example Python source code files are a type of plain text file.
 
@@ -24,19 +24,15 @@ HTML files are another kind of plain text file. Even though HTML tags like &lt;i
 
 The opposite of text files, "binary" files are any files where the format isn't made up of readable characters. Binary files can range from image files like JPEGs or GIFs, audio files like MP3s or binary document formats like Word or PDF.
 
-This section has been a bit dry, so here's a *binary GIF file* of a kitten:
+This section has been a bit dry, so here's a link to a <a href="http://forgifs.com/gallery/d/161206-4/Firefighter-kitten-slides-down-banister.gif?" target="_blank">binary GIF file of a kitten</a>.
 
-<a href="http://forgifs.com" target="_blank"><img src="http://forgifs.com/gallery/d/161206-4/Firefighter-kitten-slides-down-banister.gif?" alt="forgifs.com" /></a>
-
-(Don't try to open it in your text editor, it won't be as cute!)
-
-The main difference between a text file and a binary file is that binary files need special programs (or knowledge of the internal format) to make sense. Text files can be edited by any program that edits plain text, and are easy to process in programming languages like Python.
+The main difference between a text file and a binary file is that binary files need special programs (or knowledge of the special format) to make sense. Text files can be edited by any program that edits plain text, and are easy to process in programming languages like Python.
 
 ### An aside about programmers
 
 Programmers tend to like text files, and can get quite irked about complex binary files in proprietary formats. For example check out [this rant](https://code.google.com/p/xee/source/browse/XeePhotoshopLoader.m?r=f16763d221dfca6253983824b470adf553a19e06#108) contributed by an open source programmer who had to write a program to read the Adobe Photoshop binary file format.
 
-The details aren't important, but note that noone has ever gotten this cranky about plain text files. That's why we're sticking to text files today!
+The details aren't important, but note that noone has ever gotten quite this cranky about plain text files. That's why we're sticking to text files today!
 
 # Reading files into Python
 
@@ -60,7 +56,7 @@ It prints the contents of the text file out on the console.
 
 * The `open` function creates a *file object* (a way of getting at the contents of the file), which is then stored in the variable `f`.
 
-* `f.read()` tells Python to read the full contents of the file, and return it as a string.
+* `f.read()` tells the file object to read the full contents of the file, and return it as a string.
 
 ## Reading by smaller pieces
 
@@ -94,14 +90,18 @@ It prints the contents of the file, one character at a time, until the end of th
 
 ... and so on
 
-### Bonus Question
+### Bonus Question #1
 
-What would happen if you replaced the '1' in the code above with a '2'?
+What is the `while` statement in the above code doing? When does the program exit the while loop?
+
+### Bonus Question #2
+
+What would happen if you replaced the `read(1)`s in the code above with `read(2)`s? Think about it first, then try it and see what happens!
 
 
 # Reading files line by line
 
-So far we can read a whole file, or we can read up to a fixed number of characters from a file. How about if you just want to read a single line from a file?
+So far we can read a whole file, or we can read a certain number of characters from a file. How about if you just want to read a single line from a file?
 
 ## How lines are represented
 
@@ -180,13 +180,13 @@ You can then iterate over the list of lines like this:
 
     f = open("months.txt")
     for month in f.readlines():
-       print("Month " + month.trim())
+       print("Month " + month.strip())
 
-In fact, you don't even have to call `readlines()` - Python implicitly detects that if you try to iterate over a text file with a for loop, you probably want to iterate over it line by line:
+In fact, you don't even have to call `readlines()` - Python implicitly detects that if you try to iterate through a text file with a for loop, you probably want to iterate through it line by line:
 
     f = open("months.txt")
     for month in f:
-       print("Month " + month.trim())
+       print("Month " + month.strip())
 
 
 # Writing to files
@@ -224,7 +224,7 @@ Can you write a program which creates a two line text file?
 ### Hint
 To look at the contents of a text file, you can open it in your text editor.
 
-Alternatively, if you're using OS X or Linux you can type `cat <filename>` in a terminal (not a Python interpreter, the plain terminal shell you run Python from), to print the contents out.
+Alternatively, if you're using OS X or Linux you can type `cat <filename>` in a terminal (not a Python interpreter, the plain terminal shell you run Python from), to print the contents out. In the Windows terminal, you can use `type <filename>` to do the same thing.
 
 ### Solution:
 

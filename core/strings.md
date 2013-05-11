@@ -67,7 +67,7 @@ Once we've split the string into `parts`, we can use indexes in the `parts` list
     name = parts[0]
     vote = parts[1]
 
-These two lines of code just make this clear to the reader by storing each field in a named variable. You could use `parts[0]` and `parts[1]` instead of creating these variables, but then your code would be harder for someone else to understand.
+These two lines of code just make this clear to the reader by storing each field in a named variable. You could use `parts[0]` anywhere you used `name` and `parts[1]` anywhere that you used `vote`, but then your code would be harder for someone else to understand.
 
     print(name + " voted for " +  vote)
 
@@ -76,7 +76,7 @@ This last line *concatenates* (joins) the two variable values together with the 
 
 # Inspecting Votes
 
-Can you write a program which only prints out the votes for *White Icicle* radishes?
+Can you write a program which only prints out the names of people who voted for *White Icicle* radishes?
 
 Use the previous example as a base. You'll need to compare the vote with the string `"White Icicle"`, for each line in the file.
 
@@ -93,9 +93,9 @@ Use the previous example as a base. You'll need to compare the vote with the str
 
 # Counting Votes
 
-Can you write a program which counts the number of votes for *White Icicle* radishes?
+Can you write a program which counts the total number of votes for *White Icicle* radishes?
 
-Use the previous example as a base. You'll need a variable to hold the number of votes recorded for *White Icicle*, which you increment as part of the loop.
+Use the previous example as a base. You'll need a variable to hold the number of votes recorded for *White Icicle*, which you increment (ie add one to) as part of the loop.
 
 ### Solution
 
@@ -119,15 +119,15 @@ Using your function, can you write a program which counts votes for White Icicle
 
 ### Solution
 
-    def count_votes(name):
-        print("Counting votes for " + name + "...")
+    def count_votes(radish):
+        print("Counting votes for " + radish + "...")
         count = 0
         for line in open("radishsurvey.txt"):
             line = line.strip()
             parts = line.split(" - ")
             name = parts[0]
             vote = parts[1]
-            if vote == name:
+            if vote == radish:
                 count = count + 1
         return count
 
