@@ -5,9 +5,9 @@ title: Data Structures in Python
 
 ---
 
-Now that we are able to read through text files, we need ways to store them. There are two new data structures that we didn't cover in Introduction to Programming with Python, lists and dictionaries.
+When working with data, we need ways to store it in variables so we can manipulate it. We will use two new data structures that we didn't cover in Introduction to Programming. These are **lists** and **dictionaries**.
 
-This is the same content as the "Data Structures in Python" chapter of the "Websites with Python Flask" workshop.
+(This chapter contains the same content as the "Data Structures in Python" chapter of the "Websites with Python Flask" workshop.)
 
 If you are already comfortable with lists and dictionaries then you can skip this and move on to the next chapter.
 
@@ -45,6 +45,10 @@ Now we can add items to ``shopping_list``. Try typing the following commands int
     shopping_list.append("bread")
 
 What is in the shopping list? What happens when you append numbers or booleans to the list?
+
+You can also assign a list with some items in it all in a single line, like this:
+
+    shopping_list = [ "milk", "cheese", "bread" ]
 
 To remove an item from the list we use ``remove()``:
 

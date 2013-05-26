@@ -9,39 +9,9 @@ This is the course content for Introduction to Data Processing with Python, whic
 
 # Welcome
 
-Welcome to Introduction to Data Processing with Python. In this workshop we will take you through the fundamentals of working with text and other types of data with Python. After the workshop you'll know how to use Python to process files, extract information from the data in those files, and reprocess the data into different formats.
+Welcome to Introduction to Data Processing with Python. In this workshop we will take you through the fundamentals of working with text and other types of data with Python. We'll learn how to read data from files into data structures in our program, to extract the information we want. We'll display that data in graphs and charts, and get a glimpse of the world of Open Data that's available online. You'll never want to wrangle a spreadsheet, or touch the Copy and Paste commands, again!
 
-We only expect you to know a little Python, just the things covered in the [Introduction to Programming](http://opentechschool.github.com/python-beginners/en/index.html) workshop. You definitely do not need to know a lot.
-
-## What we'll do today
-
-Suppose you're a greengrocer, and you run a survey to see what radish varieties your customers prefer the most. You have your assistant type up the survey results into a text file on your computer, so you have 300 lines of survey data, each line has a name and a radish variety:
-
-    Angelina Belmore - Plum Purple
-    Fred Smith - Red king
-    Matthew Wroe - White Icicle
-    Keira Cani - Sicily Giant
-    Isaac Hallstrom - Red King
-    Jin Li - White Icicle
-    Georgia McKellar - Bunny Tail
-    Maximilian Avdeev - Cherry Belle
-    Lorna Beneventi - White Icicle
-    Lara Tunnecliffe - Plum Purple
-    Hugo Sodersten - Daikon
-... and so on
-
-You want to know:
-
-* What's the most popular radish variety?
-* What are the least popular?
-* Did anyone vote twice?
-* Did your arch-enemy "Rich McKnight" vote?
-
-### Useful?
-
-... as _ridiculously contrived_ as this example is, I'm sure lots of you have come across situations where you have some data and you want to extract some relevant information from it.
-
-By the end of this workshop, you should have the knowledge to quickly write a program in Python in order to quickly and easily solve this problem, and many more besides.
+We only expect you to know a little Python, not a lot. If you've done our [Introduction to Programming](http://opentechschool.github.com/python-beginners/en/index.html) workshop then that will be perfect.
 
 # Core workshop material
 

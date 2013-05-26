@@ -9,6 +9,13 @@ title: Working With Text Files
 
 A text file is any file containing only readable characters.
 
+
+<a href="http://www.flickr.com/photos/mwichary/2355783479/" title="IBM 1403 printout (from the power-of-two program) by Marcin Wichary, on Flickr"><img src="http://farm3.staticflickr.com/2087/2355783479_ba8837ac18_q.jpg" width="150" height="150" alt="IBM 1403 printout (from the power-of-two program)"></a>
+
+<a href="http://www.flickr.com/photos/dplmedmss/8644579302/" title="Book of Hours, Latin with additions in Middle English; second page of the second Middle English prayer to Christ. Southern Netherlands (probably Bruges), ca. 1440, f.45r by Dunedin Public Libraries Medieval Manuscripts, on Flickr"><img src="http://farm9.staticflickr.com/8529/8644579302_879e79aff1_q.jpg" width="150" height="150" alt="Book of Hours, Latin with additions in Middle English; second page of the second Middle English prayer to Christ. Southern Netherlands (probably Bruges), ca. 1440, f.45r"></a>
+
+<a href="http://www.flickr.com/photos/mwichary/3249196669/" title="Untitled by Marcin Wichary, on Flickr"><img src="http://farm4.staticflickr.com/3051/3249196669_7f313c2fa7_q.jpg" width="150" height="150" alt="Untitled"></a>
+
 A character can be a number like 3 or 6, or a letter of the alphabet like M or p. Taken together, programmers call numbers and letters the the set of *alphanumeric* characters.
 
 Characters also include non-alphanumeric symbols like # or $, or even more exotic symbols like 汉 or Й. Each of these is a single character
@@ -27,12 +34,6 @@ The opposite of text files, "binary" files are any files where the format isn't 
 This section has been a bit dry, so here's a link to a <a href="http://forgifs.com/gallery/d/161206-4/Firefighter-kitten-slides-down-banister.gif?" target="_blank">binary GIF file of a kitten</a>.
 
 The main difference between a text file and a binary file is that binary files need special programs (or knowledge of the special format) to make sense. Text files can be edited by any program that edits plain text, and are easy to process in programming languages like Python.
-
-### An aside about programmers
-
-Programmers tend to like text files, and can get quite irked about complex binary files in proprietary formats. For example check out [this rant](https://code.google.com/p/xee/source/browse/XeePhotoshopLoader.m?r=f16763d221dfca6253983824b470adf553a19e06#108) contributed by an open source programmer who had to write a program to read the Adobe Photoshop binary file format.
-
-The details aren't important, but note that noone has ever gotten quite this cranky about plain text files. That's why we're sticking to text files today!
 
 # Reading files into Python
 
@@ -215,7 +216,7 @@ File objects have a method for writing. You can find out about it by viewing the
 
 ### Why do you use 'print' to write things on the console, but 'write' for files?
 
-I don't know. I think it's just been that way forever.
+I don't know. I think it's just been that way for as long as Python has been around.
 
 There is one important difference, `print()` automatically ends the line. `write()` doesn't, if you want to end the line you'll need to add the newline character `\n` yourself.
 

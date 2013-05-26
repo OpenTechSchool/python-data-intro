@@ -46,16 +46,19 @@ On Windows you can run a Python file by double-clicking it.
 
 What does this code do?
 
-    for i in [2, 4, 6, 8]:
+    for i in 2, 4, 6, 8:
         print(i)
 
 ### Solution
 
 This code prints the even numbers 2 through 8, one per line.
 
-### Bonus Detail
+### Bonus Challenge
 
 Python has a built-in function called `range` that can automatically generate a range of numbers like [2, 4, 6, 8]. For example, `range(1,10)` is a sequence of the numbers 1 through 9 (a common but sometimes confusing thing in programming is for the "end" number not to be included in a sequence.)
+
+    for i in range(1,10):
+        print(i)
 
 Can you make a `range` equivalent to [2, 4, 6, 8]? To get some clues, you can open an interactive Python Interpreter and type `help(range)`. The useful details are near the top. Press 'q' to exit the help viewer when you're done.
 
@@ -65,7 +68,7 @@ Can you make a `range` equivalent to [2, 4, 6, 8]? To get some clues, you can op
 You can use variables to manipulate values inside code. What does this code do?
 
     total = 0
-    for i in [1, 3, 7]:
+    for i in 1, 3, 7:
         total = total + i
     print(total)
 
@@ -73,9 +76,9 @@ You can use variables to manipulate values inside code. What does this code do?
 
 This code prints 11 - the sum of the numbers 1, 3 and 7.
 
-### Bonus Detail
+### Bonus Challenge
 
-Python actually has a built-in function called `sum` that sums a sequence of values automatically, you don't need the `for` loop. You can get the same result with this:
+If you don't want to use a `for` loop for some reason, Python actually has a built-in function called `sum` that lets you bypass it completely. You can get the same result with this:
 
     print(sum([1,3,7]))
 

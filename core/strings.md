@@ -5,18 +5,42 @@ title: Working with Strings
 
 ---
 
-Let's return to the example we mentioned at the start of this course. We have a file, radishsurvey.txt which contains lines like this:
+# A problem
 
-    Jin Li - White Iciclea
+Now we know how to read information from text files, we'll use that knowledge to solve a problem:
+
+Suppose you're a greengrocer, and you run a survey to see what radish varieties your customers prefer the most. You have your assistant type up the survey results into a text file on your computer, so you have 300 lines of survey data in the file [radishsurvey.txt](../files/radishsurvey.txt). Each line consists of a name, a hyphen, then a radish variety:
+
+    Angelina Belmore - Plum Purple
+    Fred Smith - Red king
+    Matthew Wroe - White Icicle
+    Keira Cani - Sicily Giant
+    Isaac Hallstrom - Red King
+    Jin Li - White Icicle
     Georgia McKellar - Bunny Tail
     Maximilian Avdeev - Cherry Belle
     Lorna Beneventi - White Icicle
+    Lara Tunnecliffe - Plum Purple
+    Hugo Sodersten - Daikon
+... and so on
 
-In the format "Name - Radish Preference"
+<a href="http://www.flickr.com/photos/brixton/2045816352/" title="Radishes radishes radishes by brixton, on Flickr"><img src="http://farm3.staticflickr.com/2298/2045816352_25cba9e434_m.jpg" width="240" height="180" alt="Radishes radishes radishes"></a>
 
-How can we find out how many people voted for each radish preference?
+You want to know:
+
+* What's the most popular radish variety?
+* What are the least popular?
+* Did anyone vote twice?
+* Did your arch-enemy "Rich McKnight" vote?
+
+# Useful?
+
+... as _ridiculously contrived_ as this example is, I'm sure lots of you have come across situations where you have some data and you want to extract some relevant information from it. If you haven't, then in the next part of the workshop we'll show you were you can find this kind of data freely available on the internet.
+
 
 # Reading The Survey
+
+Save the file [radishsurvey.txt](../files/radishsurvey.txt) to your computer. How do we write a program to find out which person voted for each radish preference? 
 
 From the previous chapter, we know that we can easily go through the file line by line, and each line will have a value like `"Jin Li - White Icicle\n"`. We also know that we can strip off the trailing newline with the `strip()` method:
 
@@ -24,7 +48,7 @@ From the previous chapter, we know that we can easily go through the file line b
         line = line.strip()
         # Do something with each line
 
-We need a way to split each line into the name and the vote. Thankfully, Python comes with dozens of string functions including one called [split()](http://docs.python.org/3.3/library/stdtypes.html#str.split). Have a look at the linked documentation for `split()` and see if you can figure out how to split each line into the name and the vote.
+We need a way to split each line into the name and the vote. Thankfully, Python comes with dozens of string functions including one called `split()`. [Have a look at the documentation for split()](http://docs.python.org/3.3/library/stdtypes.html#str.split) and see if you can figure out how to split each line into the name and the vote.
 
 (Don't worry if you can't write a program that does this just yet, but have a think about it before you skip to the solution.)
 
@@ -279,11 +303,7 @@ This could be written in two lines like this, if you prefer:
     vote = vote.strip()
     vote = vote.capitalize()
 
-Or it could be condensed even further:
-
-    vote = parts[1].strip().capitalize()
-
-... these all do the *same thing* when you run them. It's up to you which you use, a good practice is to use the version which is the most readable to a human being, without being unnecessarily verbose.
+This would do the *same thing* when you run it. It's up to you which you use, a good practice is to use the version which is the most readable to a human being, without being unnecessarily verbose.
 
 ## Not quite there
 
@@ -311,11 +331,9 @@ Can you modify your program so it also prints out a warning if anyone voted twic
 
 ## Hint
 
-You will need to start making a list of the names of everyone who has voted so far. Each time you see a new name, check if it is already in the list of names. Starting with an empty list of names, you can use `list.append(newentry)` to append a new entry to the end. Or you can use + like this:
+You will need to start making a list of the names of everyone who has voted so far. Each time you see a new name, check if it is already in the list of names. Starting with an empty list of names, you can use `voterlist.append(newentry)` to append a new entry to the end.
 
-    list = list + [ newentry ]
-
-You'll need to apply the same data munging techniques you used to clean up the radish names, so that "Joanne Smith" and "joanne smith" are counted as the same person.
+You'll need to apply the same data munging techniques to clean up people's names, so that "Joanne Smith" and "joanne smith" are counted as the same person.
 
 ## Solution
 
@@ -444,12 +462,14 @@ You can add something like this at the end of your program:
     
     print("The winner is: " + winner_name)
 
+The loop shown above keeps track of one name, `winner_name`, and the number of votes cast for it. Each iteration through the loop it checks if there is a name with more votes than the current winner, and updates it if so.
+
 ## Challenge
 
 Can you refactor the part of the program that finds the winner into a function?
 
 ## Bigger Challenge
 
-The loop shown above keeps track of one name, winner_name, and the number of votes cast for it. Each turn of the loop it checks if there is a name with more votes than the current winner, and updates it if so. However, it doesn't do anything special if it finds another entry with the same number of votes as the current winner.
+The solution shown above can't deal with ties. It only updates `winner_name` if it finds another name with more votes than it, a second name with an equal number of votes will be ignored.
 
 Can you write a winner function that could deal with a tie?
