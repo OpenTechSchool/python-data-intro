@@ -20,21 +20,19 @@ map:
     - title: Working With Strings
       path: /core/strings.html
       caption: Once we have our text in Python, what can we do with it?
-    - title: Regular Expressions
-      path: /core/regex.html
-      caption: A powerful way to find patterns in text.
-    - title: Strings and Numbers
-      path: /core/numbers.html
-      caption: Converting strings to numbers and back again, working with numeric data.
+    - title: Installing ipython notebook
+      path: /core/notebook.html
+      caption: A whole new way to work with Python!
     - title: CSV Files
       path: /core/csv.html
-      caption: Reading and writing comma-separated data with the csv module
+      caption: Reading and writing comma-separated data with iPython Notebook.
+    - title: Creating Charts
+      path: /core/charts.html
+      caption: Using iPython Notebook with matplotlib to create charts.
+
  - title: Extras
    caption: Additional workshop content
    subpages:
-    - title: Basic statistics with NumPy
-      path: /extras/numpy.html
-      caption: Using NumPy to perform some basic statistical operations on data.
-    - title: Fundamentals of String Encoding
-      path: /extras/encoding.html
-      caption: Basics of Unicode to work with non-Latin characters, or even these - ☃☃👍.
+    - title: Basic statistics with pandas
+      path: /extras/pandas.html
+      caption: An introduction to using Pandas for statistical and analytical operations.

@@ -19,14 +19,14 @@ We only expect you to know a little Python, not a lot. If you've done our [Intro
 * [Data Structures in Python](core/data.html) - An introduction to the list and dictionary data structures.
 * [Working With Text Files](core/text-files.html) - What is a text file? How do we get them in and out of Python?
 * [Working With Strings](core/strings.html) - Once we have our text in Python, what can we do with it?
-* [Regular Expressions](core/regex.html) - A powerful way to find patterns in text.
-* [Strings and Numbers](core/numbers.html) - Converting strings to numbers and back again, working with numeric data.
-* [CSV Files](core/csv.html) - Reading and writing comma-separated data with the csv module
+* [Installing iPython Notebook](core/notebook.html) - A whole new way to work with Python!
+* [CSV Files](core/csv.html) - Reading and writing comma-separated data with iPython Notebook.
+* [Strings and Numbers](core/numbers.html) - Working with strings and numbers.
+* [Creating Charts](core/charts.html) - Using iPython Notebook with matplotlib to create charts.
 
 # Extra fun stuff
 
-* [Basic statistics with NumPy](extras/numpy.html) - Using NumPy to perform some basic statistical operations on data.
-* [Fundamentals of String Encoding](extras/encoding.html) - Basics of Unicode to work with non-Latin characters, or even these: ☃☃👍.
+* [Basic statistics with Pandas](extras/pandas.html) - An introduction to using Pandas for statistical and analytical operations.
 
 # Reference material
 
