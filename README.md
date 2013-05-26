@@ -39,6 +39,16 @@ Course work goes under `core/` or `extras/`. It's all linked together by `index.
 
 It's easiest to start at the end. Think of a fun and interesting topic to add to the extras. Then you can copy this file to get an idea for formatting.
 
+# Previewing content
+
+When you push to github, the official site at http://opentechschool.github.io/python-data-intro gets automatically updated.
+
+To generate and view the site (with correct CSS, etc.) with your on your local computer, you can install Jekyll and then run it like this:
+
+    jekyll --auto --server
+
+Then browse to http://localhost:4000/python-data-intro/index.html to view the generated workshop content. If you leave the server running then Jekyll will automatically regenerate the site when it changes.
+
 ## Editing Text
 
 * We use long-lines (no newlines in paragraphs) to keep diffs moderately sane.
