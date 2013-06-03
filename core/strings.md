@@ -440,6 +440,7 @@ What do you think? Is that easier to read and understand?
 
 For small programs it's not as important as big programs, but with big programs it becomes very important to factor things out so you can understand them - as well as so parts can be reused.
 
+<a href="http://www.flickr.com/photos/lisanorwood/3556903213/" title="Radishes by Lisa Norwood, on Flickr"><img src="http://farm4.staticflickr.com/3654/3556903213_522f78d2fe_n.jpg" width="213" height="320" alt="Radishes"></a>
 
 # Finding the winner
 

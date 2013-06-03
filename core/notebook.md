@@ -1,0 +1,141 @@
+---
+
+layout: ots
+title: Introducing IPython Notebook
+
+---
+
+# IPython Notebok
+
+Until now we've worked with Python either directly via the interactive Python console, or by writing Python programs using a text
+editor.
+
+However, there are other ways to work with Python. [IPython](http://ipython.org/) is a set of tools originally developed to make it easier for scientists to work with Python and data. It allows you to combine interactive Python exploration with prewritten programs.
+
+### IMAGE
+
+# Installing IPython Notebook
+
+There are a number of ways to install IPython Notebook, including a lot of prebundled installers. Many of these also include other useful Python libraries, such as *matplotlib* (a Python graphing library that integrates powerfully with IPython Notebook.)
+
+We recommend you download and install [Anaconda](http://continuum.io/downloads.html), which is a free distribution of Python bundled with a number of other useful tools (including IPython Notebook.)
+
+**Anaconda is a fairly large (~250Mb) download so if you're at a workshop event we'll have some USB keys with the predownloaded installers to save on bandwidth**
+
+Anaconda comes with its own version of Python 2.7, IPython Notebook, other libraries like matplotlib, and a package manager ("conda") that you can use to install other packages or other Python versions.
+
+## Alternative Options
+
+**Skip this section if you're happy with Anaconda.**
+
+Anaconda is pretty "kitchen sink" complete so there are some other installer options you can test out if you like:
+
+* [winpython](http://code.google.com/p/winpython/) has installers for Windows, similar to Anaconda.
+
+* [Pyzo](http://www.pyzo.org/downloads.html) has installers for Windows, Linux & OS X.
+
+* If you have 'pip' installed (maybe from another OTS workshop) then you may be able to install IPython via 'pip', as follows:
+
+      pip install tornado
+      pip install pyzmq
+      pip install ipython
+
+(If you're on OS X you will need XCode installed for this to work.)
+
+* If you're on Linux, most package managers include IPython Notebook. For instance on Ubuntu or Debian:
+
+      sudo apt-get install ipython-notebook python-matplotlib
+
+* If you can't get IPython Notebook to work on your computer at all, there's a hosted service called [Wakari](https://www.wakari.io/) that you can use for free. In this case your programs won't be running on your own computer, they'll be running "in the cloud" (ie on Wakari's servers somewhere else) and you'll just see the results.
+
+## Note about Python 3
+
+Anaconda and some of the other installers come with Python version 2. You may have been using Python version 3 up until now.
+
+The Python world is slowly migrating towards using Python 3 for everything. IPython is available for both 2 & 3, but Anaconda includes some components which are still Python 2 only.
+
+Python 2 and Python 3 have some minor incompatible differences. The programs shown in this workshop are designed to work with both, but if you find some code that doesn't work (but perhaps works on your neighbour's computer) then this may be why.
+
+
+## Starting IPython Notebook
+
+You interact with IPython Notebook using your web browser. The Notebook program creates a "web server" locally on your computer that you then connect to.
+
+To start IPython Notebook on Windows or OS X, there should be a clickable launcher under the Start menu (Windows) or in the Applications folder (OS X.)
+
+Otherwise, you can start it from a command line terminal by running this command:
+
+    ipython notebook --pylab inline
+    
+You should see some output like this:
+
+    [NotebookApp] Using existing profile dir: u'/home/gus/.ipython/profile_default'
+    [NotebookApp] Serving notebooks from /home/gus/anaconda/bin
+    [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
+    [NotebookApp] Use Control-C to stop this server and shut down all kernels.
+
+And a browser window may automatically open showing the IPython Notebook interface. If it doesn't open, you can copy-paste the "http" address from the output and paste it into your browser.
+
+Even though you're interacting with IPython Notebook using your browser, Notebook is running right there on your computer in that window. Only you can access it.
+
+
+## First Steps with Notebook
+
+In your browser, click the "New Notebook" button and a new notebook will open up.
+
+<img src="../images/ipython_notebook.png" alt="IPython Notebook empty">
+</img>
+
+The empty box at the top is the first "cell" for entering Python code.
+
+Try typing something like `print("Hello World")` into the cell. To run the code in the cell and see the output, click the Run button (play icon) on the toolbar:
+
+<img src="../images/notebook_hello_world.png" alt="IPython Notebook Hello World">
+</img>
+
+You'll see that when you run a cell, a new cell appears where you can enter another set of Python statements. Try assigning a variable. Let's make another shopping list:
+
+<img src="../images/assign_shopping_list.png" alt="IPython Notebook Assign Variable">
+</img>
+
+When you Run this cell you won't see any output, but behind the scenes the variable "shopping list" has been assigned.
+
+We can see this by making a third cell to print the contents:
+
+<img src="../images/print_shopping_list.png" alt="IPython Notebook Print Shopping List">
+</img>
+
+You can do anything with IPython Notebook cells that you'd do with normal Python code:
+
+## Loading Notebook Files
+
+You can also load IPython Notebooks that other people have created, saved in IPython Notebook files (File extension .ipynb.) Try [downloading and opening this Notebook file with the shopping list example](../files/shopping_list.ipynb). That Notebook contains some additional code, and some suggestions for changes you can make by going back and editing the existing files.
+
+Take a few minutes to play with the same Notebook and see what it can do.
+
+## Loading Python Files
+
+You can also load a pre-existing Python file into an IPython Notebook cell by typing
+
+    %load "myprogram.py"
+
+and running it, which loads up a new cell containing the contents of *myprogram.py*.
+
+Test this feature out by loading one of the scripts you wrote before. You may have to specify the full path to script file, depending on the directory IPython Notebook started up from.
+
+There is one other useful built-in tool for working with Python files:
+
+    %run "myprogram.py"
+
+This will run *myprogram.py* and load the output into a Notebook cell.
+
+## Other IPython tips
+
+* Use Shift-Enter as a keyboard shortcut to run the current cell. Look under the Help menu -> Keyboard Shortcuts to see the other keyboard shortcuts.
+
+* Using a nifty tool called NBViewer you can easily share  TODO TODO
+
+
+
+
+

@@ -20,7 +20,7 @@ map:
     - title: Working With Strings
       path: /core/strings.html
       caption: Once we have our text in Python, what can we do with it?
-    - title: Installing ipython notebook
+    - title: Introducing IPython Notebook
       path: /core/notebook.html
       caption: A whole new way to work with Python!
     - title: CSV Files
