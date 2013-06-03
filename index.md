@@ -21,16 +21,18 @@ workshop then that will be perfect.
 
 * [Recap of Python essentials](core/recap.html) - A quick recap of some of the Introduction to Programming essentials.
 * [Data Structures in Python](core/data.html) - An introduction to the list and dictionary data structures.
+* [Introducting IPython Notebook](core/notebook.html) - A whole new way to work with Python!
 * [Working With Text Files](core/text-files.html) - What is a text file? How do we get them in and out of Python?
 * [Working With Strings](core/strings.html) - Once we have our text in Python, what can we do with it?
-* [Introducting IPython Notebook](core/notebook.html) - A whole new way to work with Python!
-* [CSV Files](core/csv.html) - Reading and writing comma-separated data with IPython Notebook.
 * [Creating Charts](core/charts.html) - Using IPython Notebook with matplotlib to create charts.
+* [CSV Files](core/csv.html) - Reading comma-separated data.
 
 # Extra fun stuff
 
-* [Basic statistics with Pandas](extras/pandas.html) - An introduction to using Pandas for statistical and analytical operations.
+* [The Pandas library](extras/pandas.html) - An introduction to using Pandas for data analysis.
+
+* [Open Data](extras/opendata.html) - About Open Data.
 
 # Reference material
 
-* ...
+* TODO

@@ -14,7 +14,7 @@ Comma-separated values (CSV) is a way of expressing structured data in flat text
     "Cappuccino","No,Yes - Frothy,No"
     "Affogato","No,No,Yes"
 
-It's a common way to transfer data between programs like Spreadsheet software, where the data is tabular.
+It's a commonly used format to get data in and out of programs like Spreadsheet software, where the data is tabular.
 
 Python comes with a [CSV module](http://docs.python.org/3/library/csv.html) which provides one way to easily work with CSV-delimited data:
 
@@ -25,17 +25,15 @@ Try downloading the [coffee.csv](../files/coffee.csv) file, which contains the r
     for row in csv.reader(f):
         print(row)
 
-You may have to replace "coffee.csv" with the full path to the CSV file, depending on where IPython Notebook was started from.
-
 Each row is read as a list of strings representing the fields in the row.
 
 ## Why not use .split()/.strip()?
 
-You may have noticed that in the example above the CSV reader is doing something that you could achieve a different way we already learned, using `split(",")` to split each row, and `strip()` to take off the quote marks.
+You may have noticed that in the example above the CSV reader is doing something that you could achieve a different way we already learned, using `split(",")` to split each row into comma-delimited fields, and then using `strip()` to take off the quote marks.
 
-There are a few good reasons to use CSV here:
+There are a few good reasons to use the CSV module here:
 
-* The csv module makes it clear to anyone reading your code.
+* The csv module makes it clear what you're doing to anyone reading your code.
 * The csv module is less likely to contain an error that splits some lines the wrong way.
 * The csv module [has a lot of other features, documented here](http://docs.python.org/3/library/csv.html). These allow it to process differently formatted files, so you can easily update your program if the file format changes.
 
@@ -59,4 +57,23 @@ Here's some code that prints the name of every airport:
 
 Can you expand on that to only print airports for a certain country?
 
+## Solution
+
+    import csv
+    f = open("airports.dat")
+    for row in f:
+        if row[3] == "Australia" or row[3] == "Russia":
+            print(row[1])
+
+## Bonus Challenge
+
 How about writing a program that counts the number of airports in each country? This would be quite similar to the radishes problem we looked at back in the [Working with Strings](strings.md) chapter.
+
+
+# Airline Route Histogram
+
+For our final piece of code, we're going to combine everything we've learned into a more complex problem to solve.
+
+Open Flights distribute databases for both airline locations and airline route details. By using both databases, we can calculate how far each route travels and then plot a [histogram](https://en.wikipedia.org/wiki/Histogram) showing the distribution of distances flown by each route.
+
+* TODO finish final example :)

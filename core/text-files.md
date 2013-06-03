@@ -50,6 +50,8 @@ What do you think the following code does, if you run it in the same directory a
     f = open("months.txt")
     print(f.read())
 
+Try it out in an IPython Notebook cell.
+
 ### Solution:
 It prints the contents of the text file out on the console.
 
@@ -129,6 +131,8 @@ There's an easier way though, which os to use the `.readline()` method in place 
 
 Have another look at the one-character-per-line code example from earlier in this chapter. Can you modify it to read from the file line by line instead of character by character?
 
+Hint: In IPython Notebook, you can copy a whole cell by choosing Edit -> Copy Cell. That way you can keep the character-per-line example unmodified and create a new cell for the line by line code.
+
 ### Solution:
 
     f = open("months.txt")
@@ -150,6 +154,8 @@ How's that look? Something's not quite right, is it?
 You can strip newlines (and other "whitespace" characters) from each end of a string by using the [.strip() method](http://docs.python.org/3.3/library/stdtypes.html#str.strip). We used this briefly in the Introduction to Python course.
 
 Can you remember how to use it? (take a look at the documentation link above to refresh your memory.)
+
+See if you can modify your program to strip off the extra newlines.
 
 ### Solution:
 
@@ -183,7 +189,7 @@ You can then iterate over the list of lines like this:
     for month in f.readlines():
        print("Month " + month.strip())
 
-In fact, you don't even have to call `readlines()` - Python implicitly detects that if you try to iterate through a text file with a for loop, you probably want to iterate through it line by line:
+In fact, you don't even have to call `readlines()` - Python assumes that if you try to iterate through a text file with a for loop, you probably want to iterate through it line by line:
 
     f = open("months.txt")
     for month in f:
@@ -196,17 +202,17 @@ When you `open()` a file, you can optionally specify a *file mode*, which tells 
 
     f = open("awesomenewfile.txt", "w")
 
-There are actually a whole lot of file modes, `r` and `w` are just the most common. [There is a full list in the Python documentation for the open function](http://docs.python.org/3/library/functions.html#open) or you can open a Python interpreter and type `help(open)` to see it in the interpreter.
+There are actually a whole lot of file modes, `r` and `w` are just the most common. [There is a full list in the Python documentation for the open function](http://docs.python.org/3/library/functions.html#open) or you can type `open?` in IPython Notebook and run it to see the help displayed there.
 
 Can you guess how to write a string to a file in Python?
 
 ### Hint
-File objects have a method for writing. You can find out about it by viewing the built-in help for the file object. Open a Python interpreter and type:
+File objects have a method for writing. You can find out about it by viewing the built-in help for the file object. In IPython Notebook you can type:
 
     f = open("awesomenewfile.txt", "w")
-    help(f)
+    f?
 
-... Use the arrow keys to navigate the Python help display, and press *q* to exit once you've found the method you want.
+Or just type `f.` into IPython Notebook and then press "Tab" to view an automatic list of possible completions (NB: this only works if you've already run the cell once before to assign a value to "f".)
 
 ### Solution
 

@@ -31,11 +31,10 @@ You want to know:
 * What's the most popular radish variety?
 * What are the least popular?
 * Did anyone vote twice?
-* Did your arch-enemy "Rich McKnight" vote?
 
 # Useful?
 
-... as _ridiculously contrived_ as this example is, I'm sure lots of you have come across situations where you have some data and you want to extract some relevant information from it. If you haven't, then in the next part of the workshop we'll show you were you can find this kind of data freely available on the internet.
+... as _ridiculously contrived_ as this example is, I'm sure lots of you have come across situations where you have some data and you want to extract some relevant information from it.
 
 
 # Reading The Survey
@@ -73,9 +72,9 @@ This code looks for the substring `" - "` anywhere inside `line`, and uses that 
 
 After this line runs, `parts` has the value `['Jin Li', 'White Icicle']`.
 
-`split()` is a very versatile function. Open a Python interpreter and try typing in a few split experiments yourself.
+`split()` is a very versatile function. Try typing in a few split experiments yourself in Notebook.
 
-See if you can guess what each of these does before you run it in the Python interpreter:
+See if you can guess what each of these does before you run them:
 
     "1,2,3,4,5".split(",")
 
@@ -239,7 +238,7 @@ A pretty printing option could be:
 
 * This option prints each vote on its own line.
 
-* Iterating through a dictionary means iterating through the *keys* (radish variety names), so we still need to look up each *value* (the vote count) with `count = counts[name]`.
+* Iterating through a dictionary (ie `for name in counts`) means iterating through the *keys* (radish variety names), so we still need to look up each *value* (the vote count) with `count = counts[name]`.
 
 * When we get the count back, it's a number so we can't `print()` it straight away. `str()` returns the string equivalent of the number, ie `str(12)` returns `"12"`.
 
@@ -249,6 +248,13 @@ Python needs to distinguish between strings and numbers for lots of reasons. For
 
 Python actually has a built-in module called [pprint](http://docs.python.org/3/library/pprint.html) to make it easy to pretty-print things. Try it out with your program if you like!
 
+### Sneakier Tip
+
+IPython Notebook can automatically pretty-print things, you just need to make them the last thing in the cell.
+
+So if you replace `print(counts)` with simply `counts` on the last line, this becomes the last thing in the cell and gets formatted nicely in the output.
+
+The reason is that `print` is a built-in Python function and formats the dictionary the only way it knows - the simple ugly way. By the time IPython Notebook sees the dictionary contents it's already formatted as a string. Whereas `count` is still a dictionary, so IPython Notebook can apply smarts to format it in a better way.
 
 # Cleaning ("Munging") data
 
@@ -373,7 +379,7 @@ This is just one of many ways to do this:
         print(name + ": " + str(counts[name]))
 
 
-There's a new concept in the code above, `continue`, which means "stop whatever you were doing and go to the next iteration of the loop". In this case, if the person has already voted then we don't want to carry on to count their second vote - instead we `continue` and start the next iteration, with the next line of the file.
+There's a new concept in the code above, `continue`, which means "stop whatever you were doing and go to the next iteration of the loop". In this case, if the person has already voted then we don't want to count their invalid vote - instead we `continue` and start the next iteration, with the next vote on the next line of the file.
 
 
 # Factoring our code
@@ -388,6 +394,8 @@ Perhaps we can split it into functions to make it easier to read:
 
 Have a try at breaking out some of the parts into functions, one function at a time, without breaking the program.
 
+IPython Notebook makes this easy because you can run the cell (with Shift-Enter if you like) after each change, to check the program still works.
+
 ## Solution
 
 This is just one possible way to break it down:
@@ -399,7 +407,7 @@ This is just one possible way to break it down:
     # Create an empty list with the names of everyone who voted
     voted = []
     
-    # Clean (munge) up a string so it's easy to match against other     strings
+    # Clean up (munge) a string so it's easy to match against other     strings
     def clean_string(s):
         return s.strip().capitalize().replace("  "," ")
     
@@ -446,11 +454,11 @@ For small programs it's not as important as big programs, but with big programs 
 
 Our program prints the number of votes cast for each radish variety, but it doesn't declare a winner. Can you update the program so it goes through the votes counted and finds the one with the most votes?
 
-(You may want to add this as a totally separate section, at the end of the program, rather than modifying any of the existing loops.)
+(You may want to add this as a totally separate cell, after the previous cells, rather than modifying your existing loops.)
 
 ## Solution
 
-You can add something like this at the end of your program:
+You can do something like this:
 
     # Record the winning name and the votes cast for it
     winner_name = "No winner"

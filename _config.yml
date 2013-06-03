@@ -8,31 +8,33 @@ map:
  - title: Core
    caption: The 'mandatory' workshop content
    subpages:
-    - title: Recap of Python basics
-      path: /core/recap.html
-      caption: A quick recap of some of the Introduction to Programming essentials.
-    - title: Data Structures in Python
-      path: /core/data.html
-      caption: An introduction to the list and dictionary data structures.
-    - title: Working With Text Files
-      path: /core/text-files.html
-      caption: What is a text file? How do we get them in and out of Python?
-    - title: Working With Strings
-      path: /core/strings.html
-      caption: Once we have our text in Python, what can we do with it?
-    - title: Introducing IPython Notebook
-      path: /core/notebook.html
-      caption: A whole new way to work with Python!
-    - title: CSV Files
-      path: /core/csv.html
-      caption: Reading and writing comma-separated data with iPython Notebook.
-    - title: Creating Charts
-      path: /core/charts.html
-      caption: Using iPython Notebook with matplotlib to create charts.
-
+     - title: Recap of Python essentials
+       path: /core/recap.html
+       caption: A quick recap of some of the Introduction to Programming essentials
+     - title: Data Structures in Python
+       path: /core/data.html
+       caption: An introduction to the list and dictionary data structures.
+     - title: Introducting IPython Notebook
+       path: /core/notebook.html
+       caption: A whole new way to work with Python!
+     - title: Working With Text Files
+       path: /core/text-files.html
+       caption: What is a text file? How do we get them in and out of Python?
+     - title: Working With Strings
+       path: /core/strings.html
+       caption: Once we have our text in Python, what can we do with it?
+     - title: Creating Charts
+       path: /core/charts.html
+       caption: Using IPython Notebook with matplotlib to create charts.
+     - title: CSV Files
+       path: /core/csv.html
+       caption: Reading comma-separated data.
  - title: Extras
    caption: Additional workshop content
    subpages:
-    - title: Basic statistics with pandas
-      path: /extras/pandas.html
-      caption: An introduction to using Pandas for statistical and analytical operations.
+   - title: The Pandas library
+     path: /extras/pandas.html
+     caption: An introduction to using Pandas for data analysis.
+   - title: Open Data
+     path: /extras/opendata.html
+     caption: The Open Data movement and some places to find open data sets.

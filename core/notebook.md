@@ -12,13 +12,13 @@ editor.
 
 However, there are other ways to work with Python. [IPython](http://ipython.org/) is a set of tools originally developed to make it easier for scientists to work with Python and data. It allows you to combine interactive Python exploration with prewritten programs.
 
-### IMAGE
+* TODO picture
 
 # Installing IPython Notebook
 
-There are a number of ways to install IPython Notebook, including a lot of prebundled installers. Many of these also include other useful Python libraries, such as *matplotlib* (a Python graphing library that integrates powerfully with IPython Notebook.)
+There are a number of ways to install IPython Notebook. Many of these are bundled installers that install Pytho, IPython, and other useful Python libraries, such as *matplotlib* (a Python graphing library that integrates powerfully with IPython Notebook.)
 
-We recommend you download and install [Anaconda](http://continuum.io/downloads.html), which is a free distribution of Python bundled with a number of other useful tools (including IPython Notebook.)
+We recommend you download and install [Anaconda](http://continuum.io/downloads.html), which is a free bundled installer of Python together with a number of other useful tools (including IPython Notebook.)
 
 **Anaconda is a fairly large (~250Mb) download so if you're at a workshop event we'll have some USB keys with the predownloaded installers to save on bandwidth**
 
@@ -28,17 +28,18 @@ Anaconda comes with its own version of Python 2.7, IPython Notebook, other libra
 
 **Skip this section if you're happy with Anaconda.**
 
-Anaconda is pretty "kitchen sink" complete so there are some other installer options you can test out if you like:
+Anaconda is pretty "kitchen sink" complete. There are some other installer options you can test out if you'd like to try something different:
 
 * [winpython](http://code.google.com/p/winpython/) has installers for Windows, similar to Anaconda.
 
-* [Pyzo](http://www.pyzo.org/downloads.html) has installers for Windows, Linux & OS X.
+* [Pyzo](http://www.pyzo.org/downloads.html) has installers for Python 3 and bundled packages on Windows, Linux & OS X.
 
-* If you have 'pip' installed (maybe from another OTS workshop) then you may be able to install IPython via 'pip', as follows:
+* If you have 'pip' installed (maybe from another OTS workshop) then you may be able to install IPython by itself (plus matplotlib) via 'pip', as follows:
 
       pip install tornado
       pip install pyzmq
       pip install ipython
+      pip install matplotlib
 
 (If you're on OS X you will need XCode installed for this to work.)
 
@@ -46,15 +47,15 @@ Anaconda is pretty "kitchen sink" complete so there are some other installer opt
 
       sudo apt-get install ipython-notebook python-matplotlib
 
-* If you can't get IPython Notebook to work on your computer at all, there's a hosted service called [Wakari](https://www.wakari.io/) that you can use for free. In this case your programs won't be running on your own computer, they'll be running "in the cloud" (ie on Wakari's servers somewhere else) and you'll just see the results.
+* If you can't get IPython Notebook to work on your computer at all, there's a hosted service called [Wakari](https://www.wakari.io/) that you can use for free. In this case your programs won't be running on your own computer, they'll be running "in the cloud" (ie on Wakari's servers somewhere else) and you'll just see the results in your web browser.
 
 ## Note about Python 3
 
-Anaconda and some of the other installers come with Python version 2. You may have been using Python version 3 up until now.
+Anaconda and some of the other installers come with Python version 2. You may have been using Python version 3 up until now, this is the verison that the Introduction to Programming workshop encourages you to use.
 
-The Python world is slowly migrating towards using Python 3 for everything. IPython is available for both 2 & 3, but Anaconda includes some components which are still Python 2 only.
+The Python world is slowly migrating towards using Python 3 for everything. IPython is available for both 2 & 3, but Anaconda comes with Python 2 as it includes some components which are still Python 2 only.
 
-Python 2 and Python 3 have some minor incompatible differences. The programs shown in this workshop are designed to work with both, but if you find some code that doesn't work (but perhaps works on your neighbour's computer) then this may be why.
+Python 2 and Python 3 have some minor incompatible differences in language syntax. The programs shown in this workshop are designed to work with both, but if you find some code that doesn't work (but perhaps works on your neighbour's computer) then this may be why.
 
 
 ## Starting IPython Notebook
@@ -70,7 +71,7 @@ Otherwise, you can start it from a command line terminal by running this command
 You should see some output like this:
 
     [NotebookApp] Using existing profile dir: u'/home/gus/.ipython/profile_default'
-    [NotebookApp] Serving notebooks from /home/gus/anaconda/bin
+    [NotebookApp] Serving notebooks from /home/gus/workshops
     [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
     [NotebookApp] Use Control-C to stop this server and shut down all kernels.
 
@@ -93,7 +94,7 @@ Try typing something like `print("Hello World")` into the cell. To run the code 
 <img src="../images/notebook_hello_world.png" alt="IPython Notebook Hello World">
 </img>
 
-You'll see that when you run a cell, a new cell appears where you can enter another set of Python statements. Try assigning a variable. Let's make another shopping list:
+You'll see that whenever you run a cell, a new cell appears where you can enter another set of Python statements. Try assigning a variable. Let's make another shopping list:
 
 <img src="../images/assign_shopping_list.png" alt="IPython Notebook Assign Variable">
 </img>
@@ -105,11 +106,11 @@ We can see this by making a third cell to print the contents:
 <img src="../images/print_shopping_list.png" alt="IPython Notebook Print Shopping List">
 </img>
 
-You can do anything with IPython Notebook cells that you'd do with normal Python code:
+You can do anything with IPython Notebook cells that you'd do with normal Python code. As you build up the notebook full of cells you create a history of the things you've done and the results that were printed.
 
 ## Loading Notebook Files
 
-You can also load IPython Notebooks that other people have created, saved in IPython Notebook files (File extension .ipynb.) Try [downloading and opening this Notebook file with the shopping list example](../files/shopping_list.ipynb). That Notebook contains some additional code, and some suggestions for changes you can make by going back and editing the existing files.
+You can also load IPython Notebooks that other people have created, saved as IPython Notebook files (File extension .ipynb.) Try [downloading and opening this Notebook file with the shopping list example](../files/shopping_list.ipynb). That Notebook contains some additional code, and some suggestions for changes you can make by going back and editing the existing files.
 
 Take a few minutes to play with the same Notebook and see what it can do.
 
@@ -129,9 +130,23 @@ There is one other useful built-in tool for working with Python files:
 
 This will run *myprogram.py* and load the output into a Notebook cell.
 
+## IPython Notebook Directory
+
+When IPython Notebook starts up it prints a line like this:
+
+    [NotebookApp] Serving notebooks from /home/gus/workshops
+
+This is the directory that it was started from, and it's the working directory so if you type a line like `%run "myprogram.py"` it will look for the file "myprogram.py" in that directory.
+
+It can be helpful to make sure this directory is the directory where you plan to keep files related to your work - otherwise you have to type the complete path to the file each time so Python can find it.
+
+Installers like 'Anaconda' will add IPython Notebook to your system path, which means you can run it from any working directory. If you open a command line terminal and `cd` to the directory you want, you can then run `ipython notebook --pylab inline` to start IPython Notebook from inside the correct working directory.
+
 ## Other IPython tips
 
 * Use Shift-Enter as a keyboard shortcut to run the current cell. Look under the Help menu -> Keyboard Shortcuts to see the other keyboard shortcuts.
+
+* In previous workshops we used `help()` to view help information in the Python interpreter. IPython Notebook makes this even simpler, you can just type the name of a Python function or module and end it with a `?`. Try it now, type `print?` into a cell and run it.
 
 * Using a nifty tool called NBViewer you can easily share  TODO TODO
 

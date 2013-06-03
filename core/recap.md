@@ -7,16 +7,6 @@ title: Recap of Python Essentials
 
 This chapter is just a recap of some of the important points of the Introduction to Programming with Python course. Feel free to skip ahead if this course is still fresh in your memory.
 
-# Python 3
-
-The Introduction to Programming course could be used with both Python 2 or Python 3. In this course we will be using Python 3 (3.2 or 3.3.)
-
-For OS X or Windows [download Python 3 here](http://python.org/download/). For Linux users, you can install Python 3 using your package manager.
-
-If you have both Python 2 and 3 installed then 2 may be the default. To run version 3 you may have to run it with the command `python3` instead of `python`.
-
-Most of the programs shown here will work on 2 or 3, but some of them may not.
-
 # Running Python
 
 After installing Python on your system successfully, you can start the
@@ -29,13 +19,11 @@ Python similar to this::
     Type "help", "copyright", "credits" or "license" for more information.
     >>> 
 
-If you see a Python 2 version in the message shown then you may need to type `python3` instead.
-
 On Windows you can open Python through the Start Menu.
 
 To exit the Python interpreter, press `Ctrl-D`.
 
-To run a program saved Python file, you can run it from the command line like so:
+To run a program saved in a Python file, you can run it from the command line like so:
 
     python program.py
 
