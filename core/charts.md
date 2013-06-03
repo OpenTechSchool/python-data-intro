@@ -64,25 +64,25 @@ This loop processes the dictionary into a format that's easy to send to matplotl
     # The X axis can just be numbered 0,1,2,3...
     x = np.arange(len(counts))
 
-We create a range of indexes for the X values in the graph, one entry for each data point in the graph numbered 0,1,2,3. This will spread out the graph bars evenly across the X axis on the plot.
+We create a range of indexes for the X values in the graph, one entry for each entry in the "counts" dictionary (ie `len(counts)`), numbered 0,1,2,3,etc. This will spread out the graph bars evenly across the X axis on the plot.
 
-`np.arange` is a NumPy function like the `range()` function in Python, only it produces a NumPy array as a result. We'll see why this is useful in a second.
+`np.arange` is a NumPy function like the `range()` function in Python, only the result it produces is a "NumPy array". We'll see why this is useful in a second.
 
     plt.bar(x, votes)
 
 * TODO image showing just the bar section
 
-`bar()` creates a bar graph, using the "x" values as the X axis positions and the values in the votes array (ie the vote counts) as the height of each bar.
+`plt.bar()` creates a bar graph, using the "x" values as the X axis positions and the values in the votes array (ie the vote counts) as the height of each bar.
 
     plt.xticks(x + 0.5, names, rotation=90)
 
 * TODO image showing just the ticks
 
-`xticks()` specifies a range of values to use as labels ("ticks") for the X axis.
+`plt.xticks()` specifies a range of values to use as labels ("ticks") for the X axis.
 
 `x + 0.5` is a special expression because x is a NumPy array. NumPy arrays have some special capabilities that normal lists or `range()` objects don't have. `x + 0.5` for a normal Python range would be erroneous (you can't add a plain number to a list), but for [NumPy arrays this means](http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html#arithmetic-and-comparison-operations) "add 0.5 to all of the numbers in the array."
 
-This means that `0,1,2,3`,etc. becomes `0.5,1.5,2.5,3.5`,etc. This is what positions the X axis labels in the middle of each bar. If you remove the `+ 0.5` then the labels move across to the left hind side of the bar. Try it and see!
+This means that `0,1,2,3`,etc. becomes `0.5,1.5,2.5,3.5`,etc. This is what positions the X axis labels in the middle of each bar. If you remove the `+ 0.5` then the labels move across to the left hand side of each bar. Try it and see!
 
 Finally, `rotation=90` ensures that the labels are drawn sideways (90 degree angle) not straight. You can experiment with different rotations to create different effects.
 
