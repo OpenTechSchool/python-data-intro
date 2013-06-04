@@ -41,7 +41,8 @@ You can add this as a new cell in your notebook:
     plt.bar(x, votes)
     plt.xticks(x + 0.5, names, rotation=90)
 
-* TODO Picture
+<img src="../images/radish_bargraph.png" alt="Radishes on a bargraph">
+</img>
 
 There's a lot going on here so we'll go through it line by line. Don't be afraid to add `print()` statements, or tweak some of the values, or comment out certain lines (like the xticks line) and rerun the code in order to figure out what's going on here.
 
@@ -70,13 +71,15 @@ We create a range of indexes for the X values in the graph, one entry for each e
 
     plt.bar(x, votes)
 
-* TODO image showing just the bar section
+<img src="../images/radish_barsection.png" alt="Bar section">
+</img>
 
 `plt.bar()` creates a bar graph, using the "x" values as the X axis positions and the values in the votes array (ie the vote counts) as the height of each bar.
 
     plt.xticks(x + 0.5, names, rotation=90)
 
-* TODO image showing just the ticks
+<img src="../images/radish_ticks.png" alt="Ticks section">
+</img>
 
 `plt.xticks()` specifies a range of values to use as labels ("ticks") for the X axis.
 
@@ -85,6 +88,12 @@ We create a range of indexes for the X values in the graph, one entry for each e
 This means that `0,1,2,3`,etc. becomes `0.5,1.5,2.5,3.5`,etc. This is what positions the X axis labels in the middle of each bar. If you remove the `+ 0.5` then the labels move across to the left hand side of each bar. Try it and see!
 
 Finally, `rotation=90` ensures that the labels are drawn sideways (90 degree angle) not straight. You can experiment with different rotations to create different effects.
+
+## Challenge
+
+There's no label on the Y axis showing that it represents the vote count.
+
+Can you update your bar graph code so it does this? Take a look at the [ylabel() function in the pyplot documentation](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.ylabel).
 
 
 ## Advanced Charting

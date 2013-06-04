@@ -42,6 +42,8 @@ There are a few good reasons to use the CSV module here:
 
 We're going to do some processing of real-world data now, using freely available airline data sets from the [OpenFlights project](http://www.openflights.org/).
 
+**TIP:** As we're moving on from radishes to aircraft, now is a good time to start a new notebook in IPython Notebook (under File->New) to keep everything organised. Don't forget to save your old notebook!
+
 Visit the [OpenFlights data page](http://openflights.org/data.html) and download their airports data file - "airports.dat". This is a file in CSV format.
 
 Can you use this file to print all of the airport names for a particular country (say, Australia or Russia)?
@@ -105,7 +107,7 @@ Look back at the [OpenFlights data page](http://www.openflights.org/data.html) t
 
 To see the contents of the latitudes or longitudes dictionaries, just type the variable name into a cell and run it.
 
-<img src="../files/viewing_latitudes.png" alt="Viewing latitudes in a Notebook cell">
+<img src="../images/viewing_latitudes.png" alt="Viewing latitudes in a Notebook cell">
 </img>
 
 There's one new thing in this example solution: `float(row[6])`. `float()` means to convert the string value to a floating point (ie fractional) number:
@@ -153,7 +155,7 @@ When looking at the list of fields in the OpenFlights data documentation, rememb
 
 Once again, you can test the results of your program by typing the name of the output list (`distances` in this case) into an IPython Notebook cell and running it:
 
-<img src="../files/viewing_distances.png" alt="Viewing latitudes in a Notebook cell">
+<img src="../images/viewing_distances.png" alt="Viewing latitudes in a Notebook cell">
 </img>
 
 ## Histogram
@@ -168,7 +170,7 @@ Now we're ready to create a histogram displaying the frequency of flights by dis
     plt.ylabel("Number of flights")
 
 
-<img src="../files/histogram.png" alt="Airline route distance histogram">
+<img src="../images/histogram.png" alt="Airline route distance histogram">
 </img>
 
 `plt.hist()` does most of the work here. The first argument we supply is the dataset (list of distances.)

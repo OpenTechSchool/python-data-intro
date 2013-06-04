@@ -10,9 +10,10 @@ title: Introducing IPython Notebook
 Until now we've worked with Python either directly via the interactive Python console, or by writing Python programs using a text
 editor.
 
-However, there are other ways to work with Python. [IPython](http://ipython.org/) is a set of tools originally developed to make it easier for scientists to work with Python and data. It allows you to combine interactive Python exploration with prewritten programs.
+However, there are other ways to work with Python. [IPython](http://ipython.org/) is a set of tools originally developed to make it easier for scientists to work with Python and data. It allows you to combine interactive Python exploration with prewritten programs and even text and equations for documentation.
 
-* TODO picture
+<img src="../images/ipython_example.png" alt="A sample from the IPython Notebook introduction examples">
+</img>
 
 # Installing IPython Notebook
 
@@ -148,8 +149,7 @@ Installers like 'Anaconda' will add IPython Notebook to your system path, which 
 
 * In previous workshops we used `help()` to view help information in the Python interpreter. IPython Notebook makes this even simpler, you can just type the name of a Python function or module and end it with a `?`. Try it now, type `print?` into a cell and run it.
 
-* Using a nifty tool called NBViewer you can easily share  TODO TODO
-
+* Using a nifty tool called NBViewer you can easily share IPython Notebooks on the internet, rendered as web pages (but still downloadable to play with in IPython.) Check out the [NBViewer home page](http://nbviewer.ipython.org/) or the [IPython Notebook gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks) for some interesting starting points
 
 
 
