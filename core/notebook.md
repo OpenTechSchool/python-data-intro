@@ -37,10 +37,7 @@ Anaconda is pretty "kitchen sink" complete. There are some other installer optio
 
 * If you have 'pip' installed (maybe from another OTS workshop) then you may be able to install IPython by itself (plus matplotlib) via 'pip', as follows:
 
-      pip install tornado
-      pip install pyzmq
-      pip install ipython
-      pip install matplotlib
+      pip install tornado pyzmq numpy matplotlib ipython
 
 (If you're on OS X you will need XCode installed for this to work.)
 
@@ -90,7 +87,7 @@ In your browser, click the "New Notebook" button and a new notebook will open up
 
 The empty box at the top is the first "cell" for entering Python code.
 
-Try typing something like `print("Hello World")` into the cell. To run the code in the cell and see the output, click the Run button (play icon) on the toolbar:
+Try typing something like `print("Hello World")` into the cell. To run the code in the cell and see the output, click the Run button (play icon) on the toolbar, or type Shift-Enter:
 
 <img src="../images/notebook_hello_world.png" alt="IPython Notebook Hello World">
 </img>
@@ -145,7 +142,7 @@ Installers like 'Anaconda' will add IPython Notebook to your system path, which 
 
 ## Other IPython tips
 
-* Use Shift-Enter as a keyboard shortcut to run the current cell. Look under the Help menu -> Keyboard Shortcuts to see the other keyboard shortcuts.
+* As well as Shift-Enter there are other keyboard shortcuts in Notebook. Look under the Help menu -> Keyboard Shortcuts to see them all.
 
 * In previous workshops we used `help()` to view help information in the Python interpreter. IPython Notebook makes this even simpler, you can just type the name of a Python function or module and end it with a `?`. Try it now, type `print?` into a cell and run it.
 

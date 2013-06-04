@@ -14,7 +14,7 @@ map:
      - title: Data Structures in Python
        path: /core/data.html
        caption: An introduction to the list and dictionary data structures.
-     - title: Introducting IPython Notebook
+     - title: Introducing IPython Notebook
        path: /core/notebook.html
        caption: A whole new way to work with Python!
      - title: Working With Text Files
