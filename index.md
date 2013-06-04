@@ -29,10 +29,14 @@ workshop then that will be perfect.
 
 # Extra fun stuff
 
-* [The Pandas library](extras/pandas.html) - An introduction to using Pandas for data analysis.
+* [Alternative Approaches](extras/alternatives.html) - Other ways to store and process data (Pandas, SQL databases.)
 
-* [Open Data](extras/opendata.html) - About Open Data.
+* [Open Data Sources](extras/opendata.html) Data.
 
 # Reference material
 
-* TODO
+* [IPython NBViewer home page](http://nbviewer.ipython.org/)
+
+* [IPython Notebook gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks) 
+* [matplotlib gallery](http://matplotlib.org/gallery.html)
+

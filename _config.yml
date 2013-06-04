@@ -32,9 +32,9 @@ map:
  - title: Extras
    caption: Additional workshop content
    subpages:
-   - title: The Pandas library
-     path: /extras/pandas.html
-     caption: An introduction to using Pandas for data analysis.
+   - title: Alternative Approaches
+     path: /extras/alternatives.html
+     caption: Some other ways to store and process data.
    - title: Open Data
      path: /extras/opendata.html
-     caption: The Open Data movement and some places to find open data sets.
+     caption: Some places to find open data sets.
