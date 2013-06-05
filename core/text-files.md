@@ -239,3 +239,6 @@ Alternatively, if you're using OS X or Linux you can type `cat <filename>` in a 
     f.write("First line\n")
     f.write("Second line")
 
+## Next Chapter
+
+Now we're ready to process some of the text data from the files, in [Working With Strings](strings.html).

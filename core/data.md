@@ -134,3 +134,7 @@ Or add dictionaries to lists:
     europe.append(luxembourg)
 
 Outside of Python, dictionaries are often called ``hash tables``, ``hash maps`` or just ``maps``.
+
+## Next Chapter
+
+Once you're comfortable with lists and dictionaries it's time for the next chapter, [Introducing IPython Notebook](notebook.html)

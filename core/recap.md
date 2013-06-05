@@ -106,3 +106,6 @@ You can use the 'if' statement to execute some statements only if a condition is
     Turning clockwise
 
 
+## Next Chapter
+
+All set with Python? On to the next chapter, [Data Structures in Python](data.html)

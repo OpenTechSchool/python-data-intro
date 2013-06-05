@@ -148,6 +148,6 @@ Installers like 'Anaconda' will add IPython Notebook to your system path, which 
 
 * Using a nifty tool called NBViewer you can easily share IPython Notebooks on the internet, rendered as web pages (but still downloadable to play with in IPython.) Check out the [NBViewer home page](http://nbviewer.ipython.org/) or the [IPython Notebook gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks) for some interesting starting points
 
+## Next Chapter
 
-
-
+Time to give Notebook a real workout! The next chapter is [Working With Text Files](text-files.html)

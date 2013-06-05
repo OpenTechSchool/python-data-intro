@@ -105,3 +105,7 @@ To take a look at some of what they can do (and the sample Python code that does
 Because these tools are fairly complex it can also be helpful to copy and tweak an existing example from the gallery, if you're looking to create a new chart.
 
 (You'll notice the term "pylab" used on some of those pages. Pylab just means Pyplot combined with Numpy.)
+
+## Next Chapter
+
+Time to get into some real world data! The next chapter is [CSV Files](csv.html)

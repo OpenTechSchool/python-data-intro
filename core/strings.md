@@ -482,3 +482,7 @@ Can you refactor the part of the program that finds the winner into a function?
 The solution shown above can't deal with ties. It only updates `winner_name` if it finds another name with more votes than it, a second name with an equal number of votes will be ignored.
 
 Can you write a winner function that could deal with a tie?
+
+## Next Chapter
+
+When you're done counting radish votes, the next chapter is [Creating Charts](charts.html)

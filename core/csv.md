@@ -186,3 +186,5 @@ The [full arguments available for hist() can be viewed in the matplotlib documen
 You've taken some real world data and graphed it in an informative way!
 
 Granted, the results aren't earth shattering but you're well on your way to understanding the techniques to perform other data analysis, and chart other data. Congratulations!
+
+If you're wondering what to look at next then there is some additional material on the [index page](../index.html) - both Extras chapters and some additional reference links.
