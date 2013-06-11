@@ -53,7 +53,7 @@ You can also assign a list with some items in it all in a single line, like this
 To remove an item from the list we use ``remove()``:
 
     shopping_list.remove("milk")
-      
+
 Lists can easily be processed in a ``for`` loop. Have a look at this example which prints each item of the list in a new row:
 
     for item in shopping_list:
@@ -113,6 +113,8 @@ For this reason, you can test whether a key is in the dictionary or not, by usin
     if "cheese" in foods:
         print("Cheese is one of the known foods!")
         print(foods["cheese"])
+
+`not in` works as well, just like with lists.
 
 You can delete from a dictionary as well. We don't really need to include an entry for dirt:
 
