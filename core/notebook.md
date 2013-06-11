@@ -157,6 +157,8 @@ Using Anaconda on Windows this directory is the "IPython Notebooks" directory th
 It can be helpful to make sure this directory is the directory where you plan to keep files related to your work. If you're launching from the command line, you can 'cd' to this directory before you launch Notebook.
 
 
+On windows, you can navigate to your preferred directory for storing your work, then hold shift+right click; the context menu that comes up should have a handy option to "Start a command prompt here"!
+
 ## Other IPython tips
 
 * As well as Shift-Enter there are other keyboard shortcuts in Notebook. Look under the Help menu -> Keyboard Shortcuts to see them all.
