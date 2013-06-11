@@ -1,7 +1,9 @@
----
-layout: ots
-title: README 
----
+# Workshop Material
+
+You can view the actual workshop material live at:
+http://opentechschool.github.io/python-data-intro/
+
+# Contributors README
 
 This is a friendly how-to for contributors to the Introduction to Data Processing with Python course at OpenTechSchool. First, a quick refresher on the course:
 
