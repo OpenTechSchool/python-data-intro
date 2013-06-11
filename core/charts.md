@@ -7,6 +7,18 @@ title: Creating Charts
 
 So far we haven't done anything to really explore IPython Notebook's features, but now we're going to use the library *matplotlib* to create some graphical charts based on our data.
 
+## Inline Charts
+
+Start by running the following snippet in an IPython Notebook cell:
+
+    %pylab inline
+
+... this tells IPython Notebook that you want charts to be shown "inline" inside your notebook.
+
+NB: You can also specify this on the command line by launching notebook with the arguments "--pylab inline"
+
+## Simple Example
+
 Here's an example of a simple chart:
 
     import matplotlib.pyplot as plt

@@ -25,6 +25,22 @@ We recommend you download and install [Anaconda](http://continuum.io/downloads.h
 
 Anaconda comes with its own version of Python 2.7, IPython Notebook, other libraries like matplotlib, and a package manager ("conda") that you can use to install other packages or other Python versions.
 
+## Anaconda Install on Windows
+
+Anaconda version 1.5.0 has a couple of installer bugs. After the install you'll need to do a couple of things to fix them:
+
+* Go to your "Documents" folder and create a new folder called "IPython Notebooks". This is the working directory for IPython Notebook, and is where your notebooks will be created.
+
+* Go to the Start Menu, find the shortcut icon for "IPython (Py 2.7) Notebook", right-click it and then choose Properties.
+
+  (On Windows 8 you'll need to first click "Open File Location", then right-click the shortcut again to select the Properties.)
+
+  In the "Start In" field, remove the duplicate double quote marks "" from the start and end of the line:
+  <img src="../images/windows_fixing_startdir.png" alt="Windows with messed up Start Dir selection">
+</img>
+
+  ...replace these with a single double quote " at each end.
+
 ## Alternative Options
 
 **Skip this section if you're happy with Anaconda.**
@@ -136,9 +152,10 @@ When IPython Notebook starts up it prints a line like this:
 
 This is the directory that it was started from, and it's the working directory so if you type a line like `%run "myprogram.py"` it will look for the file "myprogram.py" in that directory.
 
-It can be helpful to make sure this directory is the directory where you plan to keep files related to your work - otherwise you have to type the complete path to the file each time so Python can find it.
+Using Anaconda on Windows this directory is the "IPython Notebooks" directory that we created after we ran the installer.
 
-Installers like 'Anaconda' will add IPython Notebook to your system path, which means you can run it from any working directory. If you open a command line terminal and `cd` to the directory you want, you can then run `ipython notebook --pylab inline` to start IPython Notebook from inside the correct working directory.
+It can be helpful to make sure this directory is the directory where you plan to keep files related to your work. If you're launching from the command line, you can 'cd' to this directory before you launch Notebook.
+
 
 ## Other IPython tips
 
