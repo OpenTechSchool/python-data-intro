@@ -47,9 +47,9 @@ From the previous chapter, we know that we can easily go through the file line b
         line = line.strip()
         # Do something with each line
 
-We need a way to split each line into the name and the vote. Thankfully, Python comes with dozens of string functions including one called `split()`. [Have a look at the documentation for split()](http://docs.python.org/3.3/library/stdtypes.html#str.split) and see if you can figure out how to split each line into the name and the vote.
+We need a way to split each line into the name and the vote. Thankfully, Python comes with dozens of string methods including one called `split()`. [Have a look at the documentation for split()](http://docs.python.org/3.3/library/stdtypes.html#str.split) and see if you can figure out how to split each line into the name and the vote.
 
-(Don't worry if you can't write a program that does this just yet, but have a think about it before you skip to the solution.)
+(Don't worry if you can't write a program that does this just yet, but at least have a think about it before you skip to the solution.)
 
 ### Solution
 
@@ -58,7 +58,7 @@ We need a way to split each line into the name and the vote. Thankfully, Python 
        parts = line.split(" - ")
        name = parts[0]
        vote = parts[1]
-       print(name + " voted for " +  vote)
+       print(name + " voted for " + vote)
 
 There's a few things going on here, so let's go through it line by line. *Walking through a program in your head and thinking about what each line does by itself is a good way to start to understand it*
 
@@ -92,7 +92,7 @@ Once we've split the string into `parts`, we can use indexes in the `parts` list
 
 These two lines of code just make this clear to the reader by storing each field in a named variable. You could use `parts[0]` anywhere you used `name` and `parts[1]` anywhere that you used `vote`, but then your code would be harder for someone else to understand.
 
-    print(name + " voted for " +  vote)
+    print(name + " voted for " + vote)
 
 This last line *concatenates* (joins) the two variable values together with the string `" voted for "`, to make a message which is printed out.
 
@@ -107,18 +107,18 @@ Use the previous example as a base. You'll need to compare the vote with the str
 
     for line in open("radishsurvey.txt"):
        line = line.strip()
-       parts = line.split(" - ")
-       name = parts[0]
-       vote = parts[1]
+       parts = line.split(" - ", 1)
+       name, vote = parts
        if vote == "White Icicle":
           print(name + " likes White Icicle!")
 
+You might note some little changes to syntax here. We hand `line.split()` an extra argument of `1` to tell it to only split the string once, making sure we end up with two parts. You can then assign a list of variables to a list (`name, vote = parts`) and each variable will contain the value of the corresponding item in the list!
 
 # Counting Votes
 
 Can you write a program which counts the total number of votes for *White Icicle* radishes?
 
-Use the previous example as a base. You'll need a variable to hold the number of votes recorded for *White Icicle*, which you increment (ie add one to) as part of the loop.
+Use the previous example as a base. You'll need a variable to hold the number of votes recorded for *White Icicle*, which you increment (i.e add one to) as part of the loop.
 
 ### Solution
 
@@ -240,7 +240,7 @@ A pretty printing option could be:
 
 * Iterating through a dictionary (ie `for name in counts`) means iterating through the *keys* (radish variety names), so we still need to look up each *value* (the vote count) with `count = counts[name]`.
 
-* When we get the count back, it's a number so we can't `print()` it straight away. `str()` returns the string equivalent of the number, ie `str(12)` returns `"12"`.
+* Why do we use `str(count)` here? Try removing the `str()` call and see what python tells you! `str()` returns the string equivalent of the number, ie `str(12)` returns `"12"`.
 
 Python needs to distinguish between strings and numbers for lots of reasons. For example, using numbers `12+1` is 13. Using strings, `"12" + "1"` *concatenates* the strings to give you `"121"`.
 
