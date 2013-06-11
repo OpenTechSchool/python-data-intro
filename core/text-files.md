@@ -53,6 +53,7 @@ What do you think the following code does, if you run it in the same directory a
 Try it out in an IPython Notebook cell.
 
 ### Solution:
+
 It prints the contents of the text file out on the console.
 
 ## What's really happening here?
@@ -195,18 +196,20 @@ In fact, you don't even have to call `readlines()` - Python assumes that if you 
     for month in f:
        print("Month " + month.strip())
 
-
 # Writing to files
 
 When you `open()` a file, you can optionally specify a *file mode*, which tells Python what you want to do with the file. The default mode is `r` for read, but another mode is `w` to write to a file.
 
     f = open("awesomenewfile.txt", "w")
 
+Tip: the write (`w`) mode will write completely new contents to a file, wiping out what it had previously!
+
 There are actually a whole lot of file modes, `r` and `w` are just the most common. [There is a full list in the Python documentation for the open function](http://docs.python.org/3/library/functions.html#open) or you can type `open?` in IPython Notebook and run it to see the help displayed there.
 
 Can you guess how to write a string to a file in Python?
 
 ### Hint
+
 File objects have a method for writing. You can find out about it by viewing the built-in help for the file object. In IPython Notebook you can type:
 
     f = open("awesomenewfile.txt", "w")
@@ -219,7 +222,6 @@ Or just type `f.` into IPython Notebook and then press "Tab" to view an automati
     f = open("awesomenewfile.txt", "w")
     f.write("Awesome message!")
 
-
 ### Why do you use 'print' to write things on the console, but 'write' for files?
 
 I don't know. I think it's just been that way for as long as Python has been around.
@@ -229,6 +231,7 @@ There is one important difference, `print()` automatically ends the line. `write
 Can you write a program which creates a two line text file?
 
 ### Hint
+
 To look at the contents of a text file, you can open it in your text editor.
 
 Alternatively, if you're using OS X or Linux you can type `cat <filename>` in a terminal (not a Python interpreter, the plain terminal shell you run Python from), to print the contents out. In the Windows terminal, you can use `type <filename>` to do the same thing.
@@ -238,6 +241,16 @@ Alternatively, if you're using OS X or Linux you can type `cat <filename>` in a 
     f = open("mylongfile.txt", "w")
     f.write("First line\n")
     f.write("Second line")
+
+### Exercise!
+
+If you want to try all this out, here's something simple to make sure you've got everything down pat. First, make a file with a few lines of random text. Then write a program that:
+
+1. Reads all the lines in the file into a list
+2. Appends something crazy to each line in the list. " Ya mum!" is nicely innapropriate, if you're struggling for ideas.
+3. Writes all lines in that list into a new file. Check out your handy work!
+
+Hopefully pretty simple, but that should make sure you have all the above ideas down-pat.
 
 ## Next Chapter
 
