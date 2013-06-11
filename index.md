@@ -37,6 +37,14 @@ workshop then that will be perfect.
 
 * [IPython NBViewer home page](http://nbviewer.ipython.org/)
 
-* [IPython Notebook gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks) 
+*  [IPython Notebook gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks) 
+
 * [matplotlib gallery](http://matplotlib.org/gallery.html)
 
+## More Advanced Follow Up Material
+
+If you're wondering how to "level up" to more advanced data analysis after mastering the material here, you could try these;
+
+* A tutorial series by Hernan Rojas showing the basics of [using the Python library "pandas" for data analysis](https://bitbucket.org/hrojas/learn-pandas). You can click on the lessons directly to view them in your browser, or click the "(download)" link on the right of the page to download a ZIP file containing them as IPython Notebook files.
+
+* If you have statistical modelling experience then [this video tutorial by Skipper Seabold from SciPy 2012](http://pyvideo.org/video/1200/statsmodels) ([accompanying material as IPython Notebook files](https://github.com/jseabold/tutorial)) comes highly recommended.

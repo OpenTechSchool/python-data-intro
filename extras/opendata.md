@@ -24,6 +24,7 @@ You can also download the data to perform more in-depth analysis.
 
 * UK's Guardian Newspaper [Data Store](http://www.guardian.co.uk/data)
 provides a wide range of data and data-based analysis.
+([Here's a giant list of just their data sets and the articles that mention them](https://views.scraperwiki.com/run/guardian_datablog_spreadsheets/).)
 
 * The [World Bank](http://data.worldbank.org/) publishes its data
 catalog online.
