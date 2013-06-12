@@ -78,12 +78,12 @@ Python 2 and Python 3 have some minor incompatible differences in language synta
 
 You interact with IPython Notebook using your web browser. The Notebook program creates a "web server" locally on your computer that you then connect to.
 
-To start IPython Notebook on Windows or OS X, there should be a clickable launcher under the Start menu (Windows) or in the Applications folder (OS X.)
+To start IPython Notebook on Windows (with Anaconda), there should be a clickable launcher under the Start menu.
 
-Otherwise, you can start it from a command line terminal by running this command:
+On Linux or OS X, you can start IPython Notebook from the command line. First open a terminal window, use 'cd' to navigate to the directory where you want to store your notebooks and other Python files. Then run this command:
 
     ipython notebook --pylab inline
-    
+
 You should see some output like this:
 
     [NotebookApp] Using existing profile dir: u'/home/gus/.ipython/profile_default'
@@ -110,7 +110,7 @@ Try typing something like `print("Hello World")` into the cell. To run the code 
 <img src="../images/notebook_hello_world.png" alt="IPython Notebook Hello World">
 </img>
 
-You'll see that whenever you run a cell, a new cell appears where you can enter another set of Python statements. Try assigning a variable. Let's make another shopping list:
+You'll see that whenever you run a cell, a new empty cell appears where you can enter another set of Python statements. Try assigning a variable. Let's make another shopping list:
 
 <img src="../images/assign_shopping_list.png" alt="IPython Notebook Assign Variable">
 </img>
@@ -136,9 +136,9 @@ You can also load a pre-existing Python file into an IPython Notebook cell by ty
 
     %load "myprogram.py"
 
-and running it, which loads up a new cell containing the contents of *myprogram.py*.
+Into a cell and running it. This loads up a new cell containing the contents of *myprogram.py*.
 
-Test this feature out by loading one of the scripts you wrote before. You may have to specify the full path to script file, depending on the directory IPython Notebook started up from.
+Test this feature out by loading one of the scripts you wrote during the recap session. You may have to specify the full path to the script file, depending on the directory IPython Notebook started up from.
 
 There is one other useful built-in tool for working with Python files:
 
@@ -168,7 +168,7 @@ If you're using the command line on Windows, you can use Explorer to find your d
 
 * In previous workshops we used `help()` to view help information in the Python interpreter. IPython Notebook makes this even simpler, you can just type the name of a Python function or module and end it with a `?`. Try it now, type `print?` into a cell and run it.
 
-* Using a nifty tool called NBViewer you can easily share IPython Notebooks on the internet, rendered as web pages (but still downloadable to play with in IPython.) Check out the [NBViewer home page](http://nbviewer.ipython.org/) or the [IPython Notebook gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks) for some interesting starting points
+* Using a nifty tool called NBViewer you can easily share IPython Notebooks on the internet, rendered as web pages (but still downloadable to play with in IPython.) Check out the [NBViewer home page](http://nbviewer.ipython.org/) or the [IPython Notebook gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks) for some interesting ones.
 
 ## Next Chapter
 

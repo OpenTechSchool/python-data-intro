@@ -7,7 +7,7 @@ title: Working with Strings
 
 # A problem
 
-Now we know how to read information from text files, we'll use that knowledge to solve a problem:
+Now we know how to work with text files, we'll use that knowledge to solve a problem:
 
 Suppose you're a greengrocer, and you run a survey to see what radish varieties your customers prefer the most. You have your assistant type up the survey results into a text file on your computer, so you have 300 lines of survey data in the file [radishsurvey.txt](../files/radishsurvey.txt). Each line consists of a name, a hyphen, then a radish variety:
 
@@ -188,7 +188,7 @@ Using your function, can you write a program which counts votes for White Icicle
 
 # Counting All The Votes
 
-Counting votes for each radish variety is a bit time consuming, you have to know all the names in advance and you have to loop through the file multiple times. How about if you could automatically find all the varieties that were votes for, and count them all in one pass?
+Counting votes for each radish variety is a bit time consuming, you have to know all the names in advance and you have to loop through the file multiple times. How about if you could automatically find all the varieties that were voted for, and count them all in one pass?
 
 You'll need a data structure where you can associate a radish variety with the number of votes counted for it. A dictionary would be perfect!
 
@@ -208,7 +208,7 @@ Imagine a program that can count votes to create a dictionary with contents like
         'April Cross': 72
     }
 
-Meaning 65 votes for White Icicle, 63 votes for Snow Belle, etc, etc.
+Meaning the key 'White Icicle' is associated with the value of 65 votes, the key 'Snow Belle' is associated with the value of 63 votes, 'Champion' has 76 votes, etc, etc.
 
 Can you create such a program? Start with one of your previous vote-counting programs and try to modify it to count all varieties.
 
@@ -346,7 +346,7 @@ They all have something in common, a double space "  " between the first and sec
 
 strip() only cleaned up additional whitespace at the start and end of the string.
 
-The `replace` function can be used to replace all double spaces "  " with a single space " ":
+The `replace` function can be used to replace all double spaces with a single space:
 
     vote = vote.replace("  ", " ")
 
@@ -476,6 +476,10 @@ For small programs it's not as important as big programs, but with big programs 
 Our program prints the number of votes cast for each radish variety, but it doesn't declare a winner. Can you update the program so it goes through the votes counted and finds the one with the most votes?
 
 (You may want to add this as a totally separate cell, after the previous cells, rather than modifying your existing loops.)
+
+## Hint
+
+You can make a for loop which iterates over all of the keys in a dictionary by using the syntax `for key in dictionary:`. In this case it might be `for name in counts:`.
 
 ## Solution
 

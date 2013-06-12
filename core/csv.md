@@ -7,12 +7,12 @@ title: Reading and writing comma-separated data
 
 Comma-separated values (CSV) is a way of expressing structured data in flat text files:
 
-    "Coffee","Water,Milk,Icecream"
-    "Espresso","No,No,No"
-    "Long Black","Yes,No,No"
-    "Flat White","No,Yes,No"
-    "Cappuccino","No,Yes - Frothy,No"
-    "Affogato","No,No,Yes"
+    "Coffee","Water","Milk","Icecream"
+    "Espresso","No","No","No"
+    "Long Black","Yes","No","No"
+    "Flat White","No","Yes","No"
+    "Cappuccino","No","Yes - Frothy","No"
+    "Affogato","No","No","Yes"
 
 It's a commonly used format to get data in and out of programs like Spreadsheet software, where the data is tabular.
 
@@ -44,7 +44,9 @@ We're going to do some processing of real-world data now, using freely available
 
 **TIP:** As we're moving on from radishes to aircraft, now is a good time to start a new notebook in IPython Notebook (under File->New) to keep everything organised. Don't forget to save your old notebook!
 
-Visit the [OpenFlights data page](http://openflights.org/data.html) and download their airports data file - "airports.dat". This is a file in CSV format.
+Visit the [OpenFlights data page](http://openflights.org/data.html) and download their airports data file - "airports.dat". This is a file in CSV format, open it in a text editor if you want to have a look at it.
+
+## Challenge
 
 Can you use this file to print all of the airport names for a particular country (say, Australia or Russia)?
 
@@ -83,9 +85,9 @@ By using both data sources, we can calculate how far each route travels and then
 
 This a multiple stage problem:
 
-* Read the airport database (airports.dat) and build a dictionary mapping the unique airport ID to the geographical coordinates (latitude & longitude.) This allows you to look up the location of each airport by its ID.
+* Read the airports file (airports.dat) and build a dictionary mapping the unique airport ID to the geographical coordinates (latitude & longitude.) This allows you to look up the location of each airport by its ID.
 
-* Read the routes database (routes.dat) and get the IDs of the source and destination airports. Look up the latitude and longitude based on the ID. Using those coordinates, calculate the length of the route and append it to a list of all route lengths.
+* Read the routes file (routes.dat) and get the IDs of the source and destination airports. Look up the latitude and longitude based on the ID. Using those coordinates, calculate the length of the route and append it to a list of all route lengths.
 
 * Plot a histogram based on the route lengths, to show the distribution of different flight distances.
 
@@ -165,7 +167,7 @@ Now we're ready to create a histogram displaying the frequency of flights by dis
     import numpy as np
     import matplotlib.pyplot as plt
 
-    plt.hist(distances, 100, facecolor='r', alpha=0.75)
+    plt.hist(distances, 100, facecolor='r')
     plt.xlabel("Distance (km)")
     plt.ylabel("Number of flights")
 
@@ -175,9 +177,9 @@ Now we're ready to create a histogram displaying the frequency of flights by dis
 
 `plt.hist()` does most of the work here. The first argument we supply is the dataset (list of distances.)
 
-The second argument is the number of bins to divide the histogram up into. You can increase this number to see more distinct bars and a more detailed picture, or reduce it to see a coarser picture. Try setting it to some other values and see what happens to the histogram plot.
+The second argument (100) is the number of bins to divide the histogram up into. You can increase this number to see more distinct bars and a more detailed picture, or reduce it to see a coarser picture. Try setting it to some other values and see what happens to the histogram plot.
 
-The third argument sets the colour of the graph, "r" for red. There are a lot of ways to specify colours in matplotlib, [the documentation explains them all](http://matplotlib.org/api/colors_api.html).
+The third argument, `facecolor`, sets the colour of the graph, "r" for red. There are a lot of ways to specify colours in matplotlib, [the documentation explains them all](http://matplotlib.org/api/colors_api.html).
 
 The [full arguments available for hist() can be viewed in the matplotlib documentation](http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.hist).
 

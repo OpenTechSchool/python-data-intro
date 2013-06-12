@@ -9,13 +9,13 @@ So far we haven't done anything to really explore IPython Notebook's features, b
 
 ## Inline Charts
 
-Start by running the following snippet in an IPython Notebook cell:
+If you're using Windows, you'll need to run the following special IPython command in an IPython Notebook cell:
 
     %pylab inline
 
 ... this tells IPython Notebook that you want charts to be shown "inline" inside your notebook.
 
-NB: You can also specify this on the command line by launching notebook with the arguments "--pylab inline"
+If you're not using Windows and you started Notebook from a command line with the arguments `--pylab inline`, then this is already done.
 
 ## Simple Example
 
@@ -95,9 +95,23 @@ We create a range of indexes for the X values in the graph, one entry for each e
 
 `plt.xticks()` specifies a range of values to use as labels ("ticks") for the X axis.
 
-`x + 0.5` is a special expression because x is a NumPy array. NumPy arrays have some special capabilities that normal lists or `range()` objects don't have. `x + 0.5` for a normal Python range would be erroneous (you can't add a plain number to a list), but for [NumPy arrays this means](http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html#arithmetic-and-comparison-operations) "add 0.5 to all of the numbers in the array."
+`x + 0.5` is a special expression because x is a NumPy array. NumPy arrays have some special capabilities that normal lists or `range()` objects don't have. 
 
-This means that `0,1,2,3`,etc. becomes `0.5,1.5,2.5,3.5`,etc. This is what positions the X axis labels in the middle of each bar. If you remove the `+ 0.5` then the labels move across to the left hand side of each bar. Try it and see!
+Doing this with a normal range is an error (try it and see):
+
+    x = range(5)
+    print(x)
+    print(x + 0.5)
+
+However, for [NumPy arrays this means](http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html#arithmetic-and-comparison-operations) "add 0.5 to all of the numbers in the array."
+
+    x = np.arange(5)
+    print(x)
+    print(x + 0.5)
+
+Run the above code in IPython Notebook and see what it prints out.
+
+This is what positions the X axis labels in the middle of each bar (0.5 across from the left hand side.) If you remove the `+ 0.5` from the bar graph example then the labels move across to the left hand side of each bar. Try it and see!
 
 Finally, `rotation=90` ensures that the labels are drawn sideways (90 degree angle) not straight. You can experiment with different rotations to create different effects.
 

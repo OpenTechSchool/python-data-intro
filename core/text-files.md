@@ -9,12 +9,17 @@ title: Working With Text Files
 
 A text file is any file containing only readable characters.
 
-
-<a href="http://www.flickr.com/photos/mwichary/2355783479/" title="IBM 1403 printout (from the power-of-two program) by Marcin Wichary, on Flickr"><img src="http://farm3.staticflickr.com/2087/2355783479_ba8837ac18_q.jpg" width="150" height="150" alt="IBM 1403 printout (from the power-of-two program)"></a>
-
+<div style="width: 33%; float: right;">
 <a href="http://www.flickr.com/photos/dplmedmss/8644579302/" title="Book of Hours, Latin with additions in Middle English; second page of the second Middle English prayer to Christ. Southern Netherlands (probably Bruges), ca. 1440, f.45r by Dunedin Public Libraries Medieval Manuscripts, on Flickr"><img src="http://farm9.staticflickr.com/8529/8644579302_879e79aff1_q.jpg" width="150" height="150" alt="Book of Hours, Latin with additions in Middle English; second page of the second Middle English prayer to Christ. Southern Netherlands (probably Bruges), ca. 1440, f.45r"></a>
+</div>
 
+<div style="width: 33%; float: right;">
 <a href="http://www.flickr.com/photos/mwichary/3249196669/" title="Untitled by Marcin Wichary, on Flickr"><img src="http://farm4.staticflickr.com/3051/3249196669_7f313c2fa7_q.jpg" width="150" height="150" alt="Untitled"></a>
+</div>
+
+<div style="width: 33%;">
+<a href="http://www.flickr.com/photos/mwichary/2355783479/" title="IBM 1403 printout (from the power-of-two program) by Marcin Wichary, on Flickr"><img class="text-left" src="http://farm3.staticflickr.com/2087/2355783479_ba8837ac18_q.jpg" width="150" height="150" alt="IBM 1403 printout (from the power-of-two program)"></a>
+</div>
 
 A character can be a number like 3 or 6, or a letter of the alphabet like M or p. Taken together, programmers call numbers and letters the the set of *alphanumeric* characters.
 
@@ -54,7 +59,7 @@ Try it out in an IPython Notebook cell.
 
 ### Solution:
 
-It prints the contents of the text file out on the console.
+It prints out the contents of the text file.
 
 ## What's really happening here?
 
@@ -98,6 +103,8 @@ It prints the contents of the file, one character at a time, until the end of th
 
 What is the `while` statement in the above code doing? When does the program exit the while loop?
 
+Think about the value that the variable `next` has each time the while loop is evaluated. What happens when the end of the file is reached?
+
 ### Bonus Question #2
 
 What would happen if you replaced the `read(1)`s in the code above with `read(2)`s? Think about it first, then try it and see what happens!
@@ -126,9 +133,9 @@ Control characters like `\n` date from the days when computers had typewriter st
 
 ### Enough about typewriters!
 
-Yes, back to Python files! To read a file line by line you could just keep reading one character a time with `.read(1)`, until you run into a newline character `\n`.
+Yes, back to Python files! To read a file line by line you could just keep reading one character at a time with `.read(1)`, until you run into a newline character `\n`.
 
-There's an easier way though, which os to use the `.readline()` method in place of `.read()`.
+There's an easier way though, which is to use the `.readline()` method in place of `.read()`.
 
 Have another look at the one-character-per-line code example from earlier in this chapter. Can you modify it to read from the file line by line instead of character by character?
 
@@ -244,11 +251,11 @@ Alternatively, if you're using OS X or Linux you can type `cat <filename>` in a 
 
 ### Exercise!
 
-If you want to try all this out, here's something simple to make sure you've got everything down pat. First, make a file with a few lines of random text. Then write a program that:
+If you want to try all this out, here's a quick exercise to make sure you've got everything down pat. First, use a text editor to create a plain text file with a few lines of random text. Then write a Python program that:
 
-1. Reads all the lines in the file into a list
+1. Reads all the lines from your text file into a list.
 2. Appends something crazy to each line in the list. " Ya mum!" is nicely innapropriate, if you're struggling for ideas.
-3. Writes all lines in that list into a new file. Check out your handy work!
+3. Writes all lines in that list into a new file. Check out your handy work by looking in the new file!
 
 Hopefully pretty simple, but that should make sure you have all the above ideas down-pat.
 
