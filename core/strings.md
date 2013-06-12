@@ -107,18 +107,47 @@ Use the previous example as a base. You'll need to compare the vote with the str
 
     for line in open("radishsurvey.txt"):
        line = line.strip()
-       parts = line.split(" - ", 1)
+       parts = line.split(" - ")
        name, vote = parts
        if vote == "White Icicle":
           print(name + " likes White Icicle!")
 
-You might note some little changes to syntax here. We hand `line.split()` an extra argument of `1` to tell it to only split the string once, making sure we end up with two parts. You can then assign a list of variables to a list (`name, vote = parts`) and each variable will contain the value of the corresponding item in the list!
+You might notice that the code splitting the line has become even shorter here. Instead of assigning each element of parts separately, we can assign them together using a technique called "multiple assignment". The line `name, vote = parts` means to assign each variable to the corresponding item in the list.
+
+### More about multiple assignment
+
+Take a moment to play with multiple assignment in IPython Notebook (see the previous solution for an example of this.) Try some lines like these:
+
+    a,b,c = [ 1,2,3 ]
+    print(b)
+    print(a)
+
+Or this:
+
+    name,cheese,cracker = "Fred,Jarlsberg,Rye".split(",")
+    print(cheese)
+
+You'll notice that multiple assignment only works when the number of elements being assigned on the left hand side of the " = " matches the number on the right.
+
+For instance, this doesn't work:
+
+    x,y,z = [ 1,2 ]
+
+Neither does this:
+
+    name,cheese,cracker = "Fred,Jarlsberg,Rye,Buckwheat".split(",")
+
+You may have noticed in the [documentation for split()](http://docs.python.org/3/library/stdtypes.html#str.split) that you can attach an optional second argument which is the maximum number of times to split the string. You can use this to prevent errors by creating too many elements, like this:
+
+    name,cheese,cracker = "Fred,Jarlsberg,Rye,Buckwheat".split(",",2)
+    print(name)
+    print(cracker)
 
 # Counting Votes
 
 Can you write a program which counts the total number of votes for *White Icicle* radishes?
 
-Use the previous example as a base. You'll need a variable to hold the number of votes recorded for *White Icicle*, which you increment (i.e add one to) as part of the loop.
+Use your previous solution as a base. You'll need a variable to hold the number of votes recorded for *White Icicle*, which you increment (i.e add one to) as part of the loop.
 
 ### Solution
 
@@ -126,9 +155,7 @@ Use the previous example as a base. You'll need a variable to hold the number of
     count = 0
     for line in open("radishsurvey.txt"):
        line = line.strip()
-       parts = line.split(" - ")
-       name = parts[0]
-       vote = parts[1]
+       name, vote = line.split(" - ")
        if vote == "White Icicle":
           count = count + 1
     print(count)
@@ -147,9 +174,7 @@ Using your function, can you write a program which counts votes for White Icicle
         count = 0
         for line in open("radishsurvey.txt"):
             line = line.strip()
-            parts = line.split(" - ")
-            name = parts[0]
-            vote = parts[1]
+            name, vote = line.split(" - ")
             if vote == radish:
                 count = count + 1
         return count
@@ -212,8 +237,7 @@ Remember that for dictionaries `counts[vote]` means "the value in `counts` which
 
     for line in open("radishsurvey.txt"):
         line = line.strip()
-        parts = line.split(" - ")
-        vote = parts[1]
+        name, vote = line.split(" - ")
         if not vote in counts:
             # First vote for this variety
             counts[vote] = 1
@@ -286,8 +310,7 @@ There are lots of functions which could remove the case distinction. `str.lower(
 
     for line in open("radishsurvey.txt"):
         line = line.strip()
-        parts = line.split(" - ")
-        vote = parts[1]
+        name, vote = line.split(" - ")
         # munge the vote string to clean it up
         vote = vote.strip().capitalize()
         if not vote in counts:
@@ -354,8 +377,7 @@ This is just one of many ways to do this:
     
     for line in open("radishsurvey.txt"):
         line = line.strip()
-        parts = line.split(" - ")
-        name = parts[0]
+        name, vote = line.split(" - ")
         # clean up the person's name
         name = name.strip().capitalize().replace("  "," ")
         # check if this person already voted
@@ -363,7 +385,6 @@ This is just one of many ways to do this:
             print(name + " has already voted! Fraud!")
             continue
         voted.append(name)
-        vote = parts[1]
         # munge the vote string to clean it up
         vote = vote.strip().capitalize().replace("  "," ")
         if not vote in counts:
@@ -430,9 +451,9 @@ This is just one possible way to break it down:
     
     for line in open("radishsurvey.txt"):
         line = line.strip()
-        parts = line.split(" - ")
-        name = clean_string(parts[0])
-        vote = clean_string(parts[1])
+        name, vote = line.split(" - ")
+        name = clean_string(name)
+        vote = clean_string(vote)
     
         if not has_already_voted(name):
             count_vote(vote)
