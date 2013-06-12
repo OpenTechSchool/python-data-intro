@@ -17,23 +17,25 @@ However, there are other ways to work with Python. [IPython](http://ipython.org/
 
 # Installing IPython Notebook
 
-There are a number of ways to install IPython Notebook. Many of these are bundled installers that install Pytho, IPython, and other useful Python libraries, such as *matplotlib* (a Python graphing library that integrates powerfully with IPython Notebook.)
+There are a number of ways to install IPython Notebook. Many of these are bundled installers that install Python, IPython, and other useful Python libraries, such as *matplotlib* (a Python graphing library that integrates powerfully with IPython Notebook.)
 
-We recommend you download and install [Anaconda](http://continuum.io/downloads.html), which is a free bundled installer of Python together with a number of other useful tools (including IPython Notebook.)
+If you're using OS X or Windows, we recommend you download and install [Anaconda](http://continuum.io/downloads.html), which is a free bundled installer of Python together with a number of other useful tools (including IPython Notebook.)
 
 **Anaconda is a fairly large (~250Mb) download so if you're at a workshop event we'll have some USB keys with the predownloaded installers to save on bandwidth**
 
-Anaconda comes with its own version of Python 2.7, IPython Notebook, other libraries like matplotlib, and a package manager ("conda") that you can use to install other packages or other Python versions.
+Anaconda comes with its own version of Python 2.7, IPython Notebook, plus other libraries like matplotlib and a package manager ("conda") that you can use to install other packages or other Python versions.
+
+If you're using Linux, Anaconda is available as an option but we recommend you try to install the programs using your Linux distribution instead (see under "Alternative Options", below.)
 
 ## Anaconda Install on Windows
 
-Anaconda version 1.5.0 has a couple of installer bugs. After the install you'll need to do a couple of things to fix them:
+On Windows Anaconda version 1.5.0 has a couple of installer bugs. After the install you'll need to do a couple of things to fix them:
 
 * Go to your "Documents" folder and create a new folder called "IPython Notebooks". This is the working directory for IPython Notebook, and is where your notebooks will be created.
 
 * Go to the Start Menu, find the shortcut icon for "IPython (Py 2.7) Notebook", right-click it and then choose Properties.
 
-  (On Windows 8 you'll need to first click "Open File Location", then right-click the shortcut again to select the Properties.)
+(On Windows 8 you'll need to right-click, click "Open File Location", then right-click the shortcut again to select the Properties.)
 
   In the "Start In" field, remove the duplicate double quote marks "" from the start and end of the line:
   <img src="../images/windows_fixing_startdir.png" alt="Windows with messed up Start Dir selection">
@@ -43,7 +45,7 @@ Anaconda version 1.5.0 has a couple of installer bugs. After the install you'll 
 
 ## Alternative Options
 
-**Skip this section if you're happy with Anaconda.**
+**This section is only if you don't want to or can't use Anaconda**
 
 Anaconda is pretty "kitchen sink" complete. There are some other installer options you can test out if you'd like to try something different:
 
@@ -65,7 +67,7 @@ Anaconda is pretty "kitchen sink" complete. There are some other installer optio
 
 ## Note about Python 3
 
-Anaconda and some of the other installers come with Python version 2. You may have been using Python version 3 up until now, this is the verison that the Introduction to Programming workshop encourages you to use.
+Anaconda and some of the other installers come with Python version 2. You may have been using Python version 3 up until now, this is the version that the Introduction to Programming workshop encourages you to use.
 
 The Python world is slowly migrating towards using Python 3 for everything. IPython is available for both 2 & 3, but Anaconda comes with Python 2 as it includes some components which are still Python 2 only.
 
@@ -89,9 +91,9 @@ You should see some output like this:
     [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
     [NotebookApp] Use Control-C to stop this server and shut down all kernels.
 
-And a browser window may automatically open showing the IPython Notebook interface. If it doesn't open, you can copy-paste the "http" address from the output and paste it into your browser.
+A browser window may automatically open showing the IPython Notebook interface. If it doesn't open, you can copy-paste the "http" address from the output and paste it into your browser.
 
-Even though you're interacting with IPython Notebook using your browser, Notebook is running right there on your computer in that window. Only you can access it.
+Even though you're interacting with IPython Notebook using your browser, Notebook is running right there on your computer in that window. Only you have access to it.
 
 
 ## First Steps with Notebook
@@ -152,12 +154,13 @@ When IPython Notebook starts up it prints a line like this:
 
 This is the directory that it was started from, and it's the working directory so if you type a line like `%run "myprogram.py"` it will look for the file "myprogram.py" in that directory.
 
-Using Anaconda on Windows this directory is the "IPython Notebooks" directory that we created after we ran the installer.
+It can be helpful to make sure this directory is the directory where you plan to keep files related to your work.
 
-It can be helpful to make sure this directory is the directory where you plan to keep files related to your work. If you're launching from the command line, you can 'cd' to this directory before you launch Notebook.
+On Windows with Anaconda this directory is the "IPython Notebooks" directory that we created after we ran the installer. On OS X, Linux or other Windows installations it's up to you which directory you use.
 
+If you're launching from the command line, you can 'cd' to this directory before you launch Notebook.
 
-On windows, you can navigate to your preferred directory for storing your work, then hold shift+right click; the context menu that comes up should have a handy option to "Start a command prompt here"!
+If you're using the command line on Windows, you can use Explorer to find your directory, then hold shift+right click. The context menu that comes up should have an option to "Start a command prompt here".
 
 ## Other IPython tips
 
