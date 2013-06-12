@@ -47,6 +47,8 @@ When you push to github, the official site at http://opentechschool.github.io/py
 
 To generate and view the site (with correct CSS, etc.) with your on your local computer, you can install Jekyll and then run it like this:
 
+    jekyll --serve --auto
+    # or
     jekyll serve --watch
 
 Then browse to http://localhost:4000/python-data-intro/index.html to view the generated workshop content. If you leave the server running then Jekyll will automatically regenerate the site when it changes.
