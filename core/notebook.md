@@ -126,11 +126,30 @@ We can see this by making a third cell to print the contents:
 
 You can do anything with IPython Notebook cells that you'd do with normal Python code. As you build up the notebook full of cells you create a history of the things you've done and the results that were printed.
 
+## IPython Notebook Directory
+
+When IPython Notebook starts up it prints a line like this:
+
+    [NotebookApp] Serving notebooks from /home/gus/workshops
+
+This is the directory that it was started from, and it's the working directory for loading Python files, text files, etc.
+
+It can be helpful to make sure this directory is the directory where you plan to keep files related to your work.
+
+On Windows with Anaconda this directory is the "IPython Notebooks" directory that we created after we ran the installer. On OS X, Linux or other Windows installations it's up to you which directory you use.
+
+If you're launching from the command line, you can 'cd' to this directory before you launch Notebook.
+
+If you're using the command line on Windows, you can use Explorer to find your directory, then hold shift+right click. The context menu that comes up should have an option to "Start a command prompt here".
+
+
 ## Loading Notebook Files
 
-You can also load IPython Notebooks that other people have created, saved as IPython Notebook files (File extension .ipynb.) Try [downloading and opening this Notebook file with the shopping list example](../files/shopping_list.ipynb). That Notebook contains some additional code, and some suggestions for changes you can make by going back and editing the existing files.
+You can also load IPython Notebooks that other people have created, saved as IPython Notebook files (File extension .ipynb.) Try [downloading and opening this Notebook file with the shopping list example](../files/shopping_list.ipynb).
 
-Take a few minutes to play with the same Notebook and see what it can do.
+After you download the Notebook file, move it into your IPython Notebook working directory and then choose File -> New in Notebook to open it.
+
+That Notebook contains some additional code, and some suggestions for changes you can make by going back and editing the existing files. Take a few moments to play with the Notebook - rerun the cells, edit the cells to change them, don't be afraid to break things!
 
 ## Loading Python Files
 
@@ -147,22 +166,6 @@ There is one other useful built-in tool for working with Python files:
     %run "myprogram.py"
 
 This will run *myprogram.py* and load the output into a Notebook cell.
-
-## IPython Notebook Directory
-
-When IPython Notebook starts up it prints a line like this:
-
-    [NotebookApp] Serving notebooks from /home/gus/workshops
-
-This is the directory that it was started from, and it's the working directory so if you type a line like `%run "myprogram.py"` it will look for the file "myprogram.py" in that directory.
-
-It can be helpful to make sure this directory is the directory where you plan to keep files related to your work.
-
-On Windows with Anaconda this directory is the "IPython Notebooks" directory that we created after we ran the installer. On OS X, Linux or other Windows installations it's up to you which directory you use.
-
-If you're launching from the command line, you can 'cd' to this directory before you launch Notebook.
-
-If you're using the command line on Windows, you can use Explorer to find your directory, then hold shift+right click. The context menu that comes up should have an option to "Start a command prompt here".
 
 ## Other IPython tips
 
