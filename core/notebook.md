@@ -15,6 +15,8 @@ However, there are other ways to work with Python. [IPython](http://ipython.org/
 <img src="../images/ipython_example.png" alt="A sample from the IPython Notebook introduction examples">
 </img>
 
+(This is just an example of what IPython Notebook can do, don't feel like you need to understand it just yet!)
+
 # Installing IPython Notebook
 
 There are a number of ways to install IPython Notebook. Many of these are bundled installers that install Python, IPython, and other useful Python libraries, such as *matplotlib* (a Python graphing library that integrates powerfully with IPython Notebook.)
