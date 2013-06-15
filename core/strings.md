@@ -143,6 +143,8 @@ You may have noticed in the [documentation for split()](http://docs.python.org/3
     print(name)
     print(cracker)
 
+Confusion warning: The optional argument to split is the *number of times to split the string*, not the number of parts to split it into. So splitting it one time creates two strings, splitting it two times creates three strings, etc. A little "got you" moment for the unwary Python programmer!
+
 # Counting Votes
 
 Can you write a program which counts the total number of votes for *White Icicle* radishes?

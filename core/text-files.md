@@ -182,6 +182,11 @@ Or you can make it into two lines, like this:
 
 In the two line alternative you update the `next` variable to hold the "stripped" version. This might be useful if you intend to use the value of `next` again, later on.
 
+Strip by default removes whitespace characters from the ends of strings (including `\n` but also spaces or tabs.) Another way you can use it is to tell it specifically to *only* remove `\n`, nothing else:
+
+    next = next.strip("\n")
+    print(next)
+
 ## Reading Every Line
 
 `readline()` will let you read through a file line by line. However, there are two even easier ways to read an entire file this way:
@@ -228,14 +233,22 @@ Or just type `f.` into IPython Notebook and then press "Tab" to view an automati
 
     f = open("awesomenewfile.txt", "w")
     f.write("Awesome message!")
+    f.close()
 
 ### Why do you use 'print' to write things on the console, but 'write' for files?
 
 I don't know. I think it's just been that way for as long as Python has been around.
 
-There is one important difference, `print()` automatically ends the line. `write()` doesn't, if you want to end the line you'll need to add the newline character `\n` yourself.
+**There is one important difference between print and write**, `print()` automatically ends the line. `write()` doesn't, if you want to end the line you'll need to add the newline character `\n` yourself.
 
 Can you write a program which creates a two line text file?
+
+### Closing Files
+
+The last part of the solution is to `close()` the file when you're done. This is good practice to "clean up" after yourself. Changes may not show up in the file until you've closed it.
+
+You can `close()` files that you've opened for reading as well.
+
 
 ### Hint
 
@@ -248,6 +261,7 @@ Alternatively, if you're using OS X or Linux you can type `cat <filename>` in a 
     f = open("mylongfile.txt", "w")
     f.write("First line\n")
     f.write("Second line")
+    f.close()
 
 ### Exercise!
 
@@ -256,6 +270,8 @@ If you want to try all this out, here's a quick exercise to make sure you've got
 1. Reads all the lines from your text file into a list.
 2. Appends something crazy to each line in the list. " Ya mum!" is nicely innapropriate, if you're struggling for ideas.
 3. Writes all lines in that list into a new file. Check out your handy work by looking in the new file!
+
+When writing to the files, remember that `print()` adds a newline but with `write()` you have to add the newline yourself.
 
 Hopefully pretty simple, but that should make sure you have all the above ideas down-pat.
 
