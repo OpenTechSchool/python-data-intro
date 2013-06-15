@@ -147,7 +147,7 @@ If you're using the command line on Windows, you can use Explorer to find your d
 
 You can also load IPython Notebooks that other people have created, saved as IPython Notebook files (File extension .ipynb.) Try [downloading and opening this Notebook file with the shopping list example](../files/shopping_list.ipynb).
 
-After you download the Notebook file, move it into your IPython Notebook working directory and then choose File -> New in Notebook to open it.
+After you download the Notebook file, move it into your IPython Notebook working directory and then choose File -> Open in Notebook to open it.
 
 That Notebook contains some additional code, and some suggestions for changes you can make by going back and editing the existing files. Take a few moments to play with the Notebook - rerun the cells, edit the cells to change them, don't be afraid to break things!
 
