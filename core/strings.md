@@ -145,6 +145,10 @@ You may have noticed in the [documentation for split()](http://docs.python.org/3
 
 Confusion warning: The optional argument to split is the *number of times to split the string*, not the number of parts to split it into. So splitting it one time creates two strings, splitting it two times creates three strings, etc. A little "got you" moment for the unwary Python programmer!
 
+# Tip
+
+Multiple assignment actually makes use of a Python type called a 'tuple' and a notion called 'sequence unpacking'. Tuples and sequence unpacking aren't required knowledge to complete this workshop. However if you're feeling curious you can have a peek at the [Python tutorial](http://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) where the concept of a tuple is explained.
+
 # Counting Votes
 
 Can you write a program which counts the total number of votes for *White Icicle* radishes?
