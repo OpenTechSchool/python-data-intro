@@ -175,6 +175,19 @@ This will run *myprogram.py* and load the output into a Notebook cell.
 
 * Using a nifty tool called NBViewer you can easily share IPython Notebooks on the internet, rendered as web pages (but still downloadable to play with in IPython.) Check out the [NBViewer home page](http://nbviewer.ipython.org/) or the [IPython Notebook gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks) for some interesting ones.
 
+## Other Ways to Run IPython
+
+Other options if you feel like exploring:
+
+* There is a command line "ipython" program (just run ipython without the --notebook argument) that behaves similarly to the "python" shell, but with some of the features of IPython Notebook (although none of the graphical features.)
+
+* There is a standalone graphical IPython program (ie not web browser based) called "QtConsole", like the command line IPython but with some graphical features. Launch it by running "ipython --qtconsole".
+
+
+## Doing the workshop without IPython
+
+Tried out IPython Notebook but don't really like it? No problem! The rest of the workshop can be completed without using IPython Notebook at all, feel free to go back to the Python coding tools you were using already.
+
 ## Next Chapter
 
 Time to give Notebook a real workout! The next chapter is [Working With Text Files](text-files.html)

@@ -29,6 +29,16 @@ Try this in Notebook and you'll see the line chart is plotted in the notebook, u
 
 matplotlib can also output charts in other formats like image files, but being able to edit the code and regenerate the chart inline is one of the nice features of IPython Notebook!
 
+## Using Matplotlib without IPython Notebook
+
+If you want to use matplotlib directly from Python instead of via IPython Notebook, you just need to add one final line to each of your programs:
+
+    plt.show()
+
+This will display a window with the chart you created, and pause the script until you close it.
+
+All the examples in this workshop assume you're using matplotlib with Notebook, so remember this additional line as you work through it (or your program will run, but nothing will happen!)
+
 ## Radish Votes
 
 Let's start by using matplotlib to generate a bar graph to display the vote counts from the radish variety program we just wrote.
