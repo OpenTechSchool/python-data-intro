@@ -45,6 +45,9 @@ On Windows Anaconda version 1.5.0 has a couple of installer bugs. After the inst
 
   ...replace these with a single double quote " at each end.
 
+* On the "Target" line, add the phrase ` --pylab inline` at the end,
+  after the word "notebook"
+
 ## Alternative Options
 
 **This section is only if you don't want to or can't use Anaconda**
