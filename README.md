@@ -7,7 +7,7 @@ http://opentechschool.github.io/python-data-intro/
 
 This is a friendly how-to for contributors to the Introduction to Data Processing with Python course at OpenTechSchool. First, a quick refresher on the course:
 
-> Have you ever found yourself doing something methodical and repetitive with a computer, and wondered why there wasn't a better way to do it? Have you ever had some data, maybe a text file or a set of numbers, that you'd like to know some simple things about? 
+> Have you ever found yourself doing something methodical and repetitive with a computer, and wondered why there wasn't a better way to do it? Have you ever had some data, maybe a text file or a set of numbers, that you'd like to know some simple things about?
 
 > You will only need a laptop and a very basic understanding of Python. If you've done our Introduction to Programming workshop then this will be perfect.
 
@@ -34,7 +34,7 @@ As you can see, the schedule just has a big chunk of 'learn stuff'. We like to k
 
 So, fork this repository. The guide is written as a [Jekyll](http://jekyllrb.com/) site, hosted on GitHub pages. It's set up so you can just write pages in Markdown.  A markup guide is below.
 
-Course work goes under `core/` or `extras/`. It's all linked together by `index.md` in the root direcory.
+Course work goes under `core/` or `extras/`. It's all linked together by `index.md` in the root directory.
 
 * `core/` covers the basic goals of the course. Put any images in `core/images/`
 * `extras/` are all the interesting things people can do once they have completed the basics.
@@ -99,8 +99,8 @@ In Vim, you might like these settings:
 
 Getting literal with `backticks`
 
-    Or use an indent of 4 spaces, 
-	to get yourself a code block, 
+    Or use an indent of 4 spaces,
+	to get yourself a code block,
 	that looks lovely.
 
 > Do a bit of blockquoting. You can still reflow the text as much as you like.  Newlines are awesome.  And made of win.
@@ -123,6 +123,6 @@ Bit of command line:
 
     $ holla holla
     get dolla
-    $ 
+    $
 
 For a more complete list of languages see [highlight.js](http://softwaremaniacs.org/media/soft/highlight/test.html)
