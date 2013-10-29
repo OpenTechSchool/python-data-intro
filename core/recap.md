@@ -14,10 +14,10 @@ interactive Python prompt by typing `python` in the command line and
 pressing `<Enter>`.  It will show you some context information about
 Python similar to this::
 
-    Python 3.2.3 (default, Oct 19 2012, 19:53:16) 
+    Python 3.2.3 (default, Oct 19 2012, 19:53:16)
     [GCC 4.7.2] on linux2
     Type "help", "copyright", "credits" or "license" for more information.
-    >>> 
+    >>>
 
 On Windows you can open Python through the Start Menu.
 
@@ -43,12 +43,12 @@ This code prints the even numbers 2 through 8, one per line.
 
 ### Bonus Challenge
 
-Python has a built-in function called `range` that can automatically generate a range of numbers like [2, 4, 6, 8]. For example, `range(1,10)` is a sequence of the numbers 1 through 9 (a common but sometimes confusing thing in programming is for the "end" number not to be included in a sequence.)
+Python has a built-in function called `range` that can automatically generate a range of numbers like \[2, 4, 6, 8\]. For example, `range(1,10)` is a sequence of the numbers 1 through 9 (a common but sometimes confusing thing in programming is for the "end" number not to be included in a sequence.)
 
     for i in range(1,10):
         print(i)
 
-Can you make a `range` equivalent to [2, 4, 6, 8]? To get some clues, you can open an interactive Python Interpreter and type `help(range)`. The useful details are near the top. Press 'q' to exit the help viewer when you're done.
+Can you make a `range` equivalent to \[2, 4, 6, 8\]? To get some clues, you can open an interactive Python Interpreter and type `help(range)`. The useful details are near the top. Press 'q' to exit the help viewer when you're done.
 
 
 # Variables
@@ -79,10 +79,10 @@ You can define your own functions with parameters in order to reuse some code ag
 
     def say_hello_to(name):
         print("Hello " + name)
-    
+
     say_hello_to("Miranda")
     say_hello_to("Fred")
-    
+
 ### Solution
 
     Hello Miranda
