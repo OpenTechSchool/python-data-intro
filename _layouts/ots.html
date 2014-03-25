@@ -1,100 +1,72 @@
 <!doctype html>
+<html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>OpenTechSchool – {{ page.title }}</title>
-  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,400,700" rel="stylesheet" type="text/css">
   <link href="{{site.baseurl}}/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/zenburn.min.css">
+  <link href="{{site.baseurl}}/css/zenburn.min.css" rel="stylesheet" media="screen">
+  <link href="{{site.baseurl}}/css/styles.css" rel="stylesheet" media="screen">
 
-  <link rel="icon" href="/favicon.ico" type="image/png">
-     <style type="text/css">
-      h1, h2, h3, h4, h5, h6 {
-        font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-      }
-      
-      pre {
-        border-color: #fff;
-        background-color: #fff;
-      }
-
-      code {
-        font-size: 15px;
-        font-family: Monaco,Menlo,Consolas,"DejaVu Sans Mono", Inconsolata, "Courier New",monospace;
-      }
-      
-      .title { text-align: center; margin-bottom: 30px; margin-top: 30px; }
-      
-      .container-fluid {
-      	max-width: 1200px;
-      	margin: auto;
-      }
-      
-      #main-content { max-width: 800px; }
-      
-      #footer { text-align: center; }
-
-      .navbar h1 a, .navbar h1 {
-        color: #eee;
-        font-size: 18px;
-        line-height: 20px;
-        text-align: center;
-        text-decoration: none;
-      }
-
-     </style>
+  <link rel="icon" href="{{site.baseurl}}/favicon.ico" type="image/png">
 </head>
-
 <body>
-    <div class="navbar navbar-inverse navbar-static-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-	  <div class="row-fluid">
-	  <div class="span3"><a href="http://www.opentechschool.org/"><h1>OpenTechSchool</a></h1></div>
-	  <div class="span6"><h1><a href="{{site.baseurl}}/">{{site.title}}</a></h1></div>
-	  </div>
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span3"><a href="http://www.opentechschool.org/" target="_blank"><h1>OpenTechSchool</a></h1></div>
+          <div class="span6"><h1><a href="{{site.baseurl}}/">{{site.title}}</a></h1></div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container-fluid">
+  <div id="main-content" class="container-fluid">
 
-      <div class="row-fluid">
-	<h1 class="title">{{ page.title }}</h1>
-	<hr>
-      </div>
-      
+    <div class="row-fluid">
+      <h1 class="title">{{ page.title }}</h1>
+      <hr>
+    </div>
+
     <div class="row-fluid">
 
-	<div class="span3 well sidebar-nav">
-      <ul class="nav nav-list">
-      {% for p in site.map %} 
-        <li class="nav-header">
-	  {% if p.path %}
-	  <a href="{{site.baseurl}}{{p.path}}" alt="{{ p.caption }}">{{p.title}}</a>
-	  {% else %}
-	  {{p.title}}
-	  {% endif %}
-	</li>
-        {% for s in p.subpages %}
-          <li><a href="{{site.baseurl}}{{s.path}}" alt="{{ s.caption }}">{{s.title}}</a></li>
-        {% endfor %}
-      {% endfor %}
-      </ul>
+      <div class="span3 well sidebar-nav">
+        <ul class="nav nav-list">
+          {% for p in site.map %}
+            <li class="nav-header">
+              {% if p.path %}
+                <a href="{{site.baseurl}}{{p.path}}" alt="{{ p.caption }}">{{p.title}}</a>
+              {% else %}
+                {{p.title}}
+              {% endif %}
+            </li>
+            {% for s in p.subpages %}
+              <li><a href="{{site.baseurl}}{{s.path}}" alt="{{ s.caption }}">{{s.title}}</a></li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
       </div>
 
-	<div id="main-content" class="span9">
-          {{ content }}
-        </div>
-        <div id="footer" class="span9">© 2011-2012 by <a href="http://www.opentechschool.org">OpenTechSchool</a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="http://www.opentechschool.org/imprint.html">Impressum</a>
-        </div>
+      <div id="main-content" class="span9">
+        {{ content }}
+      </div>
 
     </div>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="{{site.baseurl}}/bootstrap/js/bootstrap.min.js"></script>
-    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-    <script src="{{site.baseurl}}/scripts/spoilers.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+
+  </div>
+
+  <div id="footer">
+    <p>
+      © 2013-2014 - made by <a href="http://www.opentechschool.org">OpenTechSchool</a> and its <a href="https://github.com/OpenTechSchool/html-css-beginners/graphs/contributors">Contributors</a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="http://www.opentechschool.org/imprint.html">Impressum</a>
+    </p>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="{{site.baseurl}}/bootstrap/js/bootstrap.min.js"></script>
+  <script src="{{site.baseurl}}/js/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+---
+---
+/* keep the above dashes for jekyll to preprocess this file */
+body {
+  background: url("{{site.baseurl}}/images/background.png") #FFF repeat fixed;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin: 1em 0 .5em 0;
+}
+
+.sidebar-nav {
+  margin-top: 2.25em;
+}
+
+code {
+  font-family: Monaco, Menlo, Consolas, "DejaVu Sans Mono", Inconsolata,
+  "Courier New", monospace;
+}
+
+pre {
+  border: none;
+  background: none;
+}
+
+pre code {
+  font-size: 15px;
+  background: #222222 !important;
+}
+
+.navbar h1 a, .navbar h1 {
+  color: #f5f5f5;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar h1 a:hover {
+  color: #fff;
+}
+
+.navbar-static-top {
+  z-index: 1000;
+  position: relative;
+}
+
+.navbar-inner {
+  background: #085987 !important;
+  border-color: #085987 !important;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#main-content {
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0px 0px 50px 20px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow:    0px 0px 50px 20px rgba(255, 255, 255, 0.5);
+  box-shadow:         0px 0px 50px 20px rgba(255, 255, 255, 0.5);
+}
+
+#main-content p, #main-content li {
+  font-size: 15px;
+}
+
+#footer {
+  text-align: center;
+  background-color: #085987;
+  clear: both;
+  margin-top: 6em;
+  padding: 1em 0;
+  width: 100%;
+  color: #FFF;
+}
+
+#footer a {
+  color: #c1d5e1;
+}
+
+#footer a:hover {
+  color: #FFF;
+}
+
