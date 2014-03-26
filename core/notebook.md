@@ -12,10 +12,14 @@ editor.
 
 However, there are other ways to work with Python. [IPython](http://ipython.org/) is a set of tools originally developed to make it easier for scientists to work with Python and data. It allows you to combine interactive Python exploration with prewritten programs and even text and equations for documentation.
 
+*IPython isn't a different programming language, it's just a set of computer programs for working with the Python language.*
+
+## Sneak Preview of IPython
+
 <img src="../images/ipython_example.png" alt="A sample from the IPython Notebook introduction examples">
 </img>
 
-(This is just an example of what IPython Notebook can do, don't feel like you need to understand it just yet!)
+(This is just an example of what IPython Notebook can do, don't feel like you need to understand it just yet! If you want to type it into IPython Notebook later on, type the special command `%pylab inline` before you start - there's an explanation coming up in the Charts chapter.)
 
 # Installing IPython Notebook
 
@@ -182,9 +186,9 @@ This will run *myprogram.py* and load the output into a Notebook cell.
 
 Other options if you feel like exploring:
 
-* There is a command line "ipython" program (just run ipython without the --notebook argument) that behaves similarly to the "python" shell, but with some of the features of IPython Notebook (although none of the graphical features.)
+* There is a command line "ipython" program (just run `ipython` without the --notebook argument) that behaves similarly to the "python" shell, but with some of the nice features of IPython Notebook (although none of the graphical features.)
 
-* There is a standalone graphical IPython program (ie not web browser based) called "QtConsole", like the command line IPython but with some graphical features. Launch it by running "ipython --qtconsole".
+* There is a standalone graphical IPython program (ie not web browser based) called "QtConsole". It's like the command line IPython but with some graphical features. Launch this one by running `ipython qtconsole`.
 
 
 ## Doing the workshop without IPython
