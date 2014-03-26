@@ -107,10 +107,12 @@ Look back at the [OpenFlights data page](http://www.openflights.org/data.html) t
         latitudes[airport_id] = float(row[6])
         longitudes[airport_id] = float(row[7])
 
-To see the contents of the latitudes or longitudes dictionaries, just type the variable name into a cell and run it.
+In IPython Notebook, to see the contents of the latitudes or longitudes dictionaries, just type the variable name ("latitudes" or "longitudes") into a cell and run it.
 
 <img src="../images/viewing_latitudes.png" alt="Viewing latitudes in a Notebook cell">
 </img>
+
+If you're not using IPython Notebook, running this program won't print any output. Add a line `print(latitudes)` or `print(longitudes)` to the end of the program to print out the variable contents. It won't be as pretty as IPython Notebook, though!
 
 There's one new thing in this example solution: `float(row[6])`. `float()` means to convert the string value to a floating point (ie fractional) number:
 
@@ -132,6 +134,8 @@ There are two ways you can use this function:
 
       import geo_distance
       geo_distance.distance(-37.814,144.963,52.519,13.406) # Melbourne to Berlin in km!
+
+(If you're not using IPython Notebook, this code snippet doesn't display anything. You'll need to store the output of the `distance` function to a variable, then add a line with a `print()` statement to display the contents of the variable.)
 
 * Alternatively, copy and paste the geo_distance function from inside the Python file into an IPython Notebook cell. Run the cell to define the function, and then use it in subsequent cells!
 
@@ -159,6 +163,8 @@ Once again, you can test the results of your program by typing the name of the o
 
 <img src="../images/viewing_distances.png" alt="Viewing latitudes in a Notebook cell">
 </img>
+
+(If you're not using IPython Notebook, this is yet another program that doesn't display anything when it runs. Add `print()` statements to the end of the program to display the variable values.)
 
 ## Histogram
 
