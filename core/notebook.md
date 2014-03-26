@@ -23,54 +23,31 @@ However, there are other ways to work with Python. [IPython](http://ipython.org/
 
 # Installing IPython Notebook
 
-There are a number of ways to install IPython Notebook. Many of these are bundled installers that install Python, IPython, and other useful Python libraries, such as *matplotlib* (a Python graphing library that integrates powerfully with IPython Notebook.)
+There are a number of ways to install IPython Notebook.
 
-If you're using OS X or Windows, we recommend you download and install [Anaconda](http://continuum.io/downloads.html), which is a free bundled installer of Python together with a number of other useful tools (including IPython Notebook.)
+If you're using OS X or Windows, we recommend you download and install [Anaconda](http://continuum.io/downloads.html), which is a free bundled installer of Python together with many other useful tools (including IPython Notebook.)
 
-**Anaconda is a fairly large (~250Mb) download so if you're at a workshop event we'll have some USB keys with the predownloaded installers to save on bandwidth**
+**Anaconda is a fairly large (around 300Mb) download so if you're at a workshop event we'll have some USB keys with the predownloaded installers to save on bandwidth**
 
 Anaconda comes with its own version of Python 2.7, IPython Notebook, plus other libraries like matplotlib and a package manager ("conda") that you can use to install other packages or other Python versions.
 
 If you're using Linux, Anaconda is available as an option but we recommend you try to install the programs using your Linux distribution instead (see under "Alternative Options", below.)
 
-## Anaconda Install on Windows
-
-On Windows Anaconda version 1.5.0 has a couple of installer bugs. After the install you'll need to do a couple of things to fix them:
-
-* Go to your "Documents" folder and create a new folder called "IPython Notebooks". This is the working directory for IPython Notebook, and is where your notebooks will be created.
-
-* Go to the Start Menu, find the shortcut icon for "IPython (Py 2.7) Notebook", right-click it and then choose Properties.
-
-(On Windows 8 you'll need to right-click, click "Open File Location", then right-click the shortcut again to select the Properties.)
-
-  In the "Start In" field, remove the duplicate double quote marks "" from the start and end of the line:
-  <img src="../images/windows_fixing_startdir.png" alt="Windows with messed up Start Dir selection">
-</img>
-
-  ...replace these with a single double quote " at each end.
-
-* On the "Target" line, add the phrase ` --pylab inline` at the end,
-  after the word "notebook"
-
 ## Alternative Options
 
 **This section is only if you don't want to or can't use Anaconda**
 
-Anaconda is pretty "kitchen sink" complete. There are some other installer options you can test out if you'd like to try something different:
+Anaconda (described above) is the easiest option for this workshop. There are some other installer options that you can test out if you'd like to try something different:
 
-* [winpython](http://code.google.com/p/winpython/) has installers for Windows, similar to Anaconda.
+* If you're on Linux, most package managers include IPython Notebook. For instance on Ubuntu or Debian:
 
-* [Pyzo](http://www.pyzo.org/downloads.html) has installers for Python 3 and bundled packages on Windows, Linux & OS X.
+      sudo apt-get install ipython-notebook python-matplotlib
 
 * If you have 'pip' installed (maybe from another OTS workshop) then you may be able to install IPython by itself (plus matplotlib) via 'pip', as follows:
 
       pip install tornado pyzmq numpy matplotlib ipython
 
 (If you're on OS X you will need XCode installed for this to work.)
-
-* If you're on Linux, most package managers include IPython Notebook. For instance on Ubuntu or Debian:
-
-      sudo apt-get install ipython-notebook python-matplotlib
 
 * If you can't get IPython Notebook to work on your computer at all, there's a hosted service called [Wakari](https://www.wakari.io/) that you can use for free. In this case your programs won't be running on your own computer, they'll be running "in the cloud" (ie on Wakari's servers somewhere else) and you'll just see the results in your web browser.
 
@@ -87,9 +64,9 @@ Python 2 and Python 3 have some minor incompatible differences in language synta
 
 You interact with IPython Notebook using your web browser. The Notebook program creates a "web server" locally on your computer that you then connect to.
 
-To start IPython Notebook on Windows (with Anaconda), there should be a clickable launcher under the Start menu.
+On Windows, you can find a launcher for IPython Notebook under Anaconda in the Start menu.
 
-On Linux or OS X, you can start IPython Notebook from the command line. First open a terminal window, use 'cd' to navigate to the directory where you want to store your notebooks and other Python files. Then run this command:
+On Linux or OS X, you can start IPython Notebook from the command line. First open a terminal window, use 'cd' to navigate to the directory where you want to store your Python files and notebook document files. Then run this command:
 
     ipython notebook --pylab inline
 
@@ -143,7 +120,7 @@ This is the directory that it was started from, and it's the working directory f
 
 It can be helpful to make sure this directory is the directory where you plan to keep files related to your work.
 
-On Windows with Anaconda this directory is the "IPython Notebooks" directory that we created after we ran the installer. On OS X, Linux or other Windows installations it's up to you which directory you use.
+On Windows with Anaconda this directory is called "IPython Notebooks" inside "My Documents", and is created when you install Anaconda. On OS X, Linux or other Windows installations it's up to you which directory you use.
 
 If you're launching from the command line, you can 'cd' to this directory before you launch Notebook.
 
@@ -186,9 +163,9 @@ This will run *myprogram.py* and load the output into a Notebook cell.
 
 Other options if you feel like exploring:
 
-* There is a command line "ipython" program (just run `ipython` without the --notebook argument) that behaves similarly to the "python" shell, but with some of the nice features of IPython Notebook (although none of the graphical features.)
+* There is a command line "ipython" program (just run `ipython` without the --notebook argument) that behaves similarly to the "python" interactive shell, but with some of the nice features of IPython Notebook (although none of the graphical features.)
 
-* There is a standalone graphical IPython program (ie not web browser based) called "QtConsole". It's like the command line IPython but with some graphical features. Launch this one by running `ipython qtconsole`.
+* There is a graphical IPython program (ie not web browser based) called "IPython QtConsole". It's like the command line IPython but with some graphical features. Launch this one by running `ipython qtconsole`.
 
 
 ## Doing the workshop without IPython
