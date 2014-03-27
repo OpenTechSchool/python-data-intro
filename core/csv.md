@@ -130,14 +130,20 @@ Calculating geographic distances is a bit tricky because the earth is a sphere. 
 
 There are two ways you can use this function:
 
-* Place the file in the Notebook working directory and then import it as a Python module to use it:
+* Place the file in the Notebook working directory and then import it as a Python module to use it.
 
-      import geo_distance
-      geo_distance.distance(-37.814,144.963,52.519,13.406) # Melbourne to Berlin in km!
+Here's an example to test everything is working:
 
-(If you're not using IPython Notebook, this code snippet doesn't display anything. You'll need to store the output of the `distance` function to a variable, then add a line with a `print()` statement to display the contents of the variable.)
+    import geo_distance
+    geo_distance.distance(-37.814,144.963,52.519,13.406) # Melbourne to Berlin in km!
 
-* Alternatively, copy and paste the geo_distance function from inside the Python file into an IPython Notebook cell. Run the cell to define the function, and then use it in subsequent cells!
+In IPython Notebook, you can paste this code into a cell and Run it to see the distance.
+
+If you're not using IPython Notebook, this code snippet doesn't display anything. You'll need to store the result of the `distance` function to a variable, then add a line with a `print()` statement to display the contents of the variable.
+
+* As an laternative to the `import` statement, you can also copy and paste the contents of the geo_distance.py file into an IPython Notebook cell. Run the cell to define the `distance` function, and then use it in subsequent cells!
+
+## Next Challenge
 
 Once you have the `distance()` function working, can you write a program that reads all the airline routes from "routes.dat", looks up the latitude and longitude of the source and destination airports, and builds a list of route distances?
 
