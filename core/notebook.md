@@ -41,11 +41,11 @@ Anaconda (described above) is the easiest option for this workshop. There are so
 
 * If you're on Linux, most package managers include IPython Notebook. For instance on Ubuntu or Debian:
 
-      sudo apt-get install ipython-notebook python-matplotlib
+        sudo apt-get install ipython-notebook python-matplotlib
 
 * If you have 'pip' installed (maybe from another OTS workshop) then you may be able to install IPython by itself (plus matplotlib) via 'pip', as follows:
 
-      pip install tornado pyzmq numpy matplotlib ipython
+        pip install ipython[notebook]
 
 (If you're on OS X you will need XCode installed for this to work.)
 
