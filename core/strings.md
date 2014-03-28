@@ -310,7 +310,7 @@ We already know one munging function, `strip()`. Try applying `strip()` to each 
 
 How about "Red King" and "red king"? Take a look at the [Python string functions reference](http://docs.python.org/3/library/stdtypes.html#string-methods) and see if you can find a function that could transform these two so they look the same to the computer.
 
-## Solution
+### Solution
 
 There are lots of functions which could remove the case distinction. `str.lower()` would convert all the names to all lower case, `str.upper()` would CONVERT THEM ALL TO UPPER CASE, or `str.capitalize()` would Capitalise the first letter only. Here's one way:
 
@@ -375,7 +375,7 @@ You will need to start making a list of the names of everyone who has voted so f
 
 You'll need to apply the same data munging techniques to clean up people's names, so that "Joanne Smith" and "joanne smith" are counted as the same person.
 
-## Solution
+### Solution
 
 This is just one of many ways to do this:
 
@@ -428,7 +428,7 @@ Have a try at breaking out some of the parts into functions, one function at a t
 
 IPython Notebook makes this easy because you can run the cell (with Shift-Enter if you like) after each change, to check the program still works.
 
-## Solution
+### Solution
 
 This is just one possible way to break it down:
 
@@ -492,7 +492,7 @@ Our program prints the number of votes cast for each radish variety, but it does
 
 You can make a for loop which iterates over all of the keys in a dictionary by using the syntax `for key in dictionary:`. In this case it might be `for name in counts:`.
 
-## Solution
+### Solution
 
 You can do something like this:
 
