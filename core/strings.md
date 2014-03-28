@@ -118,28 +118,28 @@ You might notice that the code splitting the line has become even shorter here. 
 
 Take a moment to play with multiple assignment in IPython Notebook (see the previous solution for an example of this.) Try some lines like these:
 
-    a,b,c = [ 1,2,3 ]
+    a, b, c = [1, 2, 3]
     print(b)
     print(a)
 
 Or this:
 
-    name,cheese,cracker = "Fred,Jarlsberg,Rye".split(",")
+    name, cheese, cracker = "Fred,Jarlsberg,Rye".split(",")
     print(cheese)
 
 You'll notice that multiple assignment only works when the number of elements being assigned on the left hand side of the " = " matches the number on the right.
 
 For instance, this doesn't work:
 
-    x,y,z = [ 1,2 ]
+    x, y, z = [1, 2]
 
 Neither does this:
 
-    name,cheese,cracker = "Fred,Jarlsberg,Rye,Buckwheat".split(",")
+    name, cheese, cracker = "Fred,Jarlsberg,Rye,Buckwheat".split(",")
 
 You may have noticed in the [documentation for split()](http://docs.python.org/3/library/stdtypes.html#str.split) that you can attach an optional second argument which is the maximum number of times to split the string. You can use this to prevent errors by creating too many elements, like this:
 
-    name,cheese,cracker = "Fred,Jarlsberg,Rye,Buckwheat".split(",",2)
+    name, cheese, cracker = "Fred,Jarlsberg,Rye,Buckwheat".split(",",2)
     print(name)
     print(cracker)
 
@@ -226,12 +226,12 @@ Here are two snippets of code you might find useful:
 
 also
 
-    if not vote in counts:
+    if vote not in counts:
         # First vote for this variety
         counts[vote] = 1
     else:
         # Increment the vote count
-        counts[vote] = counts[vote] + 1
+        counts[vote] += 1
 
 Remember that for dictionaries `counts[vote]` means "the value in `counts` which is associated with the key `vote`". In this case, the key is a string (radish name) and the value is a number (vote count.)
 
@@ -244,12 +244,12 @@ Remember that for dictionaries `counts[vote]` means "the value in `counts` which
     for line in open("radishsurvey.txt"):
         line = line.strip()
         name, vote = line.split(" - ")
-        if not vote in counts:
+        if vote not in counts:
             # First vote for this variety
             counts[vote] = 1
         else:
             # Increment the vote count
-            counts[vote] = counts[vote] + 1
+            counts[vote] += 1
     print(counts)
 
 ### Pretty printing
@@ -276,7 +276,12 @@ Python needs to distinguish between strings and numbers for lots of reasons. For
 
 ### Tip
 
-Python actually has a built-in module called [pprint](http://docs.python.org/3/library/pprint.html) to make it easy to pretty-print things. Try it out with your program if you like!
+Python actually has a built-in module called [pprint](http://docs.python.org/3/library/pprint.html) to make it easy to pretty-print things. You can use it like:
+
+    from pprint import pprint
+    pprint(some_dictionary)
+
+Try it out with your program if you like!
 
 ### Sneakier Tip
 
@@ -324,7 +329,7 @@ There are lots of functions which could remove the case distinction. `str.lower(
             counts[vote] = 1
         else:
             # Increment the vote count
-            counts[vote] = counts[vote] + 1
+            counts[vote] += 1
     print(counts)
 
 If you're having trouble spotting the difference here, it's
@@ -398,7 +403,7 @@ This is just one of many ways to do this:
             counts[vote] = 1
         else:
             # Increment the vote count
-            counts[vote] = counts[vote] + 1
+            counts[vote] += 1
     
     print("Results:")
     print()
