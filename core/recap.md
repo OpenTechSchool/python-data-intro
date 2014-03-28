@@ -13,9 +13,8 @@ After installing Python on your system successfully, you can start the
 interactive Python prompt by typing `python` in the command line and
 pressing `<Enter>`.  It will show you some context information about
 Python similar to this::
-
-    Python 3.2.3 (default, Oct 19 2012, 19:53:16)
-    [GCC 4.7.2] on linux2
+    
+    Python 3.3.5 (v3.3.5:62cf4e77f785, Mar  9 2014, 10:37:12) [MSC v.1600 32 bit (Intel)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
 
