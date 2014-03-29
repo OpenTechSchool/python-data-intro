@@ -273,7 +273,25 @@ If you want to try all this out, here's a quick exercise to make sure you've got
 
 When writing to the files, remember that `print()` adds a newline but with `write()` you have to add the newline yourself.
 
-Hopefully pretty simple, but that should make sure you have all the above ideas down-pat.
+Hopefully pretty simple, but you should make sure you have all the above ideas down-pat.
+
+### Python 2.x and 3.x
+
+It's useful to have seen everything above, but there is a preferred way to handle these intricacies. It uses a python reserved word: `with`. Unfortunately, python is in a transition period between 2.7 and 3.x, so there is an added complication. This tutorial is based on 2.7, while the future will be 3.x. The good news is, you can properly write code that will work in both versions by adding the following line to 2.7 code once (near the top of your script with other imports): 
+
+    from __future__ import absolute_import, division, print_function
+
+If you are using version 3.0 (or a higher number), feel free to leave it out (though it doesn't hurt to leave it in, either). But, assuming you are using 2.7, see how to print an example file below: 
+
+    from __future__ import absolute_import, division, print_function
+    # ... any other code you want here ... 
+    with open("extrafile.txt", "w") as file_handle:
+        print("First line", file=file_handle) 
+        print("Second line", file=file_handle) 
+        print("Third line", file=file_handle) 
+        
+Notice a couple of things with this construct. First, the `with` opens a new code block. The nice thing about the way this is handled is that it will automatically close the file (even if an exception is raised). Second, we can use `print` to print (without a "\n" character specfied), but we have to tell `print` where the text is going (in this case the `file_handle`). 
+
 
 ## Next Chapter
 
