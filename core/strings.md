@@ -231,7 +231,7 @@ also
         counts[vote] = 1
     else:
         # Increment the vote count
-        counts[vote] += 1
+        counts[vote] = counts[vote] + 1
 
 Remember that for dictionaries `counts[vote]` means "the value in `counts` which is associated with the key `vote`". In this case, the key is a string (radish name) and the value is a number (vote count.)
 
@@ -249,7 +249,7 @@ Remember that for dictionaries `counts[vote]` means "the value in `counts` which
             counts[vote] = 1
         else:
             # Increment the vote count
-            counts[vote] += 1
+            counts[vote] = counts[vote] + 1
     print(counts)
 
 ### Pretty printing
@@ -329,7 +329,7 @@ There are lots of functions which could remove the case distinction. `str.lower(
             counts[vote] = 1
         else:
             # Increment the vote count
-            counts[vote] += 1
+            counts[vote] = counts[vote] + 1
     print(counts)
 
 If you're having trouble spotting the difference here, it's
@@ -411,8 +411,21 @@ This is just one of many ways to do this:
         print(name + ": " + str(counts[name]))
 
 
-There's a new concept in the code above, `continue`, which means "stop whatever you were doing and go to the next iteration of the loop". In this case, if the person has already voted then we don't want to count their invalid vote - instead we `continue` and start the next iteration, with the next vote on the next line of the file.
+There's two new concepts in the code above:
 
+`continue` means "stop whatever you were doing and go to the next iteration of the loop". In this case, if the person has already voted then we don't want to count their invalid vote - instead we `continue` and start the next iteration, with the next vote on the next line of the file.
+
+`counts[vote] += 1` is a shorthand for `counts[vote] = counts[vote] + 1`. This shortcut can be used any time you are performing operations like arithmetic, for example these are equivalent:
+
+    x = x + 1
+    x += 1
+
+And so are these:
+
+    lemons = lemons * 3
+    lemons *= 3
+
+You can also use `-=` and `/=` in the same way.
 
 # Factoring our code
 
