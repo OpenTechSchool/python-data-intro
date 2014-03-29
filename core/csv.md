@@ -161,7 +161,7 @@ When looking at the list of fields in the OpenFlights data documentation, rememb
         if source_airport in latitudes and dest_airport in latitudes:
             source_lat = latitudes[source_airport]
             source_long = longitudes[source_airport]
-            dest_lat = latitudes[source_airport]
+            dest_lat = latitudes[dest_airport]
             dest_long = longitudes[dest_airport]
             distances.append(geo_distance.distance(source_lat,source_long,dest_lat,dest_long))
 
