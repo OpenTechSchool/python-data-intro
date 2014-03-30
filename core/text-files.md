@@ -273,7 +273,7 @@ If you want to try all this out, here's a quick exercise to make sure you've got
 
 When writing to the files, remember that `print()` adds a newline but with `write()` you have to add the newline yourself.
 
-Hopefully pretty simple, but that should make sure you have all the above ideas down-pat.
+If you're not sure where to start, one approach is to modify one of the solutions to the previous exercises. If you get stuck, remember you can always call over a coach for some advice.
 
 ## Next Chapter
 
