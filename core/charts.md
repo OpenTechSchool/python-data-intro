@@ -11,15 +11,11 @@ So far we haven't done anything to really explore IPython Notebook's features, b
 
 If you're using Windows to run IPython Notebook or IPython QtConsole, you'll need to run the following special IPython command (in Notebook, type it into an IPython Notebook cell and then run it):
 
-    %pylab inline
+    %matplotlib inline
 
-... this tells IPython two things:
-
-* `pylab` means that IPython will pre-import some useful modules that are used for mathematics and charting operations. Otherwise you have to import lots of these modules individually.
+... this tells IPython:
 
 * `inline` means that you want charts to be shown "inline style" inside your notebook, not in a separate window.
-
-If you're not using Windows and you started IPython Notebook or IPython QtConsole with the arguments `--pylab inline`, then this is already done.
 
 ## Simple Example
 
