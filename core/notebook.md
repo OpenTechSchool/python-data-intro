@@ -5,7 +5,7 @@ title: Introducing IPython Notebook
 
 ---
 
-# IPython Notebok
+# IPython Notebook
 
 Until now we've worked with Python either directly via the interactive Python console, or by writing Python programs using a text
 editor.
@@ -19,7 +19,7 @@ However, there are other ways to work with Python. [IPython](http://ipython.org/
 <img src="../images/ipython_example.png" alt="A sample from the IPython Notebook introduction examples">
 </img>
 
-(This is just an example of what IPython Notebook can do, don't feel like you need to understand it just yet! If you want to type it into IPython Notebook later on, type the special command `%pylab inline` before you start - there's an explanation coming up in the Charts chapter.)
+(This is just an example of what IPython Notebook can do, don't feel like you need to understand it just yet! If you want to type it into IPython Notebook later on, type the special command `%matplotlib inline` before you start - there's an explanation coming up in the Charts chapter.)
 
 # Installing IPython Notebook
 
@@ -47,9 +47,9 @@ Anaconda (described above) is the easiest option for this workshop. There are so
 
         pip install ipython[notebook]
 
-(If you're on OS X you will need XCode installed for this to work.)
+(If you're on OS X you may need Xcode to compile dependencies.)
 
-* If you can't get IPython Notebook to work on your computer at all, there's a hosted service called [Wakari](https://www.wakari.io/) that you can use for free. In this case your programs won't be running on your own computer, they'll be running "in the cloud" (ie on Wakari's servers somewhere else) and you'll just see the results in your web browser.
+* If you can't get IPython Notebook to work on your computer at all, there's a hosted service called [Wakari](https://www.wakari.io/) that you can use for free. In this case your programs won't be running on your own computer, they'll be running "in the cloud" (i.e. on Wakari's servers somewhere else) and you'll just see the results in your web browser.
 
 ## Note about Python 3
 
@@ -68,7 +68,7 @@ On Windows, you can find a launcher for IPython Notebook under Anaconda in the S
 
 On Linux or OS X, you can start IPython Notebook from the command line. First open a terminal window, use 'cd' to navigate to the directory where you want to store your Python files and notebook document files. Then run this command:
 
-    ipython notebook --pylab inline
+    ipython notebook
 
 You should see some output like this:
 
