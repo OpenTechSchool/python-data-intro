@@ -16,8 +16,7 @@ However, there are other ways to work with Python. [IPython](http://ipython.org/
 
 ## Sneak Preview of IPython
 
-<img src="../images/ipython_example.png" alt="A sample from the IPython Notebook introduction examples">
-</img>
+![A sample from the IPython Notebook introduction examples][ipn-example]
 
 (This is just an example of what IPython Notebook can do, don't feel like you need to understand it just yet! If you want to type it into IPython Notebook later on, type the special command `%matplotlib inline` before you start - there's an explanation coming up in the Charts chapter.)
 
@@ -86,27 +85,23 @@ Even though you're interacting with IPython Notebook using your browser, Noteboo
 
 In your browser, click the "New Notebook" button and a new notebook will open up.
 
-<img src="../images/ipython_notebook.png" alt="IPython Notebook empty">
-</img>
+![IPython Notebook empty][ipn-empty]
 
 The empty box at the top is the first "cell" for entering Python code.
 
 Try typing something like `print("Hello World")` into the cell. To run the code in the cell and see the output, click the Run button (play icon) on the toolbar, or type Shift-Enter:
 
-<img src="../images/notebook_hello_world.png" alt="IPython Notebook Hello World">
-</img>
+![IPython Notebook Hello World][ipn-hello]
 
 You'll see that whenever you run a cell, a new empty cell appears where you can enter another set of Python statements. Try assigning a variable. Let's make another shopping list:
 
-<img src="../images/assign_shopping_list.png" alt="IPython Notebook Assign Variable">
-</img>
+![IPython Notebook Assign Variable][ipn-variable]
 
 When you Run this cell you won't see any output, but behind the scenes the variable "shopping list" has been assigned.
 
 We can see this by making a third cell to print the contents:
 
-<img src="../images/print_shopping_list.png" alt="IPython Notebook Print Shopping List">
-</img>
+![IPython Notebook Print Shopping List][ipn-list]
 
 You can do anything with IPython Notebook cells that you'd do with normal Python code. As you build up the notebook full of cells you create a history of the things you've done and the results that were printed.
 
@@ -175,3 +170,10 @@ Tried out IPython Notebook but don't really like it? No problem! The rest of the
 ## Next Chapter
 
 Time to give Notebook a real workout! The next chapter is [Working With Text Files](text-files.html)
+
+[ipn-example]: ../images/ipython_example.png
+[ipn-empty]: ../images/ipython_notebook.png
+[ipn-hello]: ../images/notebook_hello_world.png
+[ipn-variable]: ../images/assign_shopping_list.png
+[ipn-list]: ../images/print_shopping_list.png
+
