@@ -48,3 +48,5 @@ If you're wondering how to "level up" to more advanced data analysis after maste
 * A tutorial series by Hernan Rojas showing the basics of [using the Python library "pandas" for data analysis](https://bitbucket.org/hrojas/learn-pandas). You can click on the lessons directly to view them in your browser, or click the "(download)" link on the right of the page to download a ZIP file containing them as IPython Notebook files.
 
 * If you have statistical modelling experience then [this video tutorial by Skipper Seabold from SciPy 2012](http://pyvideo.org/video/1200/statsmodels) ([accompanying material as IPython Notebook files](https://github.com/jseabold/tutorial)) comes highly recommended.
+
+* [SciPy tutorial notes](http://scipy-lectures.github.io/), that can be used for a full course of scientific computing with Python.
