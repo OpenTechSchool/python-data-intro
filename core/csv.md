@@ -55,7 +55,7 @@ To get you started, on the OpenFlights web page it shows that "Name" is the seco
 Here's some code that prints the name of every airport:
 
     import csv
-    f = open("airports.dat")
+    f = open("airports.dat", encoding="utf-8")
     for row in csv.reader(f):
         print(row[1])
 
@@ -64,7 +64,7 @@ Can you expand on that to only print airports for a certain country?
 ## Solution
 
     import csv
-    f = open("airports.dat")
+    f = open("airports.dat", encoding="utf-8")
     for row in csv.reader(f):
         if row[3] == "Australia" or row[3] == "Russia":
             print(row[1])
@@ -101,7 +101,7 @@ Look back at the [OpenFlights data page](http://www.openflights.org/data.html) t
 
     latitudes = {}
     longitudes = {}
-    f = open("airports.dat")
+    f = open("airports.dat", encoding="utf-8")
     for row in csv.reader(f):
         airport_id = row[0]
         latitudes[airport_id] = float(row[6])
@@ -154,7 +154,7 @@ When looking at the list of fields in the OpenFlights data documentation, rememb
 ## Solution
 
     distances = []
-    f = open("routes.dat")
+    f = open("routes.dat", encoding="utf-8")
     for row in csv.reader(f):
         source_airport = row[3]
         dest_airport = row[5]
