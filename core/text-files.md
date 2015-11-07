@@ -21,7 +21,7 @@ A text file is any file containing only readable characters.
 <a href="http://www.flickr.com/photos/mwichary/2355783479/" title="IBM 1403 printout (from the power-of-two program) by Marcin Wichary, on Flickr"><img class="text-left" src="http://farm3.staticflickr.com/2087/2355783479_ba8837ac18_q.jpg" width="150" height="150" alt="IBM 1403 printout (from the power-of-two program)"></a>
 </div>
 
-A character can be a number like 3 or 6, or a letter of the alphabet like M or p. Taken together, programmers call numbers and letters the the set of *alphanumeric* characters.
+A character can be a number like 3 or 6, or a letter of the alphabet like M or p. Taken together, programmers call numbers and letters the set of *alphanumeric* characters.
 
 Characters also include non-alphanumeric symbols like # or $, or even more exotic symbols like 汉 or Й. Each of these is a single character
 
