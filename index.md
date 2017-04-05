@@ -35,9 +35,9 @@ workshop then that will be perfect.
 
 # Reference material
 
-* [IPython NBViewer home page](http://nbviewer.ipython.org/)
+* [Jupyter NBViewer home page](https://nbviewer.jupyter.org/)
 
-*  [IPython Notebook gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks) 
+*  [Jupyter Notebook gallery](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
 
 * [matplotlib gallery](http://matplotlib.org/gallery.html)
 
