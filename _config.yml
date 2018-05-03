@@ -1,6 +1,5 @@
 permalinks: title
 markdown: kramdown
-pygments: true
 baseurl: /python-data-intro
 title: Introduction to Data Processing with Python
 map:
