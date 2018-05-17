@@ -18,7 +18,7 @@ map:
      - title: Introducing IPython Notebook
        path: /core/notebook.html
        caption: A whole new way to work with Python!
-     - title: A typical problem --  Analyzing a survey
+     - title: Analyzing a survey
        path: /core/survey.html
        caption: Once we have our text in Python, what can we do with it?
      - title: Creating Charts

@@ -1,7 +1,7 @@
 ---
 
 layout: ots
-title: A typical problem --  Analyzing a survey
+title: Analyzing a survey
 
 ---
 
