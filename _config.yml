@@ -18,11 +18,8 @@ map:
      - title: Introducing IPython Notebook
        path: /core/notebook.html
        caption: A whole new way to work with Python!
-     - title: Working With Text Files
-       path: /core/text-files.html
-       caption: What is a text file? How do we get them in and out of Python?
-     - title: Working With Strings
-       path: /core/strings.html
+     - title: A typical problem --  Analyzing a survey
+       path: /core/survey.html
        caption: Once we have our text in Python, what can we do with it?
      - title: Creating Charts
        path: /core/charts.html

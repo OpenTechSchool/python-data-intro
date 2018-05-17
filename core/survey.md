@@ -1,13 +1,11 @@
 ---
 
 layout: ots
-title: Working with Strings
+title: A typical problem --  Analyzing a survey
 
 ---
 
-# A problem
-
-Now we know how to work with text files, we'll use that knowledge to solve a problem:
+# Our very, very important problem
 
 Suppose you're a greengrocer, and you run a survey to see what radish varieties your customers prefer the most. You have your assistant type up the survey results into a text file on your computer, so you have 300 lines of survey data in the file [radishsurvey.txt](../files/radishsurvey.txt). Each line consists of a name, a hyphen, then a radish variety:
 
@@ -26,6 +24,8 @@ Suppose you're a greengrocer, and you run a survey to see what radish varieties 
 
 <a href="http://www.flickr.com/photos/brixton/2045816352/" title="Radishes radishes radishes by brixton, on Flickr"><img src="http://farm3.staticflickr.com/2298/2045816352_25cba9e434_m.jpg" width="240" height="180" alt="Radishes radishes radishes"></a>
 
+(You may have noticed that this is a very simple file: Unlike on a document or web page, there is no formatting whatsoever. It doesn't look pretty, but it has one big advantage: This is the simplest type of text format to work with on a computer, so it is also the most easy to process and analyze.)
+
 You want to know:
 
 * What's the most popular radish variety?
@@ -41,11 +41,12 @@ You want to know:
 
 Save the file [radishsurvey.txt](../files/radishsurvey.txt) to your computer. How do we write a program to find out which person voted for each radish preference? 
 
-From the previous chapter, we know that we can easily go through the file line by line, and each line will have a value like `"Jin Li - White Icicle\n"`. We also know that we can strip off the trailing newline with the `strip()` method:
+We can easily open the file with Python and go through the file line by line. Each line will have a value like `"Jin Li - White Icicle\n"`. Then we can strip off the trailing newline with the `strip()` method. (If you are curious, you can look at the documentation for [open](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files) and [split](https://docs.python.org/3/library/stdtypes.html?highlight=strip#str.strip) )
 
-    for line in open("radishsurvey.txt"):
-        line = line.strip()
-        # Do something with each line
+    whith open("radishsurvey.txt") as file:
+        for line in file:
+            line = line.strip()
+            # Do something with each line
 
 We need a way to split each line into the name and the vote. Thankfully, Python comes with dozens of string methods including one called `split()`. [Have a look at the documentation for split()](http://docs.python.org/3.3/library/stdtypes.html#str.split) and see if you can figure out how to split each line into the name and the vote.
 
@@ -53,12 +54,13 @@ We need a way to split each line into the name and the vote. Thankfully, Python 
 
 ### Solution
 
-    for line in open("radishsurvey.txt"):
-       line = line.strip()
-       parts = line.split(" - ")
-       name = parts[0]
-       vote = parts[1]
-       print(name + " voted for " + vote)
+    whith open("radishsurvey.txt") as file:
+        for line in file:       
+            line = line.strip()
+            parts = line.split(" - ")
+            name = parts[0]
+            vote = parts[1]
+            print(name + " voted for " + vote)
 
 There's a few things going on here, so let's go through it line by line. *Walking through a program in your head and thinking about what each line does by itself is a good way to start to understand it*
 
@@ -105,12 +107,13 @@ Use the previous example as a base. You'll need to compare the vote with the str
 
 ### Solution
 
-    for line in open("radishsurvey.txt"):
-       line = line.strip()
-       parts = line.split(" - ")
-       name, vote = parts
-       if vote == "White Icicle":
-          print(name + " likes White Icicle!")
+    with open("radishsurvey.txt") as file:
+        for line in file:
+           line = line.strip()
+           parts = line.split(" - ")
+           name, vote = parts
+           if vote == "White Icicle":
+              print(name + " likes White Icicle!")
 
 You might notice that the code splitting the line has become even shorter here. Instead of assigning each element of parts separately, we can assign them together using a technique called "multiple assignment". The line `name, vote = parts` means to assign each variable to the corresponding item in the list.
 
@@ -159,11 +162,12 @@ Use your previous solution as a base. You'll need a variable to hold the number 
 
     print("Counting votes for White Icicle...")
     count = 0
-    for line in open("radishsurvey.txt"):
-       line = line.strip()
-       name, vote = line.split(" - ")
-       if vote == "White Icicle":
-          count = count + 1
+    whith open("radishsurvey.txt") as file:
+        for line in file:       
+            line = line.strip()
+            name, vote = line.split(" - ")
+            if vote == "White Icicle":
+                count = count + 1
     print(count)
 
 
@@ -178,11 +182,12 @@ Using your function, can you write a program which counts votes for White Icicle
     def count_votes(radish):
         print("Counting votes for " + radish + "...")
         count = 0
-        for line in open("radishsurvey.txt"):
-            line = line.strip()
-            name, vote = line.split(" - ")
-            if vote == radish:
-                count = count + 1
+        whith open("radishsurvey.txt") as file:
+            for line in file:       
+                line = line.strip()
+                name, vote = line.split(" - ")
+                if vote == radish:
+                    count = count + 1
         return count
 
     print(count_votes("White Icicle"))
@@ -241,15 +246,16 @@ Remember that for dictionaries `counts[vote]` means "the value in `counts` which
     # with vote counts
     counts = {}
 
-    for line in open("radishsurvey.txt"):
-        line = line.strip()
-        name, vote = line.split(" - ")
-        if vote not in counts:
-            # First vote for this variety
-            counts[vote] = 1
-        else:
-            # Increment the vote count
-            counts[vote] = counts[vote] + 1
+    whith open("radishsurvey.txt") as file:
+        for line in file:       
+            line = line.strip()
+            name, vote = line.split(" - ")
+            if vote not in counts:
+                # First vote for this variety
+                counts[vote] = 1
+            else:
+                # Increment the vote count
+                counts[vote] = counts[vote] + 1
     print(counts)
 
 ### Pretty printing
@@ -319,17 +325,18 @@ There are lots of functions which could remove the case distinction. `str.lower(
     # with vote counts
     counts = {}
 
-    for line in open("radishsurvey.txt"):
-        line = line.strip()
-        name, vote = line.split(" - ")
-        # munge the vote string to clean it up
-        vote = vote.strip().capitalize()
-        if not vote in counts:
-            # First vote for this variety
-            counts[vote] = 1
-        else:
-            # Increment the vote count
-            counts[vote] = counts[vote] + 1
+    whith open("radishsurvey.txt") as file:
+        for line in file:
+            line = line.strip()
+            name, vote = line.split(" - ")
+            # munge the vote string to clean it up
+            vote = vote.strip().capitalize()
+            if not vote in counts:
+                # First vote for this variety
+                counts[vote] = 1
+            else:
+                # Increment the vote count
+                counts[vote] = counts[vote] + 1
     print(counts)
 
 If you're having trouble spotting the difference here, it's
@@ -386,24 +393,25 @@ This is just one of many ways to do this:
     # Create an empty list with the names of everyone who voted
     voted = []
     
-    for line in open("radishsurvey.txt"):
-        line = line.strip()
-        name, vote = line.split(" - ")
-        # clean up the person's name
-        name = name.strip().capitalize().replace("  "," ")
-        # check if this person already voted
-        if name in voted:
-            print(name + " has already voted! Fraud!")
-            continue
-        voted.append(name)
-        # munge the vote string to clean it up
-        vote = vote.strip().capitalize().replace("  "," ")
-        if not vote in counts:
-            # First vote for this variety
-            counts[vote] = 1
-        else:
-            # Increment the vote count
-            counts[vote] += 1
+   whith open("radishsurvey.txt") as file:
+        for line in file:
+            line = line.strip()
+            name, vote = line.split(" - ")
+            # clean up the person's name
+            name = name.strip().capitalize().replace("  "," ")
+            # check if this person already voted
+            if name in voted:
+                print(name + " has already voted! Fraud!")
+                continue
+            voted.append(name)
+            # munge the vote string to clean it up
+            vote = vote.strip().capitalize().replace("  "," ")
+            if not vote in counts:
+                # First vote for this variety
+                counts[vote] = 1
+            else:
+                # Increment the vote count
+                counts[vote] += 1
     
     print("Results:")
     print()
@@ -473,15 +481,16 @@ This is just one possible way to break it down:
             counts[radish] = counts[radish] + 1
     
     
-    for line in open("radishsurvey.txt"):
-        line = line.strip()
-        name, vote = line.split(" - ")
-        name = clean_string(name)
-        vote = clean_string(vote)
-    
-        if not has_already_voted(name):
-            count_vote(vote)
-        voted.append(name)
+    whith open("radishsurvey.txt") as file:
+        for line in file:
+            line = line.strip()
+            name, vote = line.split(" - ")
+            name = clean_string(name)
+            vote = clean_string(vote)
+        
+            if not has_already_voted(name):
+                count_vote(vote)
+            voted.append(name)
     
     print("Results:")
     print()
@@ -524,7 +533,7 @@ The loop shown above keeps track of one name, `winner_name`, and the number of v
 
 ## Challenge
 
-Can you refactor the part of the program that finds the winner into a function?
+Can you extract the part of the program that finds the winner into a function?
 
 ## Bigger Challenge
 
@@ -534,4 +543,4 @@ Can you write a winner function that could deal with a tie?
 
 ## Next Chapter
 
-When you're done counting radish votes, the next chapter is [Creating Charts](charts.html)
+That became complicated pretty quickly, didn't it? In the next chapter, we will try an easier way to [analyze the survey using pandas](pandas.html), a Python library designed for data analysis.
