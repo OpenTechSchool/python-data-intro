@@ -125,4 +125,18 @@ Bit of command line:
     get dolla
     $
 
+Custom syntax highlighting for jupyter-notebook style code blocks is possible using an html tag in your markdown:
+
+    <div class="jupyter">
+    
+    ```python
+    print('test')
+    ```
+
+        test
+
+    </div>
+
+The code format can be generated from jupyter by clicking the download-as -> markdown button. Each block of input and output has to be enclosed in a separate div tag.
+
 For a more complete list of languages see [highlight.js](http://softwaremaniacs.org/media/soft/highlight/test.html)
