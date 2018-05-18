@@ -1,22 +1,36 @@
 ---
 
 layout: ots
-title: Recap of Python Essentials
+title: Python and Jupyter-Notebook (Recap)
 
 ---
 
-This chapter is just a recap of some of the important points of the Introduction to Programming with Python course. Feel free to skip ahead if this course is still fresh in your memory.
+This chapter is a recap of some of the important points of the Introduction to Programming with Python course. Feel free to skip ahead if this course is still fresh in your memory. In addition, we will introduce jupyter-notebooks, an interactive way to execute python scripts.
 
-# Running Python
+# Installing Python and Jupyter
+
+The easiest way to install python on your computer is to use *anaconda*. There are many other ways to get python and jupyter but this one is most suitable for beginners. Follow the instructions for your operating system on [https://www.anaconda.com/download/].
+
+With the anaconda package, you get the anaconda navigator, an interactive program that lets you install addons and run programs.
+
+Use the anaconda navigator to install jupyter notebook. Alternatively, you can use the command line and type
+```
+conda install jupyter notebook
+```
+
+
+
+# Running Python and Jupyter
 
 After installing Python on your system successfully, you can start the
 interactive Python prompt by typing `python` in the command line and
 pressing `<Enter>`.  It will show you some context information about
 Python similar to this::
     
-    Python 3.3.5 (v3.3.5:62cf4e77f785, Mar  9 2014, 10:37:12) [MSC v.1600 32 bit (Intel)] on win32
+    Python 3.6.5 (default, Apr  1 2018, 05:46:30) 
+    [GCC 7.3.0] on linux
     Type "help", "copyright", "credits" or "license" for more information.
-    >>>
+    >>> 
 
 On Windows you can open Python through the Start Menu.
 
@@ -28,13 +42,34 @@ To run a program saved in a Python file, you can run it from the command line li
 
 On Windows you can run a Python file by double-clicking it.
 
+But there is a much more interactive and fast way to start using python. Launch jupyter notebook from the anaconda navigator or by typing on the command line
+
+```
+jupyter notebook
+```
+
+It will start the python interpreter in the background and show a browser page, that is connected to python and will interactively edit and run your python code.
+
+Navigate to a directory where you want to start you python project and press the *new* button on the top right of the web page.
+
+
+
 
 # Loops
 
 What does this code do?
 
-    for i in 2, 4, 6, 8:
-        print(i)
+<div class="jupyter">
+```python
+for i in 2, 4, 6, 8:
+    print(i)
+```
+
+    2
+    4
+    6
+    8
+</div>
 
 ### Solution
 

@@ -9,7 +9,7 @@ map:
  - title: Core
    caption: The 'mandatory' workshop content
    subpages:
-     - title: Recap of Python essentials
+     - title: Python and Jupyter-Notebook (Recap)
        path: /core/recap.html
        caption: A quick recap of some of the Introduction to Programming essentials
      - title: Data Structures in Python
