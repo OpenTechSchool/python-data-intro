@@ -1,6 +1,6 @@
 ---
 
-layout: ots
+layout: ots-jupyter
 title: Python and Jupyter-Notebook (Recap)
 
 ---

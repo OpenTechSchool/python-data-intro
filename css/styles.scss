@@ -1,5 +1,6 @@
 ---
 ---
+
 /* keep the above dashes for jekyll to preprocess this file */
 body {
   background: url("{{site.baseurl}}/images/background.png") #FFF repeat fixed;
@@ -28,7 +29,6 @@ pre {
 
 pre code {
   font-size: 15px;
-  background: #222222 !important;
 }
 
 .navbar h1 a, .navbar h1 {
@@ -93,4 +93,74 @@ pre code {
 #footer a:hover {
   color: #FFF;
 }
+
+pre.highlight {
+    color: #F9FBFB;
+    background-color: #300A24;
+}
+
+
+/* jupyter highlight style */
+$indent: 120px;
+
+div.jupyter {
+    border: 1px black solid;
+    border-color: #ababab;
+    border-left: 5px #42A5F5 solid;
+
+    pre.highlight {
+        position: relative;
+        margin: 10px;
+        margin-left: $indent;
+        border: 1px solid #CFCFCF;
+        border-radius: 2px;
+        background-color: #F7F7F7;
+    }
+    pre.highlight::before {
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        left: - $indent;
+        content: "In [ ]:";
+        width: $indent;
+        text-align: right;
+        padding-right: 12px;
+    }
+
+    /* reset for following output fields */
+    div.highlighter-rouge + div.highlighter-rouge {
+
+        pre.highlight {
+            background-color: white;
+            border: none;
+            // filter: blur(2px);
+
+        }
+
+        pre.highlight::before {
+            content: "";
+        }
+    }
+
+    code {
+        display: block;
+        //height: auto;
+        overflow: hidden;
+        transition: height 250ms ease-in-out;
+    }
+}
+
+.button-hide {
+    font-size: 80%;
+    position: absolute;
+    top: 10px;
+    left: - $indent + 15;
+
+}
+.output-hidden {
+    code {
+        height: 0 !important;
+    }
+}
+
 

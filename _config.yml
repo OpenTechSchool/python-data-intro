@@ -36,3 +36,5 @@ map:
    - title: Open Data
      path: /extras/opendata.html
      caption: Some places to find open data sets.
+kramdown:
+    parse_block_html: true
