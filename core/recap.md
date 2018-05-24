@@ -48,20 +48,24 @@ But there is a much more interactive and fast way to start using python. Launch 
 jupyter notebook
 ```
 
-It will start the python interpreter in the background and show a browser page, that is connected to python and will interactively edit and run your python code.
+It will start the python interpreter in the background and show a browser page that is connected to python. The browser will let you interactively edit and run your python code on your local machine. In this tutorial, we will encourage you to use jupyter-notebooks as it is a tool often used in data science. The python code is the same whether you run it interactively in jupyter or not.
 
-Navigate to a directory where you want to start you python project and press the *new* button on the top right of the web page.
+In the jupyter browser window, navigate to a directory where you want to start you python project and press the *new* button on the top right of the web page.
+
+![create a new notebook in jupyter](../images/jupyter_new.png)
 
 
+With jupyter and python running, lets recap some of the basic features of the python language. Type the code into a *cell* in jupyter and execute the cell by pressing the *Run* button or *Shift+Return* on your keyboard.
 
+# Python language basics
 
-# Loops
+## Loops
 
 What does this code do?
 
 <div class="jupyter">
 ```python
-for i in 2, 4, 6, 8:
+for i in [2, 4, 6, 8]:
     print(i)
 ```
 
@@ -71,73 +75,88 @@ for i in 2, 4, 6, 8:
     8
 </div>
 
-### Solution
-
 This code prints the even numbers 2 through 8, one per line.
 
 ### Bonus Challenge
 
 Python has a built-in function called `range` that can automatically generate a range of numbers like \[2, 4, 6, 8\]. For example, `range(1,10)` is a sequence of the numbers 1 through 9 (a common but sometimes confusing thing in programming is for the "end" number not to be included in a sequence.)
 
-    for i in range(1,10):
-        print(i)
+<div class="jupyter">
+```python
+for i in range(1,10):
+    print(i)
+```
+</div>
 
-Can you make a `range` equivalent to \[2, 4, 6, 8\]? To get some clues, you can open an interactive Python Interpreter and type `help(range)`. The useful details are near the top. Press 'q' to exit the help viewer when you're done.
+Can you make a `range` equivalent to \[2, 4, 6, 8\]? To get some clues, type `help(range)`. The useful details are near the top. The help utility is available for most python functions and once you know how to read them, they are very useful.
 
 
-# Variables
+## Variables
 
 You can use variables to manipulate values inside code. What does this code do?
 
-    total = 0
-    for i in 1, 3, 7:
-        total = total + i
-    print(total)
+<div class="jupyter">
+```python
+total = 0
+for i in 1, 3, 7:
+    total = total + i
+print(total)
+```
 
-### Solution
+    11
+</div>
 
-This code prints 11 - the sum of the numbers 1, 3 and 7.
+This code prints the sum of the numbers 1, 3 and 7.
 
 ### Bonus Challenge
 
 If you don't want to use a `for` loop for some reason, Python actually has a built-in function called `sum` that lets you bypass it completely. You can get the same result with this:
 
-    print(sum([1,3,7]))
+<div class="jupyter">
+```python
+print(sum([1,3,7]))
+```
+</div>
 
 Can you make a one line Python statement that uses both `sum` and `range` to print the sum of the numbers 1 through 10?
 
 
-# Functions
+## Functions
 
 You can define your own functions with parameters in order to reuse some code again with slight differences. What does this code print?
 
-    def say_hello_to(name):
-        print("Hello " + name)
+<div class="jupyter">
+```python
+def say_hello_to(name):
+    print("Hello " + name)
 
-    say_hello_to("Miranda")
-    say_hello_to("Fred")
-
-### Solution
+say_hello_to("Miranda")
+say_hello_to("Fred")
+```
 
     Hello Miranda
     Hello Fred
+</div>
 
-
-# Conditionals
+## Conditionals
 
 You can use the 'if' statement to execute some statements only if a condition is true. What does this code print?
 
-    angle = 5
-    if angle > 0:
-        print("Turning clockwise")
-    elif angle < 0:
-        print("Turning anticlockwise")
-    else:
-        print("Not turning at all")
+<div class="jupyter">
 
-### Solution
+```python
+angle = 5
+if angle > 0:
+    print("Turning clockwise")
+elif angle < 0:
+    print("Turning anticlockwise")
+else:
+    print("Not turning at all")
+
+```
 
     Turning clockwise
+</div>
 
 
 ## Next Chapter
