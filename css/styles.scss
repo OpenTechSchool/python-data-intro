@@ -96,7 +96,7 @@ pre code {
 
 pre.highlight {
     color: #F9FBFB;
-    background-color: #300A24;
+    background-color: #3F3F3F;
 }
 
 
@@ -107,6 +107,7 @@ div.jupyter {
     border: 1px black solid;
     border-color: #ababab;
     border-left: 5px #42A5F5 solid;
+    margin-bottom: 20px;
 
     pre.highlight {
         position: relative;
@@ -154,7 +155,7 @@ div.jupyter {
 .button-hide {
     font-size: 80%;
     position: absolute;
-    top: 10px;
+    top: -5px;
     left: - $indent + 15;
 
 }
