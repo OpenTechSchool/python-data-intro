@@ -9,9 +9,9 @@ map:
  - title: Core
    caption: The 'mandatory' workshop content
    subpages:
-     - title: Intro to Anaconda and Jupyter Notebooks
-       path: /core/anaconda_jupyter.html
-       caption: A brief introduction to Anaconda and Jupyter Notebooks
+     - title: Intro to Conda and Jupyter Notebooks
+       path: /core/conda_jup.html
+       caption: A brief introduction to the Conda package manager and Jupyter Notebooks
      - title: Python and Jup-Notebook (Recap)
        path: /core/recap.html
        caption: A quick recap of some of the Introduction to Programming essentials
