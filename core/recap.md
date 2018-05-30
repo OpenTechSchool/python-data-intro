@@ -1,63 +1,11 @@
 ---
 
 layout: ots-jupyter
-title: Python and Jupyter-Notebook (Recap)
+title: Recap of Python Basics
 
 ---
 
-This chapter is a recap of some of the important points of the Introduction to Programming with Python course. Feel free to skip ahead if this course is still fresh in your memory. In addition, we will introduce jupyter-notebooks, an interactive way to execute python scripts.
-
-# Installing Python and Jupyter
-
-The easiest way to install python on your computer is to use *anaconda*. There are many other ways to get python and jupyter but this one is most suitable for beginners. Follow the instructions for your operating system on [https://www.anaconda.com/download/].
-
-With the anaconda package, you get the anaconda navigator, an interactive program that lets you install addons and run programs.
-
-Use the anaconda navigator to install jupyter notebook. Alternatively, you can use the command line and type
-```
-conda install jupyter notebook
-```
-
-
-
-# Running Python and Jupyter
-
-After installing Python on your system successfully, you can start the
-interactive Python prompt by typing `python` in the command line and
-pressing `<Enter>`.  It will show you some context information about
-Python similar to this::
-    
-    Python 3.6.5 (default, Apr  1 2018, 05:46:30) 
-    [GCC 7.3.0] on linux
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>> 
-
-On Windows you can open Python through the Start Menu.
-
-To exit the Python interpreter, press `Ctrl-D`.
-
-To run a program saved in a Python file, you can run it from the command line like so:
-
-    python program.py
-
-On Windows you can run a Python file by double-clicking it.
-
-But there is a much more interactive and fast way to start using python. Launch jupyter notebook from the anaconda navigator or by typing on the command line
-
-```
-jupyter notebook
-```
-
-It will start the python interpreter in the background and show a browser page that is connected to python. The browser will let you interactively edit and run your python code on your local machine. In this tutorial, we will encourage you to use jupyter-notebooks as it is a tool often used in data science. The python code is the same whether you run it interactively in jupyter or not.
-
-In the jupyter browser window, navigate to a directory where you want to start you python project and press the *new* button on the top right of the web page.
-
-![create a new notebook in jupyter](../images/jupyter_new.png)
-
-
-With jupyter and python running, lets recap some of the basic features of the python language. Type the code into a *cell* in jupyter and execute the cell by pressing the *Run* button or *Shift+Return* on your keyboard.
-
-# Python language basics
+This chapter reviews some of the basic concepts first presented in the _Introduction to Programmying with Python_ course. Feel free to skip ahead if that course is still fresh in your memory.
 
 ## Loops
 
@@ -65,7 +13,7 @@ What does this code do?
 
 <div class="jupyter">
 ```python
-for i in [2, 4, 6, 8]:
+for i in [2, 4, 6, 8]
     print(i)
 ```
 
