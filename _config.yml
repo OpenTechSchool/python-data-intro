@@ -9,7 +9,10 @@ map:
  - title: Core
    caption: The 'mandatory' workshop content
    subpages:
-     - title: Python and Jupyter-Notebook (Recap)
+     - title: Intro to Anaconda and Jupyter Notebooks
+       path: /core/anaconda_jupyter.html
+       caption: A brief introduction to Anaconda and Jupyter Notebooks
+     - title: Python and Jup-Notebook (Recap)
        path: /core/recap.html
        caption: A quick recap of some of the Introduction to Programming essentials
      - title: Data Structures in Python
