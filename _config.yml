@@ -12,7 +12,7 @@ map:
      - title: Intro to Conda and Jupyter Notebooks
        path: /core/conda_jup.html
        caption: A brief introduction to the Conda package manager and Jupyter Notebooks
-     - title: Python and Jup-Notebook (Recap)
+     - title: Recap of Python Basics 
        path: /core/recap.html
        caption: A quick recap of some of the Introduction to Programming essentials
      - title: Data Structures in Python
