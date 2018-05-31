@@ -5,7 +5,7 @@ title: Recap of Python Basics
 
 ---
 
-This chapter reviews some of the basic concepts first presented in the _Introduction to Programmying with Python_ course. Feel free to skip ahead if that course is still fresh in your memory.
+This chapter reviews some of the basic concepts first presented in the [_Introduction to Programming with Python_](http://opentechschool.github.io/python-beginners/) course. Feel free to skip ahead if that course is still fresh in your memory.
 
 ## Loops
 
