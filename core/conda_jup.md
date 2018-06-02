@@ -33,6 +33,8 @@ Many packages, like `random`, are bundled with the base Python distribution, but
 
 ### Downloading and installing conda
 
+To get conda it's best to follow the system-specific instructions for [Windows](https://conda.io/docs/user-guide/install/windows.html), [macOS](https://conda.io/docs/user-guide/install/macos.html), or [Linux](https://conda.io/docs/user-guide/install/linux.html). There are two distributions to choose from: [Anaconda](https://www.anaconda.com/download) and [Miniconda](https://conda.io/miniconda.html), both of which can be downloaded in Python 2.7 or Python 3.6 versions. The Anaconda distribution is 3 GB in size and is considered to be the more "beginner friendly" alternative. It includes a graphical installer and a +100 useful packages to get you started. Miniconda is a bare-bones affair, 400 MB in size, and includes only conda, Python, and a handful of dependencies.      
+
 ### Creating environments and installing packages
 ![]()
 
