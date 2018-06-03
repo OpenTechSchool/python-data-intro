@@ -33,10 +33,21 @@ Many packages, like `random`, are bundled with the base Python distribution, but
 
 ### Downloading and installing conda
 
-To get conda it's best to follow the system-specific instructions for [Windows](https://conda.io/docs/user-guide/install/windows.html), [macOS](https://conda.io/docs/user-guide/install/macos.html), or [Linux](https://conda.io/docs/user-guide/install/linux.html). There are two distributions to choose from: [Anaconda](https://www.anaconda.com/download) and [Miniconda](https://conda.io/miniconda.html), both of which can be downloaded in Python 2.7 or Python 3.6 versions. The Anaconda distribution is 3 GB in size and is considered to be the more "beginner friendly" alternative. It includes a graphical installer and a +100 useful packages to get you started. Miniconda is a bare-bones affair, 400 MB in size, and includes only conda, Python, and a handful of dependencies.      
+To get conda it's best to follow the system-specific instructions for [Windows](https://conda.io/docs/user-guide/install/windows.html), [macOS](https://conda.io/docs/user-guide/install/macos.html), or [Linux](https://conda.io/docs/user-guide/install/linux.html). There are two distributions to choose from: [Anaconda](https://www.anaconda.com/download) and [Miniconda](https://conda.io/miniconda.html), both of which can be downloaded in Python 2.7 or Python 3.6 versions. The Anaconda distribution is 3 GB in size and is considered to be the more "beginner friendly" alternative. It includes a graphical installer and a +100 useful packages to get you started. At 400 MB, Miniconda is a bare-bones affair, and includes a bash (command line) installer, conda, Python, and a handful of dependencies.      
 
 ### Creating environments and installing packages
-![]()
+
+The following instructions will guide you through the process of creating environments and installing packages, using both the conda GUI "Anaconda Navigator" and conda at the command line.
+
+If you've downloaded the Anaconda distribution you can immediately open it by finding and clicking on its icon. If you've gone the Miniconda route, you'll first need to run `conda install -c anaconda anaconda-navigator` to install it. Once you've opened the Navigator you see the __Home__ tab, which displays a number of IDEs (integrated developmentenvironments) – including _Jupyter Notebook_, which we'll get to later:
+
+![Home tab of the Anaconda Navigator](../images/anaconda_home.png)
+
+The applications can either be installed, or launched if already installed. Above the applicatoins you'll see "Application on" and a drop-down menu. Open the menu and you you should see the `base (root)` environment:
+
+![Environment menu on home tab of Anaconda Navigator](../images/anaconda_home-envs.png) 
+
+Any environments you create will appear here, and the status "Install" vs. "Launch" will change for each application as you switch environments, depending on whether or not you've installed them in that environment.
 
 ## Next Chapter
 
