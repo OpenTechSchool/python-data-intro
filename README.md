@@ -47,6 +47,13 @@ When you push to github, the official site at http://opentechschool.github.io/py
 
 To generate and view the site (with correct CSS, etc.) with your on your local computer, you can install Jekyll and then run it like this:
 
+If you have [docker installed on your system](https://docs.docker.com/get-docker/) the easiest way to test the site locally is by running
+`./testlocal.sh`
+
+It will download a suitable docker image for jekyll and run the code within this container, making it available via http://localhost:4000/python-data-intro/
+
+Alternatively, you can run the following steps manually:
+
     jekyll --serve --auto
     # or
     jekyll serve --watch
