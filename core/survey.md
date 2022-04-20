@@ -43,7 +43,7 @@ Save the file [radishsurvey.txt](../files/radishsurvey.txt) to your computer. Ho
 
 We can easily open the file with Python and go through the file line by line. Each line will have a value like `"Jin Li - White Icicle\n"`. Then we can strip off the trailing newline with the `strip()` method. (If you are curious, you can look at the documentation for [open](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files) and [split](https://docs.python.org/3/library/stdtypes.html?highlight=strip#str.strip) )
 
-    whith open("radishsurvey.txt") as file:
+    with open("radishsurvey.txt") as file:
         for line in file:
             line = line.strip()
             # Do something with each line
@@ -54,7 +54,7 @@ We need a way to split each line into the name and the vote. Thankfully, Python 
 
 ### Solution
 
-    whith open("radishsurvey.txt") as file:
+    with open("radishsurvey.txt") as file:
         for line in file:       
             line = line.strip()
             parts = line.split(" - ")
@@ -162,7 +162,7 @@ Use your previous solution as a base. You'll need a variable to hold the number 
 
     print("Counting votes for White Icicle...")
     count = 0
-    whith open("radishsurvey.txt") as file:
+    with open("radishsurvey.txt") as file:
         for line in file:       
             line = line.strip()
             name, vote = line.split(" - ")
@@ -182,7 +182,7 @@ Using your function, can you write a program which counts votes for White Icicle
     def count_votes(radish):
         print("Counting votes for " + radish + "...")
         count = 0
-        whith open("radishsurvey.txt") as file:
+        with open("radishsurvey.txt") as file:
             for line in file:       
                 line = line.strip()
                 name, vote = line.split(" - ")
@@ -246,7 +246,7 @@ Remember that for dictionaries `counts[vote]` means "the value in `counts` which
     # with vote counts
     counts = {}
 
-    whith open("radishsurvey.txt") as file:
+    with open("radishsurvey.txt") as file:
         for line in file:       
             line = line.strip()
             name, vote = line.split(" - ")
@@ -325,7 +325,7 @@ There are lots of functions which could remove the case distinction. `str.lower(
     # with vote counts
     counts = {}
 
-    whith open("radishsurvey.txt") as file:
+    with open("radishsurvey.txt") as file:
         for line in file:
             line = line.strip()
             name, vote = line.split(" - ")
@@ -393,7 +393,7 @@ This is just one of many ways to do this:
     # Create an empty list with the names of everyone who voted
     voted = []
     
-   whith open("radishsurvey.txt") as file:
+    with open("radishsurvey.txt") as file:
         for line in file:
             line = line.strip()
             name, vote = line.split(" - ")
@@ -481,7 +481,7 @@ This is just one possible way to break it down:
             counts[radish] = counts[radish] + 1
     
     
-    whith open("radishsurvey.txt") as file:
+    with open("radishsurvey.txt") as file:
         for line in file:
             line = line.strip()
             name, vote = line.split(" - ")
